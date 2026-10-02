@@ -2,15 +2,24 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.10.2
+- **Current release:** v2.10.3
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.10.2.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.10.2.txt)
-- **Country classification:** [93-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261002_93%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.10.3.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.10.3.txt)
+- **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
+- **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
 
 Record every application update here as a chronological release history. For each update, add a dated `### version: x.y.z — YYYY-MM-DD` entry at the top of this section and list the concrete changes, including feature additions, UI changes, data changes, bug fixes, and behavior changes. Keep entries concise but specific enough to show what changed and its effect. Do not replace or remove earlier entries; preserve the full history. Keep the version in this README, the launcher, and the versioned app payload filename aligned with the latest release.
+
+### version: 2.10.3 — 2026-10-03
+
+- Added six source-checked suppliers: Accelink, InnoLight, and Eoptolink (CIOE 2026 exhibitors in China); HFCL and Sterlite Technologies (optical-fiber suppliers in India); and NTT Innovative Devices (Japan). Existing Taiwan suppliers and Japanese fiber makers remain in the supplier list.
+- Added product detail dialogs with product-specific descriptions, published specifications, and links to official product documents. Where a manufacturer does not publish a specification, the app says so instead of substituting the company homepage for product data.
+- Added clickable email inquiry links when an official address is published; companies without a public email retain a link to their official inquiry form.
+- Added PM fiber and single-mode fiber comparison tables for LS Cable & System reference, including fiber diameter, attenuation, mode-field diameter, bend conditions, wavelength, and the relevant source links. Model and test-condition differences are identified in the comparison.
+- Updated the country classification from the original 93-company snapshot to 99 companies and added a sourced country/component research CSV.
 
 ### version: 2.10.2 — 2026-10-02
 
