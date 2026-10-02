@@ -6,9 +6,11 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** `index.html` loads `app.v2.10.1.txt`
 - **Country classification:** [93-company CSV](list/261002_93개업체_국가별분류.csv)
-- **Newly added supplier log:** [added_companies.csv](list/added_companies.csv)
+- **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+Record every application update here as a chronological release history. For each update, add a dated `### version: x.y.z — YYYY-MM-DD` entry at the top of this section and list the concrete changes, including feature additions, UI changes, data changes, bug fixes, and behavior changes. Keep entries concise but specific enough to show what changed and its effect. Do not replace or remove earlier entries; preserve the full history. Keep the version in this README, the launcher, and the versioned app payload filename aligned with the latest release.
 
 ### version: 2.10.1 — 2026-10-02
 
@@ -19,8 +21,6 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 - Added a first-visit PC/mobile screen choice and saved the selected layout for later visits.
 - Added country labels to company names in the supplier explorer.
 
-For each future user-requested application improvement that changes the release version, append a dated `### version: x.y.z — YYYY-MM-DD` entry here with the concrete changes. Keep the version in the launcher and payload filename aligned with the latest release.
-
 ## Newly added companies
 
-Record each newly added supplier as one row in [list/added_companies.csv](list/added_companies.csv). Include its addition date, name, country, CPO component/category, website, source, release version, and notes. This file is an additions log; do not re-list existing suppliers unless correcting their record.
+Record each newly added supplier as one row in [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv). Include its addition date, name, country, CPO component/category, website, source, release version, and notes. This file is an additions log; do not re-list existing suppliers unless correcting their record.
