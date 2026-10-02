@@ -1,10 +1,8 @@
 # CPO Supply Chain
 
-Public deployment shell for the CPO Supply Chain application.
+The application source has been consolidated into [`kimheeseo/LSCNS/cpo-supply-chain/`](https://github.com/kimheeseo/LSCNS/tree/main/cpo-supply-chain).
 
-## 접속
-
-- GitHub Pages: https://kimheeseo.github.io/cpo-supply-chain/
-- Direct App: https://cpo-supply-chain.onrender.com/
-
-The maintained source code and server implementation are not stored in this public repository. This repository contains only the minimal GitHub Pages launcher and non-sensitive public assets.
+- Current app: https://kimheeseo.github.io/LSCNS/cpo-supply-chain/
+- This repository remains as a compatibility redirect for the previous GitHub Pages address.
+- Version history and future improvement logs: [LSCNS CPO README](https://github.com/kimheeseo/LSCNS/blob/main/cpo-supply-chain/README.md)
+- New supplier additions CSV: [added_companies.csv](https://github.com/kimheeseo/LSCNS/blob/main/cpo-supply-chain/list/added_companies.csv)
