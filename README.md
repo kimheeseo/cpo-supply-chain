@@ -4,8 +4,8 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 
 - **Current release:** v2.10.1
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** `index.html` loads `app.v2.10.1.txt`
-- **Country classification:** [93-company CSV](list/261002_93개업체_국가별분류.csv)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.10.1.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.10.1.txt)
+- **Country classification:** [93-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261002_93%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
