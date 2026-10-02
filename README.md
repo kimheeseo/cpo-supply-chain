@@ -2,13 +2,21 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.10.1
+- **Current release:** v2.10.2
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.10.2.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.10.2.txt)
 - **Country classification:** [93-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261002_93%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
+- **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
 
 Record every application update here as a chronological release history. For each update, add a dated `### version: x.y.z — YYYY-MM-DD` entry at the top of this section and list the concrete changes, including feature additions, UI changes, data changes, bug fixes, and behavior changes. Keep entries concise but specific enough to show what changed and its effect. Do not replace or remove earlier entries; preserve the full history. Keep the version in this README, the launcher, and the versioned app payload filename aligned with the latest release.
+
+### version: 2.10.2 — 2026-10-02
+
+- Added a country selector that filters the supplier list for the selected country while keeping the chosen component.
+- Added a country browsing button beside “국내 영업업체”: choose a country, then a component, to view only matching suppliers.
+- Added India, Vietnam, and Singapore as country choices; Taiwan was already represented. The current dataset has no suppliers registered for India, Vietnam, or Singapore, so those choices show zero until suppliers are added.
 
 ### version: 2.10.1 — 2026-10-02
 
