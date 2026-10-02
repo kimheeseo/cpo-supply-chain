@@ -1,7 +1,5 @@
 # CPO Supply Chain
 
-GitHub Pages frontend for the CPO Supply Chain Explorer.
+Public deployment shell for the CPO Supply Chain application.
 
-- Source version: v2.8.5
-- Static UI: GitHub Pages
-- Dynamic APIs and community chat: Render backend
+The maintained source code and server implementation are not stored in this public repository. This repository contains only the minimal GitHub Pages launcher and non-sensitive public assets.
