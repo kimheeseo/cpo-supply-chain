@@ -39,3 +39,11 @@ Record every application update here as a chronological release history. For eac
 ## Newly added companies
 
 Record each newly added supplier as one row in [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv). Include its addition date, name, country, CPO component/category, website, source, release version, and notes. This file is an additions log; do not re-list existing suppliers unless correcting their record.
+
+
+## Deployment policy
+
+- **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
+- The release launcher loads the versioned static runtime `app.v2.11.0.txt`.
+- Corporate IR/event schedules and company briefing summaries are stored in the static site data.
+- Render is not part of the deployment/update workflow for this site.
