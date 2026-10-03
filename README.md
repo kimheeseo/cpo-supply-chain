@@ -47,3 +47,11 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 - The release launcher loads the versioned static runtime `app.v2.11.0.txt`.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
+
+
+### v2.11.1 — 2026-10-03
+- Corporate IR/events: nearest 5 with mapped CPO components.
+- IR briefing refresh for SENKO, Fujikura and Sumitomo Electric.
+- Checked all 93 registered companies; refreshed verified static article snapshots for 38 companies (49 curated entries).
+- Article display priority: component → keyword → company → AI/Data Center, maximum 5.
+- News display no longer depends on the Render news API.
