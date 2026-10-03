@@ -1,0 +1,151 @@
+{
+  "runDate": "2026-10-04",
+  "version": "v2.11.2",
+  "searchCoverageCompanies": 99,
+  "corporateEventsNew": 0,
+  "corporateEventsChanged": 0,
+  "exhibitionEventsAdded": [
+    {
+      "start": "2026-10-12",
+      "end": "2026-10-15",
+      "region": "overseas",
+      "name": "OCP Global Summit 2026",
+      "where": "San Jose, CA · AMD keynote 10/12 16:15 PDT",
+      "url": "https://newsroom.amd.com/news/media-alert-ceo-lisa-su-keynote-2026-ocp/"
+    }
+  ],
+  "irBriefingUpdated": [],
+  "irBriefingRetained": 16,
+  "newsUpdatedCompanies": [
+    "amd",
+    "indium",
+    "senko",
+    "accelink",
+    "nttinnovative",
+    "hfcl",
+    "dell",
+    "stl"
+  ],
+  "curatedArticlesAdded": 12,
+  "news": {
+    "amd": [
+      {
+        "date": "2026-09-29",
+        "title": "AMD, 10월 12일 OCP Global Summit Lisa Su 기조연설 안내",
+        "source": "AMD Newsroom",
+        "relevance": "ai",
+        "summary": "Lisa Su가 10월 12일 16:15 PDT에 agentic AI용 개방형 인프라를 주제로 기조연설합니다. 행사 기간은 10월 12~15일이며 구체적인 CPO 신제품 발표를 예고한 자료는 아닙니다.",
+        "url": "https://newsroom.amd.com/news/media-alert-ceo-lisa-su-keynote-2026-ocp/"
+      },
+      {
+        "date": "2026-09-23",
+        "title": "AMD, agentic AI 시대 Zen CPU 아키텍처 방향 설명",
+        "source": "AMD Newsroom",
+        "relevance": "component",
+        "summary": "Mark Papermaster와 Mike Clark가 CPU의 성능·주파수·면적·전력 균형과 chiplet·고밀도 코어 설계 방향을 설명했습니다. 복잡한 AI 워크플로에서 CPU 코어 밀도와 코어당 성능 요구를 함께 다룹니다.",
+        "url": "https://newsroom.amd.com/news/advanced-insights-zen-architecture-agentic-ai-era/"
+      }
+    ],
+    "indium": [
+      {
+        "date": "2026-09-25",
+        "title": "Indium, IMAPS에서 AI 패키징용 TIM·접합 소재 소개",
+        "source": "Indium Corporation",
+        "relevance": "component",
+        "summary": "HIA 소재군과 solder TIM을 포함한 AI 패키징 제품을 소개했습니다. 제조사는 sTIM의 적용 대상으로 1,000 W를 넘는 고전력밀도 소자를 제시했습니다.",
+        "url": "https://www.indium.com/press-releases/indium-corporation-to-highlight-materials-solutions-powering-the-ai-revolution-at-imaps-symposium/"
+      },
+      {
+        "date": "2026-09-25",
+        "title": "Indium, AI/HPC 패키징·저온 솔더 연구 발표",
+        "source": "Indium Corporation",
+        "relevance": "component",
+        "summary": "IMAPS 발표는 미세 접합용 저잔사 flux, HPC 방열용 TIM, 대형 BGA용 DFLT 솔더를 다룹니다. DFLT의 최저 피크 리플로 온도는 발표자료 기준 210°C입니다.",
+        "url": "https://www.indium.com/press-releases/indium-corporation-experts-to-present-advanced-packaging-ai-and-high-performance-computing-materials-solutions-at-imaps-symposium/"
+      }
+    ],
+    "senko": [
+      {
+        "date": "2026-09-25",
+        "title": "SENKO, AI 광연결 수요 대응 위한 단계적 투자·생산 다변화 강조",
+        "source": "SENKO",
+        "relevance": "keyword",
+        "summary": "GPEF 2026에서 AI 인프라가 광연결 생산능력 요구를 확대하고 있다고 설명했습니다. 고객과 연계한 단계적 투자와 복수 국가 생산·공급 연속성을 강조했습니다.",
+        "url": "https://www.senko.com/senko-highlights-disciplined-investment-and-supply-chain-flexibility-at-global-photonics-economic-forum-2026/"
+      }
+    ],
+    "accelink": [
+      {
+        "date": "2026-09-22",
+        "title": "Accelink, ECOC에서 12.8T XPO·6.4T NPO·400G/lane 전시",
+        "source": "Accelink",
+        "relevance": "component",
+        "summary": "12.8T 액랭 XPO의 64×200G 채널 실시간 BER 시험과 6.4T NPO 솔루션을 공개했습니다. 차세대 3.2T pluggable을 위한 400G/lane 기술도 전시했습니다.",
+        "url": "https://www.accelink.com/en/lighting_your_dreams/2102602681389441026.html"
+      },
+      {
+        "date": "2026-09-04",
+        "title": "Accelink, 32×200G 기반 6.4T NPO 광엔진 공개",
+        "source": "Accelink",
+        "relevance": "component",
+        "summary": "SiPh PIC, linear direct-drive EIC, 2.5D flip-chip과 탈착형 socket을 결합했습니다. ELSFP 외부 광원과 FMU-Shuffle 광섬유 관리 장치를 포함하는 NPO 구성을 제시했습니다.",
+        "url": "https://www.accelink.com/en/lighting_your_dreams/2096199655745421313.html"
+      }
+    ],
+    "nttinnovative": [
+      {
+        "date": "2026-09-16",
+        "title": "NTT Innovative Devices, 102.4T Open CPO Switch 전시 안내",
+        "source": "NTT Innovative Devices",
+        "relevance": "component",
+        "summary": "탈착 가능한 6.4T 광엔진과 socket을 사용하는 102.4T CPO 스위치 플랫폼을 ECOC 전시 품목으로 공개했습니다. 모듈 교체와 유지보수성을 고려한 구조를 소개했습니다.",
+        "url": "https://ntt-innovative-devices.com/en/exhibition/ECOC.html"
+      }
+    ],
+    "hfcl": [
+      {
+        "date": "2026-09-14",
+        "title": "HFCL, 광섬유·케이블·프리폼 생산능력 확대 투자 승인",
+        "source": "HFCL Investor Relations",
+        "relevance": "component",
+        "summary": "이사회가 광섬유·광케이블·프리폼 제조능력 확대에 약 ₹820 crore 추가 투자를 승인했다고 공시했습니다. 확정된 생산량이나 CPO 수주로 해석하지 않고 투자 승인 사실만 반영합니다.",
+        "url": "https://www.hfcl.com/investors/announcements"
+      }
+    ],
+    "dell": [
+      {
+        "date": "2026-10-01",
+        "title": "Dell·JERA·RHAELM, 일본 AI 인프라 개발 MOU 체결",
+        "source": "JERA 공식 공동 발표",
+        "relevance": "ai",
+        "summary": "일본 AI 인프라 구축을 위한 표준화 모델 개발에 합의했습니다. 최초 Chiba 프로젝트는 최대 400 MW 전력 용량을 바탕으로 추진되며 가동 중인 데이터센터 용량을 의미하지 않습니다.",
+        "url": "https://www.jera.co.jp/en/news/information/20261001_2535"
+      }
+    ],
+    "stl": [
+      {
+        "date": "2026-09-24",
+        "title": "STL, 48~6,912심 사전 종단 트렁크 포트폴리오 확대",
+        "source": "STL",
+        "relevance": "component",
+        "summary": "실내용 48~576심과 실내외용 144~6,912심 트렁크를 발표했습니다. MMC·MTP/MPO·LC와 Base-8/12/16/24 구성을 제공한다고 명시했습니다.",
+        "url": "https://stl.tech/en-us/press-release/stl-strengthens-its-neuralis-portfolio-with-pre-terminated-fiber-trunk-assemblies-to-power-hyperscale-data-centers/"
+      },
+      {
+        "date": "2026-09-10",
+        "title": "STL, 48~576심 IBR 조립품의 OFNP 인증 발표",
+        "source": "STL",
+        "relevance": "component",
+        "summary": "48~576심 사전 종단 IBR 케이블 조립품에 대한 미국 OFNP 인증과 NFPA 262 적합성을 발표했습니다. 데이터센터 실내의 고밀도 배선 경로를 대상으로 합니다.",
+        "url": "https://stl.tech/en-us/press-release/stl-launches-plenum-rated-fiber-trunk-assemblies-for-ai-data-center-connectivity/"
+      }
+    ]
+  },
+  "notes": [
+    "Company-name discovery covered 99 registered suppliers, including six late-added vendors. Only source-verified additions are published.",
+    "Corporate calendars with inaccessible/dynamic content were retained, not treated as confirmed absent.",
+    "IR briefings retained under the priority given to quarterly results and technical announcements.",
+    "Priority selects up to five articles; final display is newest first.",
+    "This release backfills previously unrepresented official announcements dated September 4–October 1, not twelve announcements published today."
+  ]
+}

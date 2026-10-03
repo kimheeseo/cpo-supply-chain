@@ -2,9 +2,9 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.10.3
+- **Current release:** v2.11.2
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.10.3.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.10.3.txt)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.11.2.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.11.2.txt)
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
@@ -12,6 +12,13 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 ## Version log
 
 Record every application update here as a chronological release history. For each update, add a dated `### version: x.y.z — YYYY-MM-DD` entry at the top of this section and list the concrete changes, including feature additions, UI changes, data changes, bug fixes, and behavior changes. Keep entries concise but specific enough to show what changed and its effect. Do not replace or remove earlier entries; preserve the full history. Keep the version in this README, the launcher, and the versioned app payload filename aligned with the latest release.
+
+### version: 2.11.2 — 2026-10-04
+
+- Added 12 previously unrepresented official announcements for AMD, Indium, SENKO, Accelink, NTT Innovative Devices, HFCL, Dell and STL; preserved prior records. Dates span September 4–October 1.
+- Added OCP Global Summit (October 12–15) to exhibitions from AMD's dated official announcement. Corporate IR dates and 16 existing briefings remain unchanged.
+- Corporate event components now derive from the current parts/vendors mapping. Up to five priority-selected articles display newest first; future-dated articles are excluded.
+- Included all 99 vendors in discovery, including six suppliers appended by the existing runtime. See `data/update_20261004.json` for sources and verification limits.
 
 ### version: 2.10.3 — 2026-10-03
 
@@ -44,7 +51,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned static runtime `app.v2.11.0.txt`.
+- The release launcher loads the versioned static runtime `app.v2.11.2.txt`.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 
