@@ -1,0 +1,189 @@
+{
+  "runDate": "2026-10-05",
+  "version": "v2.11.3",
+  "baseCommit": "21ee3dbc8ee175bf8ded57822fae1e01fe66a587",
+  "searchCoverageCompanies": 99,
+  "corporateEventsNew": 0,
+  "corporateEventsChanged": 0,
+  "irBriefingUpdated": [
+    "senko"
+  ],
+  "irBriefingRetained": 15,
+  "briefings": {
+    "senko": {
+      "date": "2026-09-25",
+      "title": "GPEF 2026: AI Optical Connectivity Investment and Supply Chain",
+      "points": [
+        "AI 인프라 확대에 따른 광연결 생산능력 수요 증가를 설명했습니다.",
+        "고객과 협의한 단계적 투자 및 복수 국가 생산 거점의 중요성을 강조했습니다.",
+        "공급 연속성·품질·납기와 복수 적격 공급원 확보를 핵심 공급망 요인으로 제시했습니다."
+      ],
+      "implication": "CPO용 광접속 부품을 검토할 때 광학 사양과 함께 생산 확대 계획, 공급 거점 다변화 및 고객별 공급 약정을 확인할 필요가 있습니다. 발표에는 CPO 수주액이나 확정 증설 물량이 제시되지 않았습니다.",
+      "url": "https://www.senko.com/senko-highlights-disciplined-investment-and-supply-chain-flexibility-at-global-photonics-economic-forum-2026/"
+    }
+  },
+  "exhibitionEventsAdded": [
+    {
+      "start": "2026-10-13",
+      "end": "2026-10-15",
+      "region": "overseas",
+      "name": "SEMICON West 2026",
+      "where": "San Francisco · Moscone Center",
+      "url": "https://www.semiconwest.org/"
+    }
+  ],
+  "newsUpdatedCompanies": [
+    "ficontec",
+    "broadcom",
+    "tfcioe",
+    "hpe",
+    "amd",
+    "nvidia",
+    "corning",
+    "lightmatter",
+    "hfcl",
+    "astera"
+  ],
+  "curatedArticlesAdded": 12,
+  "news": {
+    "ficontec": [
+      {
+        "date": "2026-10-01",
+        "title": "ficonTEC·HTSI, 대만 CPO 웨이퍼 시험 플랫폼 생산·서비스 협력",
+        "summary": "300 mm 양면 전기·광학 웨이퍼 시험 플랫폼 INS-2의 현지 생산·설치·엔지니어링 지원을 추진합니다. 기존 ATE와 연동 가능한 구조로 CPO 시험 생산능력 확대를 목표로 합니다.",
+        "url": "https://www.ficontec.com/ficontec-and-htsi-announce-strategic-cooperation-to-scale-advanced-cpo-test-solutions-in-taiwan/",
+        "source": "ficonTEC",
+        "relevance": "component"
+      }
+    ],
+    "broadcom": [
+      {
+        "date": "2026-09-29",
+        "title": "Broadcom·TOPPAN 합작 AST, 싱가포르 FC-BGA 기판 공장 개소",
+        "summary": "AI 연산·네트워킹 칩용 대형·다층 FC-BGA 기판 공장을 개소했습니다. 고부가 제조 시작 목표는 2026년 말이며, 발표는 공장 개소와 양산 개시 목표를 구분합니다.",
+        "url": "https://investors.broadcom.com/news-releases/news-release-details/ast-completes-singapores-first-high-end-fc-bga-substrate",
+        "source": "Broadcom IR",
+        "relevance": "keyword"
+      }
+    ],
+    "tfcioe": [
+      {
+        "date": "2026-09-24",
+        "title": "TFC, ECOC에서 광엔진·ELSFP·FAU·Fiber Shuffle 역량 소개",
+        "summary": "고속 광엔진, ELSFP, FAU, Fiber Shuffle Box와 맞춤형 광패키징 기술을 전시했습니다. 페이지 게시일은 9월 24일이며 본문의 행사 종료 기록은 9월 23일입니다.",
+        "url": "https://www.tfcsz.com/en/news/1084.html",
+        "source": "TFC",
+        "relevance": "component"
+      },
+      {
+        "date": "2026-09-15",
+        "title": "TFC, CIOE에서 1.6T 광엔진 양산 및 CPO·NPO 개발 현황 설명",
+        "summary": "공식 발표에서 1.6T 광엔진 양산을 명시하고 800G·1.6T 광연결 제품군을 소개했습니다. CPO·NPO는 개발·상용화를 추진하는 기술로 구분했습니다.",
+        "url": "https://www.tfcsz.com/en/news/1081.html",
+        "source": "TFC",
+        "relevance": "component"
+      }
+    ],
+    "hpe": [
+      {
+        "date": "2026-09-30",
+        "title": "HPE, Vultr에서 AMD Helios 시스템 12억달러 첫 수주",
+        "summary": "Vultr의 미국 데이터센터에 AMD Helios AI Rack by HPE를 공급하는 주문을 발표했습니다. 랙당 72 GPU와 6개 QFX5252 Ethernet scale-up 스위치 트레이를 포함하며 CPO 채택 여부는 이 발표에서 확정하지 않았습니다.",
+        "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-secures-its-first-amd-helios-order-in-12-billion-deal-with-vultr.html",
+        "source": "HPE",
+        "relevance": "component"
+      },
+      {
+        "date": "2026-09-02",
+        "title": "HPE·Oracle, AI 데이터센터 네트워킹 협력 확대",
+        "summary": "Oracle 글로벌 데이터센터의 HPE Juniper 라우팅·스위칭 플랫폼 도입과 지원 협력을 확대했습니다. RoCEv2 AI 백엔드 네트워크와 혼잡 관리·텔레메트리를 다루며, 다년간 도입 가능성을 설명한 발표입니다.",
+        "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-and-oracle-deepen-networking-collaboration-to-accelerate-gigawatt-scale-ai-infrastructure.html",
+        "source": "HPE",
+        "relevance": "keyword"
+      }
+    ],
+    "amd": [
+      {
+        "date": "2026-09-30",
+        "title": "AMD Helios 기반 HPE 시스템, Vultr의 12억달러 주문 확보",
+        "summary": "HPE가 AMD Helios AI Rack의 첫 주문을 발표했습니다. AMD와 HPE는 Vultr의 AI 학습·추론 인프라 구축을 지원하며, 주문을 완료된 설치 실적으로 해석하지 않습니다.",
+        "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-secures-its-first-amd-helios-order-in-12-billion-deal-with-vultr.html",
+        "source": "HPE 공식 발표",
+        "relevance": "ai"
+      }
+    ],
+    "nvidia": [
+      {
+        "date": "2026-09-10",
+        "title": "d-Matrix, NVIDIA NVLink Fusion 기반 XPU 랙 통합 추진",
+        "summary": "차세대 Raptor XPU를 NVLink scale-up·Spectrum-X scale-out 네트워크와 MGX 랙 생태계에 연결할 계획입니다. Vera CPU·ConnectX-9·BlueField-4 통합도 계획으로 제시했으며, CPO 출하 실적을 발표한 자료는 아닙니다.",
+        "url": "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/",
+        "source": "NVIDIA Blog",
+        "relevance": "component"
+      }
+    ],
+    "corning": [
+      {
+        "date": "2026-09-08",
+        "title": "Verizon·Corning, 2027~2032년 광섬유·연결 솔루션 장기 공급 계약",
+        "summary": "8,000만 마일 이상의 고밀도 광섬유 및 연결 솔루션을 대상으로 수십억달러 규모 계약을 발표했습니다. 광대역망 확장과 AI 데이터센터 간 장거리 백본 수요를 함께 지원합니다.",
+        "url": "https://www.corning.com/worldwide/en/about-us/news-events/news-releases/2026/09/verizon-and-corning-announce-multi-year-multi-billion-dollar-supply-agreement-for-broadband-expansion-and-next-gen-ai-infrastructure.html",
+        "source": "Corning",
+        "relevance": "component"
+      }
+    ],
+    "lightmatter": [
+      {
+        "date": "2026-03-11",
+        "title": "Lightmatter, 탈착형 FAU vClick Optics 공개",
+        "summary": "SENKO SEAT·MPC와 수직 expanded-beam 기술을 결합하고 ASE 첨단 패키징 공정 호환성을 제시했습니다. 제조사 시연 기준 삽입·재삽입 손실은 1.5 dB 미만으로, 최종 패키징 전 광엔진 검사를 지원합니다.",
+        "url": "https://lightmatter.co/press-release/lightmatter-unveils-vclick-optics-industry-first-detachable-fiber-array-unit-for-cpo-advanced-packaging-and-high-volume-production/",
+        "source": "Lightmatter",
+        "relevance": "component"
+      }
+    ],
+    "hfcl": [
+      {
+        "date": "2026-10-01",
+        "title": "HFCL, 영국 AI 데이터센터용 OptiQ AI 광연결 포트폴리오 소개",
+        "summary": "산업 매체는 HFCL이 IBR 케이블·광섬유 조립품·트렁크·카세트·패널 등을 OptiQ AI로 통합했다고 보도했습니다. 영국 데이터센터의 배선 밀도와 구축·유지보수 요구를 대상으로 합니다.",
+        "url": "https://www.intelligentdatacentres.com/2026/10/01/hfcl-brings-optiq-ai-optical-connectivity-portfolio-to-the-uks-ai-data-centre-buildout/",
+        "source": "Intelligent Data Centres",
+        "relevance": "component"
+      }
+    ],
+    "astera": [
+      {
+        "date": "2026-09-15",
+        "title": "Astera Labs, AI·클라우드용 Leo 메모리 컨트롤러 제품군 확대",
+        "summary": "Leo X-Series와 Scorpio X-Series Fabric Switch를 연계한 메모리 활용도 개선 방향을 발표했습니다. Agentic AI와 일반 클라우드 워크로드의 메모리 용량 수요를 대상으로 합니다.",
+        "url": "https://ir.asteralabs.com/news-releases/news-release-details/astera-labs-bolsters-leo-smart-memory-controller-family-agentic",
+        "source": "Astera Labs IR",
+        "relevance": "keyword"
+      }
+    ]
+  },
+  "displayDeduplication": [
+    {
+      "vendor": "coherent",
+      "announcement": "PhotonLink 2026-09-21",
+      "alias": "https://www.coherent.com/news/press-releases/launches-photonlink-integrated-optics-platform-ai-infrastructure",
+      "canonical": "https://ir.coherent.com/news-releases/news-release-details/coherent-launches-photonlinktm-integrated-optics-platform-ai"
+    },
+    {
+      "vendor": "lightmatter",
+      "announcement": "Open CPX MSA 2026-09-17",
+      "alias": "https://lightmatter.co/press-releases/",
+      "canonical": "https://lightmatter.co/press-release/lightmatter-joins-open-cpx-msa-introduces-the-industrys-first-bidirectional-cpx-optical-engine/"
+    }
+  ],
+  "verificationLimits": [
+    "All 99 registered vendors included in component, company-only and AI/data-center discovery. Search results are not proof of absence; undated, unrelated and duplicate candidates were not added.",
+    "Some dynamic IR calendars expose no event data in the retrieved HTML. Existing dates retained without claiming fresh confirmation; no inferred corporate dates added.",
+    "HFCL OptiQ uses a dated industry article after official-source search did not yield the specific announcement.",
+    "Astera item verified from official dated IR index and excerpt; article fetch returned HTTP 403.",
+    "Lightmatter vClick is an older high-relevance backfill, not an October announcement.",
+    "TFC ECOC publication date September 24 is distinguished from September 23 event completion.",
+    "Browser binary unavailable; validation covers JavaScript parsing, extracted runtime data/functions, static asset paths and deployment checks."
+  ]
+}
