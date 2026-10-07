@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-08",
+  "version": "v2.11.7",
+  "scope": "NVIDIA product expansion: NIC/SuperNIC and LinkX interconnect",
+  "recommendation": [
+    "Add a dedicated NIC/SuperNIC layer instead of hiding ConnectX under generic System/Networking.",
+    "Add a dedicated Interconnect/Cable layer for LinkX DAC/LACC/AOC/transceivers, QSA adapters, and breakout splitters.",
+    "Keep Spectrum-X/Quantum-X Photonics in System/Networking and cross-link NVIDIA into Optical Module."
+  ],
+  "products": [
+    {
+      "company": "NVIDIA",
+      "category": "NIC / SuperNIC",
+      "product": "ConnectX-9 SuperNIC",
+      "key_specs": "Ethernet/InfiniBand; 800 Gb/s adapter bandwidth; 1x800G or 2x400G; up to 8 split ports; PCIe Gen6 up to 48 lanes; OSFP224/QSFP112; RDMA/RoCEv2, NCCL, NIXL, GPUDirect",
+      "source": "https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-9-supernic-datasheet"
+    },
+    {
+      "company": "NVIDIA",
+      "category": "NIC",
+      "product": "ConnectX-7 400G Adapter",
+      "key_specs": "Ethernet/InfiniBand; 400 Gb/s total; 1/2/4 ports; PCIe Gen5 up to 32 lanes; HHHL/FHHL and OCP 3.0; RoCE, GPUDirect, NVMe/TCP acceleration",
+      "source": "https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-7-datasheet"
+    },
+    {
+      "company": "NVIDIA",
+      "category": "Interconnect / Cable",
+      "product": "LinkX cable accessories",
+      "key_specs": "QSA QSFP/QSFP-DD to SFP adapter family; MC6709309 MPO-12 to 8xLC passive splitter, 5/10/20/30/50m; supports legacy-to-high-speed Ethernet adaptation",
+      "source": "https://www.nvidia.com/ko-kr/networking/ethernet/cable-accessories/"
+    },
+    {
+      "company": "NVIDIA",
+      "category": "Optical Module / Interconnect",
+      "product": "LinkX Cables and Transceivers",
+      "key_specs": "100G/200G/400G/800G AI networking interconnect portfolio spanning DAC, LACC, optical transceivers and selected compatibility AOC",
+      "source": "https://www.nvidia.com/ko-kr/networking/interconnect/"
+    }
+  ]
+}
