@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-08",
+  "version": "v2.11.6",
+  "scope": "CPO product catalog and article refresh",
+  "products": [
+    {
+      "company": "Broadcom",
+      "product": "Tomahawk 6 – Davisson BCM78919",
+      "category": "Switch ASIC / CPO",
+      "highlights": "102.4 Tb/s; 16×6.4T optical engines; 200G/link; replaceable ELSFP",
+      "source": "https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches"
+    },
+    {
+      "company": "NVIDIA",
+      "product": "Spectrum-X Ethernet Photonics / Quantum-X800 Photonics",
+      "category": "System / CPO switch",
+      "highlights": "200G SerDes CPO; Spectrum-X up to 409.6 Tb/s; Quantum-X Q3450-LD 144×800G",
+      "source": "https://www.nvidia.com/en-us/networking/products/silicon-photonics/"
+    },
+    {
+      "company": "Coherent",
+      "product": "PhotonLink",
+      "category": "Integrated optics / optical engine / ELS",
+      "highlights": "CPO/NPO/chip-to-chip platform spanning generation, shaping, guide and detection",
+      "source": "https://www.coherent.com/networking/photonlink"
+    },
+    {
+      "company": "Lumentum",
+      "product": "DWDM ELSFP + VCSEL FOWLP engine",
+      "category": "ELS / optical engine",
+      "highlights": "OCI-MSA external laser source; VCSEL-based scale-up prototype",
+      "source": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-to-Demonstrate-DWDM-ELSFP-Laser-Module-for-OCI-MSA-Applications-at-ECOC-2026/default.aspx"
+    },
+    {
+      "company": "Molex",
+      "product": "VersaBeam Mini",
+      "category": "Connector / VSFF",
+      "highlights": "16-fiber EBO; up to 3,456 fibers/1RU",
+      "source": "https://www.molex.com/en-us/news/molex-announces-versabeam-mini-to-advance-optical-interconnects"
+    },
+    {
+      "company": "Corning",
+      "product": "CPO FlexConnect Fiber + MMC/PRIZM TMT",
+      "category": "Fiber / connector",
+      "highlights": "9.2 µm MFD @1310 nm; short-link MPI mitigation; expanded-beam blind-mate connectivity",
+      "source": "https://www.corning.com/microsites/coc/oem/documents/OEM-139-AEN.pdf"
+    },
+    {
+      "company": "Ciena",
+      "product": "Vesta 200 6.4T CPX",
+      "category": "Optical engine",
+      "highlights": "32 lanes; 6.4 Tb/s; O-band; Open CPX",
+      "source": "https://www.ciena.com/insights/infobriefs/vesta-200-6-4-t-cpx-optical-engine"
+    },
+    {
+      "company": "Furukawa Electric / Lightera",
+      "product": "Snap-Beam Connector",
+      "category": "Fiber-to-PIC / connector",
+      "highlights": "expanded-beam; magnetic detachable connection; reflow compatible; 8×40-channel demo",
+      "source": "https://www.prnewswire.com/news-releases/furukawa-electric-and-lighteras-snap-beam-connector-for-co-packaged-optics-wins-ecoc-fibre-infrastructure-innovation-award-2026-302886658.html"
+    },
+    {
+      "company": "US Conec",
+      "product": "PRIZM TMT / MMC ecosystem",
+      "category": "Expanded-beam connector",
+      "highlights": "multi-source expanded-beam ferrule framework",
+      "source": "https://www.usconec.com/media/h4zopm3k/us-conec-corning-fujikura-and-sumitomo-electric-joint-press-release_3-11-2026_final.pdf"
+    },
+    {
+      "company": "CIG",
+      "product": "1.6T + NPO/CPO roadmap",
+      "category": "Optical module / NPO",
+      "highlights": "1.6T production focus; ELSFP; 3.2T/6.4T/7.2T NPO/CPO R&D",
+      "source": "https://www.cigtech.com/"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-10-06",
+      "company": "CIG",
+      "title": "CIG and ml&s establish high-speed optical module and NPO production in Mexico",
+      "source": "https://www.businesswire.com/news/home/20261006889382/en/CIG-and-mls-Group-to-Establish-High-Speed-Optical-Module-Production-in-Arteaga-Coahuila-Mexico"
+    },
+    {
+      "date": "2026-10-06",
+      "company": "Marvell",
+      "title": "Marvell Investor Day 2026",
+      "source": "https://investor.marvell.com/news-events/ir-calendar/detail/20261006-marvell-investor-day-2026"
+    },
+    {
+      "date": "2026-10-02",
+      "company": "Ciena",
+      "title": "Ciena OCP Global Summit 2026 AI-ready connectivity showcase",
+      "source": "https://www.ciena.com/about/newsroom/press-releases/ciena-showcases-ai-ready-connectivity-expertise-for-scale-up-scale-out-and-scale-across-connectivity-at-ocp-global-summit-2026"
+    },
+    {
+      "date": "2026-09-22",
+      "company": "Furukawa / Corning / Ciena / Lumentum",
+      "title": "ECOC Exhibition Industry Awards 2026 CPO-related product winners",
+      "source": "https://www.ecocexhibition.com/industry-awards/"
+    }
+  ],
+  "note": "Prototype/roadmap entries are explicitly labeled as such and should not be treated as generally available production SKUs."
+}
