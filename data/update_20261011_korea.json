@@ -1,0 +1,47 @@
+{
+  "version": "2.13.0",
+  "date": "2026-10-11",
+  "scope": "Korean CPO-related startup and SME suppliers, including PM fiber and enabling equipment",
+  "method": "Distinguishes directly marketed CPO products from adjacent components and development-stage equipment. PMF and joint-development firms are not represented as qualified or mass-produced CPO suppliers.",
+  "companiesAdded": [
+    "Lessengers",
+    "FOSTEC",
+    "ADS Tech",
+    "OptoNest",
+    "InnoMetry",
+    "LaserCell"
+  ],
+  "companiesUpdated": [],
+  "keySources": [
+    {
+      "company": "OptoNest",
+      "region": "Korea",
+      "url": "https://www.optonest.com/e_sub2/special_fiber.php",
+      "claim": "Official PM fiber product page; stated applications include FOG and polarization-sensitive components. CPO qualification not stated."
+    },
+    {
+      "company": "FOSTEC",
+      "region": "Korea",
+      "url": "https://fostec.kr/user/product/cpo-interconnector",
+      "claim": "Official CPO interconnector product page; separate detachable solution page identifies silicon photonics/CPO applications."
+    },
+    {
+      "company": "Lessengers",
+      "region": "Korea",
+      "url": "https://lessengers.com/company/",
+      "claim": "Company describes CPO/NPO/OBO and optical transceiver products; distinguish platform/application positioning from shipping CPO engine."
+    },
+    {
+      "company": "ADS Tech",
+      "region": "Korea",
+      "url": "https://kind.krx.co.kr/",
+      "claim": "Investor materials describe CPO V-groove-to-PIC and receptacle alignment equipment."
+    },
+    {
+      "company": "InnoMetry and LaserCell",
+      "region": "Korea",
+      "url": "https://www.etnews.com/",
+      "claim": "Reported MOU-stage CPO module X-ray/CT inspection and area-laser bonding equipment development."
+    }
+  ]
+}
