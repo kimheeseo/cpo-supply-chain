@@ -1,0 +1,74 @@
+{
+  "version": "2.11.9",
+  "date": "2026-10-10",
+  "scope": "CIOE 2026 and OFC 2026 CPO supplier, product and article refresh",
+  "method": "Event participation is source-linked separately from product/demo claims; plans and demos are not labeled mass production.",
+  "companiesAdded": [
+    "HYC",
+    "Enlitech",
+    "LightSpeed Photonics",
+    "Photonect"
+  ],
+  "keySources": [
+    {
+      "company": "Accelink",
+      "event": "OFC 2026",
+      "url": "https://www.accelink.com/en/lighting_your_dreams/2033807728727584770.html",
+      "claim": "3.2T NPO optical engine demo"
+    },
+    {
+      "company": "YOFC",
+      "event": "OFC 2026",
+      "url": "https://en.yofc.com/view/3079.html",
+      "claim": "Hollow-core fiber and OIO prototype on exhibit"
+    },
+    {
+      "company": "TFC",
+      "event": "CIOE 2026",
+      "url": "https://www.tfcsz.com/en/news/1081.html",
+      "claim": "1.6T optical engine and CPO/NPO development"
+    },
+    {
+      "company": "HYC",
+      "event": "OFC 2026",
+      "url": "https://www.ofcconference.org/news-media/exhibitor-news/hyc-showcases-multi-core-fiber-and-cpo-interconnect-solutions-at-ofc-2026/",
+      "claim": "MCF and CPO passive interconnect portfolio"
+    },
+    {
+      "company": "OE Solutions",
+      "event": "OFC 2026",
+      "url": "https://www.ofcconference.org/news-media/exhibitor-news/oe-solutions-announces-23dbm-ultra-high-power-cooled-elsfp;-sampling-begins-q3-2026/",
+      "claim": "23 dBm cooled O-band ELSFP; sampling expected Q3 2026"
+    },
+    {
+      "company": "Enlitech",
+      "event": "OFC 2026",
+      "url": "https://www.ofcconference.org/news-media/exhibitor-news/enlitech-launches-night-jar-for-cpo-ai-optical-yield-tracking/",
+      "claim": "Night Jar SiPh wafer test system"
+    },
+    {
+      "company": "LightSpeed Photonics",
+      "event": "OFC 2026",
+      "url": "https://www.ofcconference.org/news-media/exhibitor-news/lightspeed-photonics-launches-industry-s-first-solderable%E2%80%9D-near-packaged-optical-interconnect-techn/",
+      "claim": "LightKonnect solderable NPO optical interconnect"
+    },
+    {
+      "company": "Photonect",
+      "event": "OFC 2026",
+      "url": "https://www.photonectcorp.com/post/photonect-to-launch-pix-attach-laser-fusion-system-in-march-2026",
+      "claim": "PIX-Attach laser-fusion fiber attach system"
+    },
+    {
+      "company": "OpenLight",
+      "event": "OFC 2026",
+      "url": "https://www.ofcconference.org/news-media/exhibitor-news/openlight-introduces-3-2t-dr8-silicon-photonics-pic-s-as-well-as-1-6t-dr8-lro-and-lpo-variants/",
+      "claim": "3.2T DR8 SiPh PIC and 1.6T LRO/LPO variants"
+    },
+    {
+      "company": "Marvell and Lumentum",
+      "event": "OFC 2026",
+      "url": "https://www.ofcconference.org/news-media/exhibitor-news/marvell-and-lumentum-to-demonstrate-optical-circuit-switching-for-next-generation-ai-scale-up-infra/",
+      "claim": "OCS and optical interconnect demos"
+    }
+  ]
+}
