@@ -1,0 +1,96 @@
+{
+  "version": "2.12.0",
+  "date": "2026-10-11",
+  "scope": "United States, China, and Europe CPO startup and scale-up supplier registry",
+  "method": "Company origin and direct CPO product status are labeled separately; pre-commercial roadmap, evaluation, and CPO-enabling suppliers are not represented as mass-produced CPO vendors.",
+  "companiesAdded": [
+    "Polaris Electro-Optics",
+    "Lingxi Photonics (灵熹光子)",
+    "LightEpoch (光纪元)",
+    "LightLinkTech (光联芯科)",
+    "Nexilumen (光擎源)",
+    "Lightium",
+    "NcodiN",
+    "Solinide Photonics",
+    "ICON Photonics"
+  ],
+  "companiesUpdated": [
+    "Xscape Photonics",
+    "Scintil Photonics",
+    "Pilot Photonics"
+  ],
+  "keySources": [
+    {
+      "company": "Xscape Photonics",
+      "region": "United States",
+      "url": "https://www.xscapephotonics.com/falconx",
+      "claim": "FalconX comb-laser ELSFP; company lists CPO and AI interconnect applications."
+    },
+    {
+      "company": "Polaris Electro-Optics",
+      "region": "United States",
+      "url": "https://polariseo.com/",
+      "claim": "Company states integrated photonics addresses NPO and CPO applications."
+    },
+    {
+      "company": "Lingxi Photonics",
+      "region": "China",
+      "url": "https://www.puhuacapital.com/index.php/news/info/279",
+      "claim": "Investor announcement identifies CPO/OIO optical-engine startup founded in 2025."
+    },
+    {
+      "company": "LightEpoch",
+      "region": "China",
+      "url": "https://www.lightepoch.com/",
+      "claim": "Company states 2026 founding; NPO first, CPO roadmap. Current validation stage labeled."
+    },
+    {
+      "company": "LightLinkTech",
+      "region": "China",
+      "url": "https://lightlinktech.net/h-col-110.html",
+      "claim": "Company describes optical I/O and CPO/OIO optical-engine platform."
+    },
+    {
+      "company": "Nexilumen",
+      "region": "China",
+      "url": "https://www.nexilumen.com/",
+      "claim": "Company describes MicroLED optical I/O and CPO-era systems; seed-stage."
+    },
+    {
+      "company": "Scintil Photonics",
+      "region": "France",
+      "url": "https://www.scintil-photonics.com/post/scintil-photonics-raises-58m-to-scale-integrated-photonics-for-ai-factories",
+      "claim": "Single-chip DWDM light engine aligned with next-generation CPO."
+    },
+    {
+      "company": "Pilot Photonics",
+      "region": "Ireland",
+      "url": "https://cocopop.pilotphotonics.com/",
+      "claim": "EU-backed comb-based external laser source for CPO/OIO."
+    },
+    {
+      "company": "Lightium",
+      "region": "Switzerland",
+      "url": "https://lightium.com/",
+      "claim": "Swiss startup and TFLN PIC foundry; included as an enabling photonics supplier."
+    },
+    {
+      "company": "NcodiN",
+      "region": "France",
+      "url": "https://www.leti-cea.com/cea-tech/leti/english/Pages/What%27s-On/Press%20release/CEA-Leti-and-NcodiN.aspx",
+      "claim": "French deep-tech startup developing nanolaser-enabled optical interposer for AI links."
+    },
+    {
+      "company": "Solinide Photonics",
+      "region": "Sweden",
+      "url": "https://solinide.com/about-us/",
+      "claim": "Pre-seed startup developing SiN microcomb source for CPO."
+    },
+    {
+      "company": "ICON Photonics",
+      "region": "France",
+      "url": "https://icon-photonics.com/",
+      "claim": "Startup developing wafer-level photonic packaging and fiber-to-chip interfaces applicable to CPO."
+    }
+  ]
+}
