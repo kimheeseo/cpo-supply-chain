@@ -2,14 +2,20 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.11.9
+- **Current release:** v2.13.1
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.11.9.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.11.3.txt)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.1.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.1.txt)
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.13.1 — 2026-10-12
+
+- Added officially announced Lumentum Q1 FY2027 earnings webcast on November 5; kept corporate IR dates separate from exhibitions and restricted corporate display to dates after today (maximum five).
+- Added source-linked news for Sumitomo Electric's PRISM Lab, Lightera's second-generation HCF integration, and Lumentum's earnings-date notice. Preserved existing product, vendor, stock, and 3D data.
+- Updated the versioned static runtime and GitHub Pages launcher without changing Render services.
 
 ### version: 2.11.9 — 2026-10-10
 
@@ -65,7 +71,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned static runtime `app.v2.11.3.txt`.
+- The release launcher loads the versioned static runtime `app.v2.13.1.txt`.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 

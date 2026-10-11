@@ -1,0 +1,60 @@
+{
+  "version": "2.13.1",
+  "date": "2026-10-12",
+  "baseCommit": "f9b2f2f623d31835b6d828288d435c83a713a890",
+  "scope": "Corporate IR events and CPO-adjacent official supplier news",
+  "companiesReviewed": "16 core companies plus existing registered supplier news; official source priority",
+  "corporateEventsNew": 1,
+  "corporateEventsChanged": 0,
+  "corporateEvents": [
+    {
+      "start": "2026-11-05",
+      "end": "2026-11-05",
+      "region": "corporate",
+      "company": "Lumentum",
+      "name": "Q1 FY2027 Financial Results / Earnings Webcast (14:00 PT)",
+      "where": "San Jose / webcast",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx"
+    }
+  ],
+  "irBriefingsUpdated": [],
+  "irBriefingsRetained": 16,
+  "newsUpdatedCompanies": [
+    "sumitomo",
+    "furukawa",
+    "lumentum"
+  ],
+  "curatedArticlesAdded": 3,
+  "news": [
+    {
+      "id": "sumitomo",
+      "date": "2026-10-02",
+      "title": "Sumitomo Electric, PRISM Lab. 광커넥터·초정밀 광접속 연구개발 시설 개설",
+      "summary": "2026년 9월 요코하마 사업장에 5,500㎡ 규모 연구시설을 가동했습니다. 진동·온습도 제어와 정밀 분석 장비를 갖추고 광커넥터 소형화 및 비용 절감 기술을 개발합니다. CPO 전용 연구시설이라고 발표하지는 않았습니다.",
+      "url": "https://sumitomoelectric.com/jp/press/2026/10/prs109",
+      "source": "Sumitomo Electric",
+      "relevance": "component"
+    },
+    {
+      "id": "furukawa",
+      "date": "2026-09-21",
+      "title": "Furukawa 계열 Lightera, 2세대 HCF·MFA·FITEL 융착 통합 생태계 공개",
+      "summary": "2세대 Antiresonant HCF는 C/L-band에서 감쇠 0.5 dB/km 이하, 실리카 광섬유 대비 지연 최소 30% 감소를 제시했습니다. 장거리 저지연 광연결 기술로, CPO 전용 제품은 아닙니다.",
+      "url": "https://lightera.com/n/lightera-launches-second-generation-antiresonant-hollow-core-fiber-and-integrated-hcf-ecosystem/",
+      "source": "Lightera (Furukawa Electric Group)",
+      "relevance": "keyword"
+    },
+    {
+      "id": "lumentum",
+      "date": "2026-10-05",
+      "title": "Lumentum, FY2027 1분기 실적발표일 11월 5일로 확정",
+      "summary": "2026년 11월 5일 장 마감 후 분기 실적을 발표하고 같은 날 오후 2시(PT) 웹캐스트를 진행합니다. CPO 레이저·ELS 실적은 발표 전이므로 수치나 수주를 예측하지 않습니다.",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx",
+      "source": "Lumentum IR",
+      "relevance": "company"
+    }
+  ],
+  "displayPolicy": "Corporate IR events strictly after today's Korea date, maximum 5; exhibitions independently listed; news relevance-ranked then newest-first with URL deduplication and max 5.",
+  "verification": "Inline JS scripts parsed successfully; index references app.v2.13.1.txt; existing HTML structure and non-target data retained; GitHub Pages deployment checked separately.",
+  "render": "Not used or modified"
+}
