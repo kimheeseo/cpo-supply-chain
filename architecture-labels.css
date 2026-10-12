@@ -1,0 +1,32 @@
+/* Main 2D architecture labels: five times the original 8px / mobile 7px. */
+.reference-image-stage[data-passive-2d="true"] .cpo2d-label{
+  font-size:40px;
+  line-height:1.12;
+  padding:6px 10px;
+  border-width:2px;
+  border-radius:14px;
+  max-width:24%;
+  box-sizing:border-box;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  text-align:center;
+  justify-content:center;
+  background:rgba(5,20,36,.92);
+  box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+/* Leave enough room at both image edges for larger multilingual names. */
+.reference-image-stage[data-passive-2d="true"] [data-diagram-label="connector"]{left:13%!important;max-width:24%}
+.reference-image-stage[data-passive-2d="true"] [data-diagram-label="laser"]{left:84%!important;max-width:28%}
+.reference-image-stage[data-passive-2d="true"] [data-diagram-label="fau"]{left:88%!important;max-width:20%}
+@media(max-width:620px){
+  .reference-image-stage[data-passive-2d="true"] .cpo2d-label{font-size:35px;padding:4px 6px}
+}
+/* Keep full-size labels readable on narrow screens by panning the diagram. */
+.cpo2d-label-scroll{width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-color:#8ba7c2 #eaf1f7}
+.cpo2d-label-scroll .reference-image-stage[data-passive-2d="true"]{min-width:1200px}
+@media(max-width:620px){
+  .cpo2d-label-scroll .reference-image-stage[data-passive-2d="true"]{min-width:1000px}
+}
+/* Separate the two upper callouts from the central ASIC at the enlarged size. */
+.reference-image-stage[data-passive-2d="true"] [data-diagram-label="opticalFiber"]{top:15%!important}
+.reference-image-stage[data-passive-2d="true"] [data-diagram-label="opticalEngine"]{top:33%!important}
