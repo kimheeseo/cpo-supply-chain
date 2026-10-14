@@ -1,0 +1,77 @@
+{
+  "version": "2.13.3",
+  "date": "2026-10-14",
+  "scope": "Major-events accordion behavior and CPO-related public-policy tracker for United States, China, Japan, Korea and Europe",
+  "uiChanges": [
+    "Renamed CPO event panel to 주요 행사 일정.",
+    "기업 IR / 발표, 국내, 국외 and 정책 buttons are all inactive on initial load.",
+    "The panel shows no schedule cards until a button is selected; selecting a button shows only that category, and selecting it again closes the category.",
+    "Added 정책 with country subfilters: 전체, 미국, 중국, 일본, 한국, 유럽.",
+    "Policy entries distinguish direct CPO measures from CPO-enabling photonics / advanced-packaging / optical-infrastructure policy."
+  ],
+  "policies": [
+    {
+      "region": "미국",
+      "date": "2025-01-16",
+      "classification": "CPO 기반",
+      "title": "CHIPS NAPMP advanced packaging final awards",
+      "source": "U.S. Department of Commerce",
+      "url": "https://www.commerce.gov/news/press-releases/2025/01/us-department-commerce-announces-14-billion-final-awards-support-next",
+      "note": "$1.4B final awards for advanced packaging; includes AI/HPC/data-center substrates, ASU photonics core facility and pilot-line capability. Not a CPO-only program."
+    },
+    {
+      "region": "미국",
+      "date": "2025-01-17",
+      "classification": "CPO 기반",
+      "title": "CHIPS incentives for photonic IC manufacturing and packaging",
+      "source": "U.S. Department of Commerce",
+      "url": "https://www.commerce.gov/news/press-releases/2025/01/us-department-commerce-announces-chips-incentives-awards-corning",
+      "note": "Supports Infinera InP PIC manufacturing/test/packaging and GlobalFoundries photonic-IC advanced packaging. Not a CPO-only program."
+    },
+    {
+      "region": "중국",
+      "date": "2025-09-04",
+      "classification": "CPO 직접",
+      "title": "电子信息制造业2025－2026年稳增长行动方案",
+      "source": "MIIT / State Administration for Market Regulation",
+      "url": "https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20258/4876d45feab148a5a0b02177334aab0d.pdf",
+      "note": "Explicitly calls for increased R&D investment in high-speed optical chips and 光电共封, and integration of optical and electrical architecture ecosystems."
+    },
+    {
+      "region": "일본",
+      "date": "2026-10-14",
+      "classification": "CPO 직접",
+      "title": "Green Innovation Fund — next-generation green data center / photonics-electronics convergence",
+      "source": "METI / NEDO",
+      "url": "https://green-innovation.nedo.go.jp/project/building-next-generation-digital-infrastructure/scheme/",
+      "note": "Project includes CPO application technology, multimode CPO module technology and single-mode CPO transmission technology in optical smart NIC R&D."
+    },
+    {
+      "region": "한국",
+      "date": "2026-01-14",
+      "classification": "CPO 기반",
+      "title": "차세대광기반연산반도체핵심기술개발사업",
+      "source": "과학기술정보통신부",
+      "url": "https://m.korea.kr/news/policyNewsView.do?newsId=148957965",
+      "note": "New 2026 R&D program for optical-computing semiconductor core technologies alongside advanced-packaging R&D; not a CPO-only program."
+    },
+    {
+      "region": "한국",
+      "date": "2026-08-27",
+      "classification": "CPO 기반",
+      "title": "AI 시대 통신인프라 투자 촉진 민·관협의체",
+      "source": "과학기술정보통신부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775728&pWise=sub&pWiseSub=J2",
+      "note": "Includes AIDC and optical communications in next-generation communications infrastructure and plans an investment/regulatory improvement package."
+    },
+    {
+      "region": "유럽",
+      "date": "2025-04-25",
+      "classification": "CPO 기반",
+      "title": "PIXEurope Advanced Photonic Integrated Circuits Pilot Line",
+      "source": "EU Chips Joint Undertaking",
+      "url": "https://www.chips-ju.europa.eu/NewsDetails/?id=545344c5-cf21-f111-8342-000d3a27d474",
+      "note": "Open-access advanced PIC pilot line covering fabrication, integration, packaging, testing and scaling; relevant enabling infrastructure rather than a CPO-only policy."
+    }
+  ]
+}
