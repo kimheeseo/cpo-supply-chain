@@ -2,14 +2,21 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.13.2
+- **Current release:** v2.13.3
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.2.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.2.txt)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.3.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.3.txt)
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.13.3 — 2026-10-14
+
+- Renamed the CPO event panel to `주요 행사 일정` and changed the event buttons to closed-by-default accordion behavior: 기업 IR / 발표, 국내, 국외 are inactive until selected, and only the selected category is displayed.
+- Added a `정책` button with country filters for 미국, 중국, 일본, 한국 and 유럽. Policy cards link to official government/public-program sources and distinguish direct CPO measures from broader CPO-enabling photonics, advanced-packaging and optical-infrastructure measures.
+- Added source records for U.S. CHIPS advanced packaging/photonics, China MIIT `光电共封`, Japan NEDO Green Innovation Fund CPO/optical-smart-NIC R&D, Korea optical-computing semiconductor/AIDC-optical infrastructure programs, and EU PIXEurope.
+- Source/verification record: `data/update_20261014_policy.json`.
 
 ### version: 2.13.2 — 2026-10-14
 
@@ -78,7 +85,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned static runtime `app.v2.13.2.txt`.
+- The release launcher loads the versioned static runtime `app.v2.13.3.txt`.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 
