@@ -1,6 +1,6 @@
-/* Main 2D architecture labels: 70% of the previous 40px / mobile 35px. */
+/* Main 2D architecture labels: 60% of the immediately previous label size. */
 .reference-image-stage[data-passive-2d="true"] .cpo2d-label{
-  font-size:28px;
+  font-size:16.8px;
   line-height:1.12;
   padding:6px 10px;
   border-width:2px;
@@ -19,7 +19,7 @@
 .reference-image-stage[data-passive-2d="true"] [data-diagram-label="laser"]{left:84%!important;max-width:28%}
 .reference-image-stage[data-passive-2d="true"] [data-diagram-label="fau"]{left:88%!important;max-width:20%}
 @media(max-width:620px){
-  .reference-image-stage[data-passive-2d="true"] .cpo2d-label{font-size:24.5px;padding:4px 6px}
+  .reference-image-stage[data-passive-2d="true"] .cpo2d-label{font-size:14.7px;padding:4px 6px}
 }
 /* Keep full-size labels readable on narrow screens by panning the diagram. */
 .cpo2d-label-scroll{width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-color:#8ba7c2 #eaf1f7}
