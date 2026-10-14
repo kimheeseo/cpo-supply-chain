@@ -2,14 +2,21 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.13.1
+- **Current release:** v2.13.2
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.1.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.1.txt)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.2.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.2.txt)
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.13.2 — 2026-10-14
+
+- Reduced the text size of labels inside the main passive 2D CPO image to 60% of the previous size while keeping the image itself unchanged and non-interactive.
+- Refreshed source-linked products for US, China, Korea and Japan across large enterprises and startups/SMEs, including NVIDIA, Ayar Labs, OpenLight, Avicena, Accelink, HG Genuine, Lessengers, FOSTEC, OE Solutions, AIO Core and THine Electronics. Demo/evaluation/roadmap status is explicitly distinguished from production.
+- Added HG Genuine, AIO Core and THine Electronics to the supplier registry, and normalized country names so equivalent labels such as 미국/美国/美國 and 중국/中国/中國 are merged into one country entry.
+- Source/verification record: `data/update_20261014.json`.
 
 ### version: 2.13.1 — 2026-10-12
 
@@ -71,7 +78,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned static runtime `app.v2.13.1.txt`.
+- The release launcher loads the versioned static runtime `app.v2.13.2.txt`.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 
