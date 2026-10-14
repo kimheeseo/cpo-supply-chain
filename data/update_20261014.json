@@ -1,0 +1,108 @@
+{
+  "version": "2.13.2",
+  "date": "2026-10-14",
+  "scope": "Latest CPO / optical-interconnect product refresh for United States, China, Korea and Japan; canonical country labels; 2D label-size reduction",
+  "uiChanges": [
+    "Main passive 2D architecture label font size reduced to 60% of the previous size.",
+    "Country labels are canonicalized so 미국/美国/美國 and 중국/中国/中國 no longer appear as separate countries."
+  ],
+  "companiesAdded": [
+    "HG Genuine (华工正源)",
+    "AIO Core",
+    "THine Electronics"
+  ],
+  "companiesUpdated": [
+    "NVIDIA",
+    "Ayar Labs",
+    "OpenLight",
+    "Avicena",
+    "Accelink Technologies",
+    "Lingxi Photonics",
+    "LightLinkTech",
+    "Lessengers",
+    "FOSTEC",
+    "OE Solutions",
+    "NTT Innovative Devices"
+  ],
+  "sourcePolicy": "Official company/product pages were preferred. Demo, evaluation-kit, qualification-sample and roadmap status are explicitly labeled and are not represented as mass production unless the source says so.",
+  "keySources": [
+    {
+      "country": "미국",
+      "company": "NVIDIA",
+      "product": "Spectrum-X Ethernet Photonics SN6800 / Quantum-X Photonics",
+      "url": "https://www.nvidia.com/en-us/networking/products/silicon-photonics/"
+    },
+    {
+      "country": "미국",
+      "company": "Ayar Labs",
+      "product": "TeraPHY optical I/O chiplet / SuperNova external light source",
+      "url": "https://ayarlabs.com/teraphy/"
+    },
+    {
+      "country": "미국",
+      "company": "OpenLight",
+      "product": "3.2T DR8 SiPh PIC / 1.6T DR8 LRO-LPO",
+      "url": "https://openlightphotonics.com/newsroom/openlight-introduces-3-2t-dr8-silicon-photonics-pics-as-well-as-1-6t-dr8-lro-and-lpo-variants"
+    },
+    {
+      "country": "미국",
+      "company": "Avicena",
+      "product": "1 Tb/s LightBundle evaluation kit / connectorized microLED link",
+      "url": "https://avicena.tech/avicena-to-demonstrate-worlds-first-connectorized-microled-optical-interconnect-for-ai-infrastructure-at-ecoc-2026/"
+    },
+    {
+      "country": "중국",
+      "company": "Accelink Technologies",
+      "product": "6.4T NPO optical engine / 3.2T verified NPO system",
+      "url": "https://www.accelink.com/en/lighting_your_dreams/2096199655745421313.html"
+    },
+    {
+      "country": "중국",
+      "company": "HG Genuine",
+      "product": "3.2T NPO optical engine + ELSFP",
+      "url": "https://www.genuine-opto.com/gsxw/489.jhtml"
+    },
+    {
+      "country": "중국",
+      "company": "LightLinkTech",
+      "product": "Optical I/O / CPO-OIO chip-level interconnect platform",
+      "url": "https://lightlinktech.net/"
+    },
+    {
+      "country": "한국",
+      "company": "Lessengers",
+      "product": "1.6T OSFP 2xSR4 / detachable 800G NPO / DOW",
+      "url": "https://lessengers.com/"
+    },
+    {
+      "country": "한국",
+      "company": "FOSTEC",
+      "product": "Detachable Solution / Fiber Array Assembly / CPO Interconnector",
+      "url": "https://www.fostec.kr/user/product/detachable-solution"
+    },
+    {
+      "country": "한국",
+      "company": "OE Solutions",
+      "product": "1.6T OSFP / 1311 nm ELSFP",
+      "url": "https://oesolutions.com/ko/product-type/optical-transceivers/"
+    },
+    {
+      "country": "일본",
+      "company": "AIO Core",
+      "product": "IOCore PAA-XW8001 / Embedded Optical Module",
+      "url": "https://www.aiocore.com/products"
+    },
+    {
+      "country": "일본",
+      "company": "THine Electronics",
+      "product": "ZERO EYE SKEW DSP-free optical chipset for LPO/CPO",
+      "url": "https://www.thine.co.jp/en/news/detail/id=4980"
+    },
+    {
+      "country": "일본",
+      "company": "NTT Innovative Devices",
+      "product": "Optical/electrical integrated devices / 6.4T optical-engine exhibit",
+      "url": "https://www.ntt-innovative-devices.com/en/"
+    }
+  ]
+}
