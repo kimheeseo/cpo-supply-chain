@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-16",
+  "official_updates": [
+    {
+      "company": "TSMC",
+      "date": "2026-10-15",
+      "title": "Q3 2026 results",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2026/q3"
+    },
+    {
+      "company": "Lumentum",
+      "date": "2026-10-12",
+      "title": "1060nm VCSEL PCIe over optics demo",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Astera-Labs-and-Corning-to-Demonstrate-1060-nm-VCSEL-Based-PCIe-over-Optics-for-AI-Rack-Scale-Connectivity-at-the-2026-OCP-Global-Summit/default.aspx"
+    },
+    {
+      "company": "Prysmian",
+      "date": "2026-10-13",
+      "title": "Xtera acquisition",
+      "url": "https://www.prysmian.com/en/media/press-releases/prysmian-completes-xtera-acquisition-and-accelerates-expansion-in-submarine-telecom"
+    }
+  ],
+  "status": "source verified, app not updated"
+}
