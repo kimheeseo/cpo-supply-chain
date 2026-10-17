@@ -2,14 +2,23 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.13.3
+- **Current release:** v2.13.8 (v2.13.7 base runtime + 2026-10-17 interaction enhancement)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.3.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.3.txt)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with [assembly-explorer-20261017.js](./assembly-explorer-20261017.js) and [CSS](./assembly-explorer-20261017.css)
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.13.8 — 2026-10-17
+
+- CPO Assembly(3D): show ten clickable, projected CAD-group name tags directly over the Three.js assembly. Clicking any tag or original mesh highlights the corresponding group and immediately displays its name; the tags remain usable in **Assembly View**, not only in exploded/detail mode. Labels can be hidden.
+- CPO Assembly(2D): add **동작 원리 · 레이저 경로** play/stop and step-by-step controls. Illustrate ELS → PM fiber → PIC/modulator → FAU → SM harness → connector with differentiated CW input and modulated output beams, including a clear conceptual-not-to-scale note and reduced-motion support.
+- Korea sales/support: add contextual **Optical Fiber → Corning → 한국코닝·공식 Distributor·확인 필요 취급처** drilldown, source/status badges and filters (Korea subsidiary 1, Corning-listed distributors 5, third-party reported reseller 1).
+- Keep the official Korea Corning distributor roster separate from Namhae ENG, whose Corning product handling is reported by a third party but whose current official Corning distributor status is not confirmed.
+- Current launcher labels **국내 영업업체 / 국가별 업체** remain unchanged, and the core supplier registry/3D geometry remains preserved.
+- Sources and role definitions: [data/korea_corning_channels_20261017.json](./data/korea_corning_channels_20261017.json). The extension is isolated to separate JS/CSS to avoid rewriting the 2.13.7 Base64 app payload.
 
 ### version: 2.13.3 — 2026-10-14
 
@@ -85,7 +94,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned static runtime `app.v2.13.3.txt`.
+- The release launcher loads the versioned base runtime `app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css` enhancements.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 
