@@ -2,7 +2,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.14.1 (v2.13.7 base runtime + 2026-10-17 CPO path, Korea channel, news, and weekly brief enhancement)
+- **Current release:** v2.14.2 (v2.13.7 base runtime + 2026-10-17 market-signal readability enhancement)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
@@ -10,6 +10,12 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.14.2 — 2026-10-17
+
+- Replaced the compact weekly article cards with a readable **CPO 시장 판단** brief. Every source-linked card now separates announcement stage, affected components, disclosed production evidence, and implication.
+- Added `전체 · 상용화 · 기술/제품 · 공급망/광섬유` lens filters. A production tag is intentionally withheld unless the cited source publishes customer, shipment, volume-production, or equivalent evidence.
+- Added the audit record [data/market_signals_20261017.json](./data/market_signals_20261017.json). Existing event/IR/domestic/overseas/policy filters remain below this panel.
 
 ### version: 2.14.1 — 2026-10-17
 

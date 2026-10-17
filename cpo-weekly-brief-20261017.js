@@ -1,31 +1,35 @@
-/* CPO Supply Chain v2.14.1 · top-of-schedule weekly technology brief. */
+/* CPO Supply Chain v2.14.2 · readable market-signal brief for the event area. */
 (function(){
   'use strict';
   if(window.__cpoWeeklyBrief20261017)return;
   window.__cpoWeeklyBrief20261017=true;
-
   var trends=[
-    {date:'2026.10.13',type:'시스템',title:'Wiwynn·Ayar·GUC, CPO 통합 시스템 라이브 시연',summary:'ASIC·광엔진·외부광원과 상태 텔레메트리를 한 시스템으로 검증했습니다.',insight:'시사점 · CPO 경쟁이 광소자 단품에서 패키징·냉각·운영 검증으로 넓어지고 있습니다.',source:'Wiwynn 공식',url:'https://www.wiwynn.com/news/wiwynn-ayar-labs-and-guc-advance-co-packaged-optics-with-live-demonstration-of-integrated-optical-compute-system-at-ocp-global-summit-2026'},
-    {date:'2026.09.21',type:'광엔진',title:'Coherent, PhotonLink 통합 광학 플랫폼 공개',summary:'레이저·실리콘포토닉스·광섬유·검출기와 조립·시험 역량을 CPO/NPO용으로 통합했습니다.',insight:'시사점 · 부품별 최적화보다 end-to-end 조립·시험 공급능력이 중요해지고 있습니다.',source:'Coherent 공식',url:'https://ir.coherent.com/news-releases/news-release-details/coherent-launches-photonlinktm-integrated-optics-platform-ai'},
-    {date:'2026.09.21',type:'광섬유',title:'Lightera, 2세대 Hollow-Core Fiber 생태계 발표',summary:'지연·용량 민감 AI/DCI 구간을 겨냥한 HCF와 연계 생태계를 발표했습니다.',insight:'시사점 · CPO 패키지 밖 연결 구간에서도 저지연 광전송의 선택지가 확대되고 있습니다.',source:'Lightera 공식',url:'https://lightera.com/n/lightera-launches-second-generation-antiresonant-hollow-core-fiber-and-integrated-hcf-ecosystem/'}
+    {date:'2026.10.13',stage:'통합 시스템 데모',stageClass:'demo',title:'Wiwynn·Ayar·GUC, CPO 통합 시스템 라이브 시연',summary:'ASIC·광엔진·외부광원과 상태 텔레메트리를 한 시스템으로 검증했습니다.',impact:'ELS · PIC · ASIC · 패키징/냉각',production:'공개 발표에서 고객·출하량은 미공개',insight:'CPO 검증 범위가 광소자 단품에서 패키징·냉각·운영으로 확대되고 있습니다.',lenses:['commercial','technology','supply'],source:'Wiwynn 공식',url:'https://www.wiwynn.com/news/wiwynn-ayar-labs-and-guc-advance-co-packaged-optics-with-live-demonstration-of-integrated-optical-compute-system-at-ocp-global-summit-2026'},
+    {date:'2026.09.21',stage:'통합 플랫폼 공개',stageClass:'platform',title:'Coherent, PhotonLink 통합 광학 플랫폼 공개',summary:'레이저·실리콘포토닉스·광섬유·검출기와 조립·시험 역량을 CPO/NPO용으로 통합했습니다.',impact:'Laser · SiPh · Fiber attach · Assembly/Test',production:'특정 CPO 고객·양산 물량은 확인 필요',insight:'부품별 성능뿐 아니라 end-to-end 조립·시험 공급능력이 경쟁축이 됩니다.',lenses:['commercial','technology','supply'],source:'Coherent 공식',url:'https://ir.coherent.com/news-releases/news-release-details/coherent-launches-photonlinktm-integrated-optics-platform-ai'},
+    {date:'2026.09.21',stage:'제품·생태계 발표',stageClass:'ecosystem',title:'Lightera, 2세대 Hollow-Core Fiber 생태계 발표',summary:'지연·용량 민감 AI/DCI 구간을 겨냥한 HCF와 연계 생태계를 발표했습니다.',impact:'HCF · DCI cable · AI cluster interconnect',production:'CPO 직접 적용·국내 조달 가능성은 별도 확인 필요',insight:'CPO 패키지 밖 연결 구간에서도 저지연 광전송 선택지가 확대됩니다.',lenses:['technology','supply'],source:'Lightera 공식',url:'https://lightera.com/n/lightera-launches-second-generation-antiresonant-hollow-core-fiber-and-integrated-hcf-ecosystem/'}
   ];
-
+  var labels={all:'전체',commercial:'상용화',technology:'기술/제품',supply:'공급망/광섬유'};
+  function escapeHtml(value){return String(value||'').replace(/[&<>"']/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]})}
+  function signalCard(item){
+    return '<a class="market-signal-card" data-market-lenses="'+item.lenses.join(' ')+'" href="'+item.url+'" target="_blank" rel="noopener">'+
+      '<span class="market-signal-top"><em class="market-stage '+item.stageClass+'">'+item.stage+'</em><time datetime="'+item.date.replace(/\./g,'-')+'">'+item.date+'</time></span>'+ 
+      '<b>'+escapeHtml(item.title)+'</b><span class="market-signal-summary">'+escapeHtml(item.summary)+'</span>'+
+      '<span class="market-signal-meta"><strong>영향 부품</strong>'+escapeHtml(item.impact)+'</span>'+
+      '<span class="market-signal-meta market-signal-check"><strong>양산 판단</strong>'+escapeHtml(item.production)+'</span>'+
+      '<span class="market-signal-insight"><strong>시사점</strong>'+escapeHtml(item.insight)+'</span><span class="market-signal-source">'+item.source+' ↗</span></a>';
+  }
   function build(){
     if(document.getElementById('weeklyTrendBrief'))return;
-    var filter=document.getElementById('eventFilter');
-    if(!filter)return;
-    var section=document.createElement('section');
-    section.className='weekly-trend-brief';
-    section.id='weeklyTrendBrief';
-    section.setAttribute('aria-label','이번 주 CPO 기술 동향');
-    var cards=trends.map(function(item){
-      return '<a class="weekly-trend-card" href="'+item.url+'" target="_blank" rel="noopener">'+
-        '<span class="weekly-trend-top"><em>'+item.type+'</em><time datetime="'+item.date.replaceAll('.','-')+'">'+item.date+'</time></span>'+ 
-        '<b>'+item.title+'</b><span class="weekly-trend-summary">'+item.summary+'</span>'+ 
-        '<span class="weekly-trend-insight">'+item.insight+'</span><span class="weekly-trend-source">'+item.source+' ↗</span></a>';
-    }).join('');
-    section.innerHTML='<div class="weekly-trend-head"><div><b>이번 주 CPO 동향</b><span>3개 핵심 업데이트 · 공식 발표 기준</span></div><span class="weekly-trend-date">2026.10.17 기준</span></div><div class="weekly-trend-list">'+cards+'</div>';
-    filter.parentNode.insertBefore(section,filter);
+    var eventFilter=document.getElementById('eventFilter');if(!eventFilter)return;
+    var section=document.createElement('section');section.className='market-brief';section.id='weeklyTrendBrief';section.setAttribute('aria-label','이번 주 CPO 시장 판단');
+    var controls=Object.keys(labels).map(function(key){return '<button type="button" class="market-lens-btn" data-market-lens="'+key+'" aria-pressed="'+(key==='all')+'">'+labels[key]+'</button>'}).join('');
+    section.innerHTML='<div class="market-brief-head"><div><b>이번 주 CPO 시장 판단</b><span>발표를 상용화·기술·공급망 신호로 분리해 읽습니다.</span></div><time datetime="2026-10-17">2026.10.17 기준</time></div>'+ 
+      '<div class="market-summary" aria-label="시장 신호 요약"><div><strong>3</strong><span>공식 신호</span></div><div><strong>0</strong><span>공개 양산 근거</span></div><div><strong>3</strong><span>영향 부품군</span></div></div>'+ 
+      '<p class="market-scope">※ 고객·물량·출하 근거가 공개된 경우에만 ‘양산’으로 표시합니다. 현재 3건은 데모·플랫폼·생태계 발표 단계입니다.</p>'+ 
+      '<div class="market-lens" role="group" aria-label="시장 판단 관점">'+controls+'</div><div class="market-signal-list">'+trends.map(signalCard).join('')+'</div>';
+    eventFilter.parentNode.insertBefore(section,eventFilter);
+    var buttons=Array.prototype.slice.call(section.querySelectorAll('.market-lens-btn')),cards=Array.prototype.slice.call(section.querySelectorAll('.market-signal-card'));
+    buttons.forEach(function(button){button.addEventListener('click',function(){var lens=button.dataset.marketLens;buttons.forEach(function(btn){btn.setAttribute('aria-pressed',String(btn===button))});cards.forEach(function(card){card.hidden=lens!=='all'&&card.dataset.marketLenses.split(' ').indexOf(lens)<0})})});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build,{once:true});else build();
 })();

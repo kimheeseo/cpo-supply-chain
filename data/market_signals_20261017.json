@@ -1,0 +1,10 @@
+{
+  "checked": "2026-10-17",
+  "purpose": "Compact market-reading layer for the CPO Supply Chain event panel. It distinguishes official announcements from disclosed commercial production evidence.",
+  "production_rule": "Only mark production when the cited source discloses customer, shipment, volume production, or equivalent commercial evidence. Otherwise retain the demonstrated/platform/ecosystem stage.",
+  "signals": [
+    {"date":"2026-10-13","company":"Wiwynn / Ayar Labs / GUC","stage":"Integrated system demonstration","components":["ELS","PIC","ASIC","package/thermal"],"production_disclosure":"Not stated in cited announcement","source":"https://www.wiwynn.com/news/wiwynn-ayar-labs-and-guc-advance-co-packaged-optics-with-live-demonstration-of-integrated-optical-compute-system-at-ocp-global-summit-2026"},
+    {"date":"2026-09-21","company":"Coherent","stage":"Integrated optics platform announcement","components":["laser","silicon photonics","fiber attach","assembly/test"],"production_disclosure":"Specific CPO customer and volume not stated in cited announcement","source":"https://ir.coherent.com/news-releases/news-release-details/coherent-launches-photonlinktm-integrated-optics-platform-ai"},
+    {"date":"2026-09-21","company":"Lightera","stage":"Second-generation HCF ecosystem announcement","components":["HCF","DCI cable","AI-cluster interconnect"],"production_disclosure":"Direct CPO application and Korea procurement require separate confirmation","source":"https://lightera.com/n/lightera-launches-second-generation-antiresonant-hollow-core-fiber-and-integrated-hcf-ecosystem/"}
+  ]
+}

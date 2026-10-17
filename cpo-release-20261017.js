@@ -151,8 +151,8 @@
     if(changed&&typeof window.renderVendor==='function')window.renderVendor();
   }
   function refreshBadge(){
-    var badge=$('#buildBadge');if(!badge||badge.textContent.indexOf('v2.14.0')>=0)return;
-    badge.textContent='v2.14.0 · CPO 전체 광경로 · 국내 채널 확대 · 2026-10-17';
+    var badge=$('#buildBadge');if(!badge||badge.textContent.indexOf('v2.14.2')>=0)return;
+    badge.textContent='v2.14.2 · 시장 판단 · CPO 광경로 · 국내 채널 · 2026-10-17';
   }
   function init(){initWholeCpoFlow();initKoreaDirectory();appendLatestNews();refreshBadge();var badge=$('#buildBadge');if(badge)new MutationObserver(refreshBadge).observe(badge,{childList:true,characterData:true,subtree:true});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
