@@ -51,3 +51,5 @@
  .cpo-flow-explainer{padding:9px}
  .cpo-flow-chain button{font-size:11px;padding:6px 7px}
 }
+/* HTML hidden attributes must win over component-level display rules. */
+.cpo-cad-pin[hidden],.cpo-brand-card[hidden],.cpo-korea-filters[hidden],.cpo-korea-cta[hidden],#koreaSalesTableWrap[hidden],#koreaSalesBody tr[hidden]{display:none!important}
