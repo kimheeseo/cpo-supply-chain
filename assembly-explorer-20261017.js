@@ -140,7 +140,7 @@
     var inspector=$('.part-inspector',panel);
     shell.insertBefore(box,inspector||null);
     var step=0,running=false,raf=0,last=0,elapsed=0,lessMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var inLen=feed.getTotalLength(),outLen=output.getTotalLength();
+    var inLen=0,outLen=0; // SVG stage begins hidden: measure geometry only after opening the tab.
     function renderStep(i){
       step=Math.max(0,Math.min(stages.length-1,i));
       buttons.forEach(function(b,j){b.setAttribute('aria-current',j===step?'step':'false')});
@@ -155,12 +155,13 @@
       if(!running)return;
       if(document.hidden||!panel.classList.contains('active')){stop();return}
       if(last)elapsed+=Math.min(now-last,80);last=now;
+      if(!inLen||!outLen){inLen=feed.getTotalLength();outLen=output.getTotalLength();}
       var t=(elapsed%7200)/7200;
       // First 48%: CW laser reaches the PIC; remaining 52%: modulated optical data exits.
       var inputPhase=t<.48;
       var p=inputPhase?feed:output;
       var ratio=inputPhase?t/.48:(t-.48)/.52;
-      var point=p.getPointAtLength(Math.min(1,ratio)* (inputPhase?inLen:outLen));
+      var point=p.getPointAtLength(Math.min(1,ratio)* Math.max(0.001,(inputPhase?inLen:outLen)));
       var dot=inputPhase?dotIn:dotOut,other=inputPhase?dotOut:dotIn;
       dot.setAttribute('cx',point.x.toFixed(3));dot.setAttribute('cy',point.y.toFixed(3));
       other.setAttribute('cx','-10');other.setAttribute('cy','-10');
