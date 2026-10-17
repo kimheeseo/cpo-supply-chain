@@ -1,0 +1,59 @@
+{
+  "checked": "2026-10-17",
+  "title": "Optical Fiber / Cable → Corning → Korean sales/support",
+  "manufacturer": {
+    "name": "Corning",
+    "country": "United States",
+    "website": "https://www.corning.com/kr/ko/markets/Optical-Communications-Market.html"
+  },
+  "attributionRules": {
+    "subsidiary": "Corning-owned Korea legal presence (not evidence of a dedicated fiber manufacturing location)",
+    "authorizedDistributor": "Listed on Corning Optical Communications' Korea distributor directory; product availability needs inquiry",
+    "resellerReported": "Third-party source identifies Corning product handling, but not currently listed on Corning's official Korea Optical Communications distributor directory"
+  },
+  "records": [
+    {
+      "name": "한국코닝㈜",
+      "classification": "subsidiary",
+      "phone": "+82-2-796-9500",
+      "source": "https://www.corning.com/kr/ko/contact-us.html"
+    },
+    {
+      "name": "A.J. World Co. Ltd.",
+      "classification": "authorizedDistributor",
+      "segment": "Carrier",
+      "source": "https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html"
+    },
+    {
+      "name": "Daeshin NS Co., Ltd.",
+      "classification": "authorizedDistributor",
+      "segment": "Enterprise",
+      "source": "https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html"
+    },
+    {
+      "name": "Daeyoung E&C Co., Ltd.",
+      "classification": "authorizedDistributor",
+      "segment": "Carrier",
+      "source": "https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html"
+    },
+    {
+      "name": "MK Square21 Ltd.",
+      "classification": "authorizedDistributor",
+      "segment": "Carrier",
+      "source": "https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html"
+    },
+    {
+      "name": "NTOP Information Communication",
+      "classification": "authorizedDistributor",
+      "segment": "Enterprise",
+      "source": "https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html"
+    },
+    {
+      "name": "남해이엔지(주)",
+      "classification": "resellerReported",
+      "notes": "Third-party database mentions Corning products including EDGE8 and MIC fiber cable; current official Corning Korea distributor listing does not include this name; confirm current status directly.",
+      "source": "https://g2bmarket.com/detail/namhaeienji"
+    }
+  ],
+  "caution": "Corning's published directory is for Optical Communications distributors; selling a specific CPO/PMF part is not established by this listing. CPO-qualified supply not asserted."
+}
