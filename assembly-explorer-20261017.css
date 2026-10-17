@@ -1,0 +1,53 @@
+/* CPO 2026-10-17: Assembly annotations, optical-flow explainer, KR sales drilldown. */
+[data-view-panel="fauCad"] .cad3d-stage{position:relative;isolation:isolate}
+.cpo-cad-overlay{position:absolute;inset:0;z-index:16;pointer-events:none}
+.cpo-cad-pin{position:absolute;display:inline-flex;align-items:center;gap:4px;transform:translate(-50%,-50%);padding:4px 7px;border:1px solid rgba(255,255,255,.84);border-radius:999px;background:#0e3151e8;color:#fff;font:800 11px/1.15 system-ui,sans-serif;box-shadow:0 3px 11px #0007;white-space:nowrap;cursor:pointer;pointer-events:auto}
+.cpo-cad-pin:hover,.cpo-cad-pin:focus-visible,.cpo-cad-pin[aria-pressed="true"]{background:#156b70;border-color:#baf5d1;z-index:3;outline:2px solid #f0c558;outline-offset:1px}
+.cpo-cad-pin b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:50%;background:#f0ca66;color:#14304a}
+.cpo-cad-caption{position:absolute;top:9px;left:9px;max-width:min(75%,380px);border:1px solid #96bbd0;border-radius:10px;padding:8px 11px;background:#0d293de8;color:#e5f4ff;font:700 12px/1.45 system-ui;pointer-events:none;box-shadow:0 4px 16px #0005}
+.cpo-cad-caption span{display:block;color:#aad7ed;font-size:11px;font-weight:500;margin-top:2px}
+.cpo-cad-toggle{border-color:#498b92!important}
+.cpo-cad-legend{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.cpo-cad-legend button{border:1px solid #79a9b9;border-radius:8px;padding:6px 9px;background:#e8f2f8;color:#18445c;font:750 11px/1.2 system-ui;cursor:pointer}
+.cpo-cad-legend button[aria-pressed="true"]{border-color:#167a6c;background:#c4eee2}
+.cpo-optical-toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:8px 0 12px}
+.cpo-optical-toolbar button{padding:9px 13px;min-height:42px;border:1px solid #218ac2;border-radius:9px;background:#0e5d8c;color:#fff;font:800 13px system-ui;cursor:pointer}
+.cpo-optical-toolbar button:disabled{opacity:.45;cursor:not-allowed}
+.cpo-optical-toolbar .cpo-optical-step{background:transparent;color:var(--text,#255071)}
+.cpo-optical-status{flex:1 1 200px;font-size:12px;line-height:1.4;color:var(--text,#36617e)}
+.fau2d-stage{position:relative}
+.cpo-beam-svg{position:absolute;inset:0;width:100%;height:100%;z-index:13;pointer-events:none}
+.cpo-beam-path{fill:none;stroke-width:.85;stroke-linecap:round;stroke-dasharray:2.2 1.8;opacity:.85}
+.cpo-beam-path.input{stroke:#ffc65d;filter:drop-shadow(0 0 2px #fff19b)}
+.cpo-beam-path.output{stroke:#39f7d0;filter:drop-shadow(0 0 2px #b6fff7)}
+.cpo-beam-dot{fill:#fff1a9;stroke:#ed9a24;stroke-width:.3;filter:drop-shadow(0 0 2px #ffd56b)}
+.cpo-beam-dot.output{fill:#79ffe9;stroke:#04b99c}
+.cpo-beam-svg:not(.is-running) .cpo-beam-dot{visibility:hidden}
+.cpo-flow-explainer{border:1px solid #9fbaca;border-radius:12px;padding:12px;margin:12px 0;background:var(--surface,#eaf4f7);color:var(--text,#193f55)}
+.cpo-flow-explainer h4{font-size:15px;margin:0 0 8px}
+.cpo-flow-chain{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.cpo-flow-chain button{border:1px solid #a5bfca;border-radius:8px;background:#fff;color:#124563;padding:8px 10px;min-height:40px;font:750 12px system-ui;cursor:pointer}
+.cpo-flow-chain button[aria-current="step"]{background:#13698c;border-color:#13698c;color:white}
+.cpo-flow-chain .cpo-flow-arrow{font-size:13px;color:#62869d}
+.cpo-flow-caption{font-size:12px;line-height:1.55;margin:9px 0 0}
+.cpo-flow-caution{font-size:11px;line-height:1.5;color:#567082;margin-top:7px}
+.cpo-brand-card{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border:1px solid #9cbbd5;border-radius:12px;background:#e8f4fd;color:#123d5a;padding:12px;margin:12px 0}
+.cpo-brand-card strong{font-size:16px;display:block}
+.cpo-brand-card small{display:block;font-size:12px;margin-top:4px}
+.cpo-brand-card a{font-size:12px;color:#0c6595}
+.cpo-brand-card button{border:1px solid #1376a1;border-radius:9px;background:#14698e;color:#fff;padding:9px 12px;min-height:42px;cursor:pointer;font-weight:800}
+.cpo-korea-tag{display:inline-block;margin-top:5px;font-size:10px;font-weight:800;padding:3px 6px;border-radius:5px;background:#d0f2df;color:#145438}
+.cpo-korea-tag.review{background:#fff0c4;color:#79500e}
+.cpo-korea-filters{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.cpo-korea-filters button{border:1px solid #97bbd0;border-radius:8px;padding:7px 10px;background:#f1f8fd;color:#215673;font:750 12px system-ui;min-height:36px;cursor:pointer}
+.cpo-korea-filters button[aria-pressed="true"]{background:#176f94;color:#fff}
+.cpo-korea-cta{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:11px;padding:10px 12px;border:1px solid #a1bbc8;border-radius:9px;background:#eff7f8;font-size:12px;color:#1b5868}
+.cpo-korea-cta button{border:0;background:#156a86;color:white;border-radius:8px;min-height:42px;padding:9px 12px;font-weight:800;cursor:pointer}
+@media(max-width:650px){
+ .cpo-cad-pin{padding:6px;min-width:27px;min-height:27px;justify-content:center;font-size:10px}
+ .cpo-cad-pin .pin-label{display:none}
+ .cpo-cad-caption{max-width:72%;font-size:11px}
+ .cpo-optical-toolbar button{font-size:12px}
+ .cpo-flow-explainer{padding:9px}
+ .cpo-flow-chain button{font-size:11px;padding:6px 7px}
+}
