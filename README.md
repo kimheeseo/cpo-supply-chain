@@ -2,14 +2,22 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.13.8 (v2.13.7 base runtime + 2026-10-17 interaction enhancement)
+- **Current release:** v2.14.0 (v2.13.7 base runtime + 2026-10-17 CPO path, Korea channel, and news enhancement)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with [assembly-explorer-20261017.js](./assembly-explorer-20261017.js) and [CSS](./assembly-explorer-20261017.css)
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with the isolated [assembly](./assembly-explorer-20261017.js) and [v2.14.0 release](./cpo-release-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.14.0 — 2026-10-17
+
+- CPO Assembly(2D) now adds a readable **whole-CPO Tx optical-path schematic** below the play control. The laser pulse moves through ELS → PM fiber → PIC/EIC modulation → FAU → SMF harness → front I/O, with the active stage and a short explanation updated in real time. The original conceptual-path control and reduced-motion behavior remain available.
+- The Korea sales/support dialog now provides manufacturer filters for **Optical Fiber / Cable** and **Front Connector**. The fiber view distinguishes Corning (Korea office + five official distributors), Furukawa Electric/Lightera (Furukawa Sangyo Korea), Sumitomo Electric (SEKEL), and Fujikura (official global inquiry when a dedicated Korea fiber channel could not be confirmed). The connector view adds Fujikura/DDK's two official Korea distributors alongside the existing Amphenol and Molex/Arrow routes.
+- Every displayed route includes a classification (Korea office, official distributor, reported handling, or global inquiry), an official-source link, and public phone/email when published. Namhae ENG remains explicitly marked as product-handling information, not an unverified Corning authorization claim.
+- Refreshed source-linked briefing data with the October 13 Wiwynn–Ayar Labs–GUC live CPO demonstration at OCP Global Summit 2026 and Lightera's September 21 second-generation HCF announcement. Existing recent Coherent, Fujikura, and Sumitomo Electric entries are retained.
+- Added the audit record [data/korea_vendor_channels_20261017.json](./data/korea_vendor_channels_20261017.json). The Base64 application runtime and core supplier registry are preserved; this release is an additive static GitHub Pages enhancement.
 
 ### version: 2.13.8 — 2026-10-17
 
@@ -94,7 +102,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned base runtime `app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css` enhancements.
+- The release launcher loads the versioned base runtime `app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css` and `cpo-release-20261017.js`/`.css` enhancements.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 

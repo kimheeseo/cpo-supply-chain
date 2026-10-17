@@ -1,0 +1,51 @@
+/* CPO Supply Chain v2.14.0 · whole-CPO signal flow and Korea channel directory. */
+.cpo-system-flow{
+  margin:12px 0 2px;padding:12px;border:1px solid #a8c8dc;border-radius:12px;
+  background:linear-gradient(135deg,#f6fbff,#e8f4fb);color:#133b57;overflow:auto
+}
+.cpo-system-flow h5{margin:0 0 4px;font-size:13px;color:#124d75}
+.cpo-system-flow p{margin:0;font-size:11px;line-height:1.5;color:#496b7f}
+.cpo-system-svg{display:block;width:100%;min-width:610px;height:136px;margin:9px 0 3px}
+.cpo-system-svg .cpo-system-line{fill:none;stroke:#a8bfd0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.cpo-system-svg .cpo-system-line.is-lit{stroke:#ffb52f;stroke-width:4;stroke-dasharray:8 8;opacity:.55}
+.cpo-system-svg.is-running .cpo-system-line.is-lit{animation:cpoSystemDash 1.25s linear infinite}
+.cpo-system-node rect{fill:#fff;stroke:#8eafc3;stroke-width:1.4;rx:8}
+.cpo-system-node text{fill:#174764;font:700 10px system-ui,sans-serif;text-anchor:middle}
+.cpo-system-node .sub{fill:#638197;font:600 8px system-ui,sans-serif}
+.cpo-system-node.is-active rect{fill:#fff3cc;stroke:#e2a622;stroke-width:2}
+.cpo-system-dot{fill:#fff7bb;stroke:#e58a00;stroke-width:2;filter:drop-shadow(0 0 4px #f7b226);opacity:0}
+.cpo-system-svg.is-running .cpo-system-dot{opacity:1}
+.cpo-system-caption{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px;color:#355f77}
+.cpo-system-caption b{color:#976000}
+@keyframes cpoSystemDash{to{stroke-dashoffset:-32}}
+
+.cpo-directory-toolbar{margin:11px 0 9px;padding:11px;border:1px solid #b7d1e2;border-radius:12px;background:#f3f9fd}
+.cpo-directory-title{display:flex;align-items:center;gap:7px;font-size:13px;line-height:1.35;color:#153f5e}
+.cpo-directory-title b{font-size:14px}.cpo-directory-title span{color:#507087}
+.cpo-directory-filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.cpo-directory-filter{border:1px solid #9fc2d7;border-radius:999px;background:#fff;color:#1c5271;padding:6px 10px;font:750 12px/1.2 system-ui;cursor:pointer}
+.cpo-directory-filter:hover,.cpo-directory-filter:focus-visible,.cpo-directory-filter[aria-pressed="true"]{background:#116b91;border-color:#116b91;color:#fff;outline:0}
+.cpo-directory-note{margin:8px 0 0;font-size:11px;line-height:1.5;color:#536f80}
+#koreaSalesTableWrap.cpo-directory-mode{overflow:auto;border-radius:10px}
+#koreaSalesTableWrap.cpo-directory-mode .korea-sales-table{min-width:730px}
+#koreaSalesTableWrap.cpo-directory-mode th:nth-child(1){width:20%}
+#koreaSalesTableWrap.cpo-directory-mode th:nth-child(2){width:29%}
+#koreaSalesTableWrap.cpo-directory-mode th:nth-child(3){width:16%}
+#koreaSalesTableWrap.cpo-directory-mode th:nth-child(4){width:35%}
+.cpo-access-brand{display:block;margin-bottom:3px;color:#0d527d;font-weight:850}
+.cpo-access-product{display:block;color:#527087;font-size:11px;line-height:1.35}
+.cpo-access-channel{font-weight:800;color:#1d4e67}.cpo-access-role{display:block;margin-top:4px;color:#506d7c;font-size:11px;line-height:1.35}
+.cpo-access-tier{display:inline-block;border-radius:99px;padding:3px 6px;font-size:10px;font-weight:850;line-height:1.15}
+.cpo-access-tier.office{background:#d8eefc;color:#09557e}.cpo-access-tier.authorized{background:#d8f4e5;color:#17653d}.cpo-access-tier.reported{background:#fff1c7;color:#805b08}.cpo-access-tier.global{background:#eceff4;color:#455a6b}
+.cpo-access-contact{font-size:11px;line-height:1.5}.cpo-access-contact a{overflow-wrap:anywhere}
+.cpo-source-link{display:inline-block;margin-top:4px;font-size:11px}
+body.dark .cpo-system-flow{background:#102d40;border-color:#376476;color:#e0f1fb}
+body.dark .cpo-system-flow h5{color:#94d9ff}body.dark .cpo-system-flow p,body.dark .cpo-system-caption{color:#bad3e1}
+body.dark .cpo-system-node rect{fill:#173c50;stroke:#5c93ad}body.dark .cpo-system-node text{fill:#e8f7ff}body.dark .cpo-system-node .sub{fill:#abcbdc}
+body.dark .cpo-directory-toolbar{background:#112d40;border-color:#3b687d}body.dark .cpo-directory-title{color:#e2f4ff}body.dark .cpo-directory-title span,body.dark .cpo-directory-note{color:#bad3e1}
+body.dark .cpo-directory-filter{background:#173a4e;color:#d8effc;border-color:#4c7890}body.dark .cpo-directory-filter[aria-pressed="true"]{background:#1b86ae;color:#fff}
+body.dark .cpo-access-brand{color:#8ed7ff}body.dark .cpo-access-product,body.dark .cpo-access-role{color:#b2cad8}
+@media(max-width:650px){
+  .cpo-system-flow{padding:10px}.cpo-system-svg{min-width:540px;height:125px}.cpo-system-caption{align-items:flex-start;flex-direction:column;gap:3px}
+  .cpo-directory-filter{padding:6px 8px;font-size:11px}
+}

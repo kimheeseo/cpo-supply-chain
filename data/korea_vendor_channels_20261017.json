@@ -1,0 +1,25 @@
+{
+  "checked": "2026-10-17",
+  "scope": "Korea sales/support routes for optical-fiber/cable and CPO-adjacent connector vendors. A listing is not a confirmation that a specific CPO, PM fiber, or qualified part is stocked locally.",
+  "classification": {
+    "office": "Manufacturer-owned Korea office or group sales office",
+    "authorized": "Listed by the manufacturer as a Korea distributor",
+    "reported": "Korean product handling found, but current manufacturer authorization was not verified",
+    "global": "No dedicated Korea optical-fiber channel found in the checked official material; use the manufacturer form"
+  },
+  "fiber": [
+    {"manufacturer":"Corning","route":"Corning Korea Company Ltd. + five Corning Optical Communications distributors","source":"https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html"},
+    {"manufacturer":"Furukawa Electric / Lightera","route":"Furukawa Sangyo Korea Co., Ltd.","phone":"+82-31-898-7688","source":"https://www.furukawaelectric.com/en/company/group/salesoffice.html"},
+    {"manufacturer":"Sumitomo Electric","route":"Sumitomo Electric (Korea) Electronics, Ltd.","phone":"+82-2-3453-4511","source":"https://sumitomoelectric.com/company/office_group_companies/sumitomo-electric-korea-electronics-ltd"},
+    {"manufacturer":"Fujikura","route":"Official global inquiry form; dedicated Korea optical-fiber sales channel not confirmed in checked official material","source":"https://www.fujikura.co.jp/en/contact/"}
+  ],
+  "connector": [
+    {"manufacturer":"Fujikura / DDK Connector","route":"Mujin Electronics Co., Ltd. and Woo Shin Trading Co.","source":"https://www.connector.fujikura.com/English/corprate_profile/world_text.html"},
+    {"manufacturer":"Amphenol","route":"Amphenol Korea","source":"https://www.amphenol.co.kr/"},
+    {"manufacturer":"Molex","route":"Molex Korea distributors / Arrow Korea","source":"https://www.molex.com/en-us/contact/molex-korea-distributors"}
+  ],
+  "latestNews": [
+    {"date":"2026-10-13","company":"Ayar Labs / Wiwynn / GUC","title":"Live CPO demonstration at OCP Global Summit 2026","source":"https://www.wiwynn.com/news/wiwynn-ayar-labs-and-guc-advance-co-packaged-optics-with-live-demonstration-of-integrated-optical-compute-system-at-ocp-global-summit-2026"},
+    {"date":"2026-09-21","company":"Lightera","title":"Second-generation antiresonant hollow-core fiber and integrated HCF ecosystem","source":"https://lightera.com/n/lightera-launches-second-generation-antiresonant-hollow-core-fiber-and-integrated-hcf-ecosystem/"}
+  ]
+}
