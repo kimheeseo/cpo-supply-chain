@@ -2,14 +2,19 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.14.0 (v2.13.7 base runtime + 2026-10-17 CPO path, Korea channel, and news enhancement)
+- **Current release:** v2.14.1 (v2.13.7 base runtime + 2026-10-17 CPO path, Korea channel, news, and weekly brief enhancement)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with the isolated [assembly](./assembly-explorer-20261017.js) and [v2.14.0 release](./cpo-release-20261017.js) enhancements.
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.14.1 — 2026-10-17
+
+- Added a **이번 주 CPO 동향** block above the selectable event schedule. It presents three source-linked cards covering system integration, optical-engine integration, and fiber/DCI context, each with a concise implication.
+- The existing `기업 IR / 발표 · 국내 · 국외 · 정책` event filters remain closed by default and continue to work independently below the weekly brief.
 
 ### version: 2.14.0 — 2026-10-17
 
@@ -102,7 +107,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned base runtime `app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css` and `cpo-release-20261017.js`/`.css` enhancements.
+- The release launcher loads the versioned base runtime `app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css`, `cpo-release-20261017.js`/`.css`, and `cpo-weekly-brief-20261017.js`/`.css` enhancements.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 
