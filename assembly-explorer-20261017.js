@@ -256,6 +256,14 @@
   }
   function init(){
     init3d();init2d();initKorea();
+    var badge=$('#buildBadge');
+    if(badge){
+      var labelVersion=function(){
+        if(badge.textContent.indexOf('v2.13.7')>=0)badge.textContent=badge.textContent.replace('v2.13.7','v2.13.8');
+      };
+      new MutationObserver(labelVersion).observe(badge,{childList:true,characterData:true,subtree:true});
+      labelVersion();
+    }
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
   else init();
