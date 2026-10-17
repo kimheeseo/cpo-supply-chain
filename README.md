@@ -2,7 +2,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.14.2 (v2.13.7 base runtime + 2026-10-17 market-signal readability enhancement)
+- **Current release:** v2.14.3 (v2.13.7 base runtime + 2026-10-17 collapsible market-signal brief)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
@@ -10,6 +10,11 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
 ## Version log
+
+### version: 2.14.3 — 2026-10-17
+
+- The “이번 주 CPO 시장 판단” panel now has a header-level 접기/보기 button, matching the collapsible event experience.
+- It stays open on first visit so the three weekly signals remain visible, and remembers the viewer’s most recent open/closed choice locally.
 
 ### version: 2.14.2 — 2026-10-17
 

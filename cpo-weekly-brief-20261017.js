@@ -1,4 +1,4 @@
-/* CPO Supply Chain v2.14.2 · readable market-signal brief for the event area. */
+/* CPO Supply Chain v2.14.3 · collapsible, readable market-signal brief for the event area. */
 (function(){
   'use strict';
   if(window.__cpoWeeklyBrief20261017)return;
@@ -23,11 +23,23 @@
     var eventFilter=document.getElementById('eventFilter');if(!eventFilter)return;
     var section=document.createElement('section');section.className='market-brief';section.id='weeklyTrendBrief';section.setAttribute('aria-label','이번 주 CPO 시장 판단');
     var controls=Object.keys(labels).map(function(key){return '<button type="button" class="market-lens-btn" data-market-lens="'+key+'" aria-pressed="'+(key==='all')+'">'+labels[key]+'</button>'}).join('');
-    section.innerHTML='<div class="market-brief-head"><div><b>이번 주 CPO 시장 판단</b><span>발표를 상용화·기술·공급망 신호로 분리해 읽습니다.</span></div><time datetime="2026-10-17">2026.10.17 기준</time></div>'+ 
-      '<div class="market-summary" aria-label="시장 신호 요약"><div><strong>3</strong><span>공식 신호</span></div><div><strong>0</strong><span>공개 양산 근거</span></div><div><strong>3</strong><span>영향 부품군</span></div></div>'+ 
+    section.innerHTML='<div class="market-brief-head"><div><b>이번 주 CPO 시장 판단</b><span>발표를 상용화·기술·공급망 신호로 분리해 읽습니다.</span></div><div class="market-brief-actions"><time datetime="2026-10-17">2026.10.17 기준</time><button type="button" class="market-brief-toggle" aria-expanded="true" aria-controls="marketBriefBody">시장 판단 접기 <span aria-hidden="true">⌃</span></button></div></div>'+ 
+      '<div class="market-brief-body" id="marketBriefBody"><div class="market-summary" aria-label="시장 신호 요약"><div><strong>3</strong><span>공식 신호</span></div><div><strong>0</strong><span>공개 양산 근거</span></div><div><strong>3</strong><span>영향 부품군</span></div></div>'+ 
       '<p class="market-scope">※ 고객·물량·출하 근거가 공개된 경우에만 ‘양산’으로 표시합니다. 현재 3건은 데모·플랫폼·생태계 발표 단계입니다.</p>'+ 
-      '<div class="market-lens" role="group" aria-label="시장 판단 관점">'+controls+'</div><div class="market-signal-list">'+trends.map(signalCard).join('')+'</div>';
+      '<div class="market-lens" role="group" aria-label="시장 판단 관점">'+controls+'</div><div class="market-signal-list">'+trends.map(signalCard).join('')+'</div></div>';
     eventFilter.parentNode.insertBefore(section,eventFilter);
+    var toggle=section.querySelector('.market-brief-toggle');
+    var body=section.querySelector('.market-brief-body');
+    function setCollapsed(collapsed,save){
+      section.classList.toggle('is-collapsed',collapsed);
+      body.hidden=collapsed;
+      toggle.setAttribute('aria-expanded',String(!collapsed));
+      toggle.innerHTML=collapsed?'시장 판단 보기 <span aria-hidden="true">⌄</span>':'시장 판단 접기 <span aria-hidden="true">⌃</span>';
+      if(save){try{localStorage.setItem('cpoMarketBriefCollapsed',collapsed?'1':'0');}catch(_){}}
+    }
+    var saved='';try{saved=localStorage.getItem('cpoMarketBriefCollapsed')||'';}catch(_){}
+    setCollapsed(saved==='1',false);
+    toggle.addEventListener('click',function(){setCollapsed(!section.classList.contains('is-collapsed'),true);});
     var buttons=Array.prototype.slice.call(section.querySelectorAll('.market-lens-btn')),cards=Array.prototype.slice.call(section.querySelectorAll('.market-signal-card'));
     buttons.forEach(function(button){button.addEventListener('click',function(){var lens=button.dataset.marketLens;buttons.forEach(function(btn){btn.setAttribute('aria-pressed',String(btn===button))});cards.forEach(function(card){card.hidden=lens!=='all'&&card.dataset.marketLenses.split(' ').indexOf(lens)<0})})});
   }
