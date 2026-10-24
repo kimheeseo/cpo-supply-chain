@@ -131,7 +131,7 @@
     var imageTargets=['lightSource','pmBranch','fauPic','fanout','smHarness','frontConnector'];
     var imageTargetNames=['ELS 광원','PM 광섬유 분기','PIC 광엔진 종단','FAU 팬아웃','SM 광섬유 하네스','전면 커넥터'];
     function highlightImageRegion(i){
-      $('.fau2d-region',stage).forEach(function(region){
+      $$('.fau2d-region',stage).forEach(function(region){
         var active=region.getAttribute('data-detail-id')===imageTargets[i];
         region.classList.toggle('cpo-flow-highlight',active);
         if(active){region.dataset.flowLabel=(i+1)+'단계 · '+imageTargetNames[i];region.setAttribute('aria-current','step')}
