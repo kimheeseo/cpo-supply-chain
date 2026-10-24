@@ -22,7 +22,7 @@
 .cpo-beam-path.output{stroke:#39f7d0;filter:drop-shadow(0 0 2px #b6fff7)}
 .cpo-beam-dot{fill:#fff1a9;stroke:#ed9a24;stroke-width:.3;filter:drop-shadow(0 0 2px #ffd56b)}
 .cpo-beam-dot.output{fill:#79ffe9;stroke:#04b99c}
-.cpo-beam-svg:not(.is-running) .cpo-beam-dot{visibility:hidden}
+.cpo-beam-svg:not(.is-running) .cpo-beam-path,.cpo-beam-svg:not(.is-running) .cpo-beam-dot{visibility:hidden}
 .cpo-flow-explainer{border:1px solid #9fbaca;border-radius:12px;padding:12px;margin:12px 0;background:var(--surface,#eaf4f7);color:var(--text,#193f55)}
 .cpo-flow-explainer h4{font-size:15px;margin:0 0 8px}
 .cpo-flow-chain{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
