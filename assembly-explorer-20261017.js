@@ -127,6 +127,9 @@
     var box=document.createElement('section');box.className='cpo-flow-explainer';
     var heading=document.createElement('h4');heading.textContent='CPO 광신호 전달 원리 · Tx 개념 모델';
     var chain=document.createElement('div');chain.className='cpo-flow-chain';
+    var visual=document.createElement('div');visual.className='cpo-flow-visual';visual.setAttribute('role','img');visual.setAttribute('aria-label','CPO 송신 광경로 6단계 도식. 단계별 보기와 동작 원리에 따라 현재 단계가 강조됩니다.');
+    var flowX=[24,134,244,354,464,574];
+    visual.innerHTML='<svg viewBox="0 0 600 92" aria-hidden="true" focusable="false"><path class="cpo-flow-track" d="M24 34 H574"></path><circle class="cpo-flow-traveler" cx="24" cy="34" r="7"></circle>'+[['ELS','광원'],['PMF','PMF'],['PIC','PIC'],['FAU','FAU'],['SMF','SMF'],['I/O','커넥터']].map(function(n,i){return '<g class="cpo-flow-node" data-flow-step="'+i+'" transform="translate('+flowX[i]+' 34)"><circle class="cpo-flow-ring" r="16"></circle><circle class="cpo-flow-core" r="11"></circle><text class="cpo-flow-abbr" text-anchor="middle" y="3">'+n[0]+'</text><text class="cpo-flow-label" text-anchor="middle" y="42">'+n[1]+'</text></g>'}).join('')+'</svg>';
     var desc=document.createElement('p');desc.className='cpo-flow-caption';desc.setAttribute('aria-live','polite');
     var caution=document.createElement('p');caution.className='cpo-flow-caution';
     caution.textContent='※ 이해를 돕기 위한 광 경로 개념 애니메이션입니다. 배경의 FAU 참고 사진은 CPO 전체 회로도가 아니며, 오버레이 선은 실제 케이블 경로·광학 설계 치수가 아닙니다. Rx(수신)는 외부 광신호가 반대 방향으로 PIC 수신기로 들어옵니다.';
@@ -136,7 +139,7 @@
       var btn=document.createElement('button');btn.type='button';btn.textContent=st[0];btn.setAttribute('aria-current','false');
       btn.addEventListener('click',function(){stop();renderStep(i)});chain.appendChild(btn);buttons.push(btn);
     });
-    box.append(heading,chain,desc,caution);
+    box.append(heading,visual,chain,desc,caution);
     var inspector=$('.part-inspector',panel);
     shell.insertBefore(box,inspector||null);
     var step=0,running=false,raf=0,last=0,elapsed=0,lessMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -144,6 +147,8 @@
     function renderStep(i){
       step=Math.max(0,Math.min(stages.length-1,i));
       buttons.forEach(function(b,j){b.setAttribute('aria-current',j===step?'step':'false')});
+      $('.cpo-flow-node',visual).forEach(function(node,j){node.classList.toggle('is-active',j===step)});
+      var traveler=$('.cpo-flow-traveler',visual);if(traveler)traveler.setAttribute('cx',String(flowX[step]));
       desc.textContent=(step+1)+' / '+stages.length+' · '+stages[step][1];
       if(!running)live.textContent=stages[step][0]+' · '+stages[step][1];
     }
