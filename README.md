@@ -2,7 +2,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.17.2 (2D-to-3D view order and photographed-stage highlighting)
+- **Current release:** v2.17.3 (2D-to-3D view order and photographed-stage highlighting)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
@@ -15,10 +15,10 @@ The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loade
 
 ## Version log
 
-### version: 2.17.2 — 2026-10-24
+### version: 2.17.3 — 2026-10-24
 - Reordered the architecture tabs as 2D, 3D, CPO Assembly(2D), CPO Assembly(3D).
 - Fixed the stage-node and image-region selectors so both highlights update on each step.
-- Each optical-path step now pulses the matching region on the CPO Assembly 2D reference image, including ELS, PMF, PIC end, fanout, SM fiber harness, and front connector.
+- Each optical-path step now shows a compact pulsing marker on the matching region of the CPO Assembly 2D reference image, including ELS, PMF, PIC end, fanout, SM fiber harness, and front connector.
 
 
 ### version: 2.16.2 — 2026-10-24
