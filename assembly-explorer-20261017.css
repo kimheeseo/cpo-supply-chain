@@ -69,3 +69,9 @@
 @keyframes cpo-flow-pulse{0%{r:15;opacity:.95}100%{r:25;opacity:0}}
 @media(max-width:600px){.cpo-flow-visual svg{min-height:74px}.cpo-flow-label{font-size:8px}.cpo-flow-abbr{font-size:6.5px}}
 @media(prefers-reduced-motion:reduce){.cpo-flow-traveler{transition:none}.cpo-flow-node.is-active .cpo-flow-ring{animation:none;stroke:#f0a21c;opacity:.8}}
+
+/* Highlight the corresponding photographed FAU assembly area for each optical step. */
+.fau2d-stage .fau2d-region.cpo-flow-highlight{z-index:8!important;border:3px solid #ffad18!important;border-radius:18px;background:rgba(255,186,44,.2)!important;box-shadow:0 0 0 4px rgba(255,173,24,.32),0 0 20px 8px rgba(255,173,24,.4)!important;animation:cpo-image-region-pulse 1.25s ease-in-out infinite}
+.fau2d-stage .fau2d-region.cpo-flow-highlight::after{content:attr(data-flow-label);position:absolute;left:50%;top:-14px;transform:translate(-50%,-100%);white-space:nowrap;border-radius:999px;padding:5px 9px;background:#a85d00;color:#fff;font:800 10px/1.2 system-ui;box-shadow:0 2px 9px rgba(0,0,0,.22);pointer-events:none}
+@keyframes cpo-image-region-pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.13)}}
+@media(prefers-reduced-motion:reduce){.fau2d-stage .fau2d-region.cpo-flow-highlight{animation:none}}
