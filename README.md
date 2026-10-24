@@ -2,7 +2,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.15.0 (OCP 2026 source-linked CPO and optical-interconnect product update)
+- **Current release:** v2.15.1 (weekly CPO and optical-interconnect product update)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
@@ -11,9 +11,15 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 
 ## OCP 2026 product updates · 2026-10-24
 
-The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loaded from [data/ocp_product_updates_20261024.json](./data/ocp_product_updates_20261024.json). It covers the Broadcom Tomahawk 6-Davisson 102.4T CPO showcase, Marvell Ara 1.6T transmit-retimed optics, the Lumentum/Astera Labs/Corning PCIe-over-optics demonstration, and LightXcelerate's microVCSEL CPO demo. Each record links to an official company or OCP source and distinguishes demos from commercially orderable products.
+The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loaded from [data/ocp_product_updates_20261024.json](./data/ocp_product_updates_20261024.json). It covers the Broadcom Tomahawk 6-Davisson 102.4T CPO showcase, Marvell Ara 1.6T transmit-retimed optics, the Lumentum/Astera Labs/Corning PCIe-over-optics demonstration, LightXcelerate's microVCSEL CPO demo, NVIDIA/Cisco USFP 12.8T pluggable-optics roadmap, and CoolIT/Stäubli direct-to-plug OSFP cooling. The latter two were announced at OCP on Oct 12 and received follow-up industry coverage on Oct 21; both remain reference-only. Each record links to an official company or OCP source and distinguishes demos from commercially orderable products.
 
 ## Version log
+
+### version: 2.15.1 — 2026-10-24
+
+- Added source-linked NVIDIA/Cisco USFP 12.8T pluggable-optics roadmap and CoolIT/Stäubli CP-OSFP direct-to-plug cooling. Original announcements were Oct 12; weekly coverage appeared Oct 21.
+- Kept both entries reference-only: no released orderable SKU or verified BOM quantities.
+
 
 ### version: 2.15.0 — 2026-10-24
 
