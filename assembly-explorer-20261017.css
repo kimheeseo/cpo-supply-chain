@@ -53,3 +53,19 @@
 }
 /* HTML hidden attributes must win over component-level display rules. */
 .cpo-cad-pin[hidden],.cpo-brand-card[hidden],.cpo-korea-filters[hidden],.cpo-korea-cta[hidden],#koreaSalesTableWrap[hidden],#koreaSalesBody tr[hidden]{display:none!important}
+
+/* Step-by-step optical path visual */
+.cpo-flow-visual{width:100%;overflow:hidden;border:1px solid #bed5df;border-radius:10px;background:linear-gradient(180deg,#f8fcfe,#e7f3f8);margin:4px 0 10px}
+.cpo-flow-visual svg{display:block;width:100%;height:auto;min-height:88px}
+.cpo-flow-track{fill:none;stroke:#9cb9c8;stroke-width:4;stroke-linecap:round}
+.cpo-flow-traveler{fill:#ffb52e;stroke:#fff;stroke-width:3;filter:drop-shadow(0 0 5px #f59e0b);transition:cx .45s ease}
+.cpo-flow-core{fill:#d9e8ee;stroke:#66899b;stroke-width:2;transition:fill .2s,stroke .2s}
+.cpo-flow-ring{fill:none;stroke:transparent;stroke-width:3}
+.cpo-flow-abbr{font:800 7px system-ui;fill:#25495b;pointer-events:none}
+.cpo-flow-label{font:700 9px system-ui;fill:#496b7d;pointer-events:none}
+.cpo-flow-node.is-active .cpo-flow-core{fill:#ffcf66;stroke:#d97900;stroke-width:3}
+.cpo-flow-node.is-active .cpo-flow-ring{stroke:#f0a21c;animation:cpo-flow-pulse 1.25s ease-out infinite}
+.cpo-flow-node.is-active .cpo-flow-abbr,.cpo-flow-node.is-active .cpo-flow-label{fill:#7b3f00;font-weight:900}
+@keyframes cpo-flow-pulse{0%{r:15;opacity:.95}100%{r:25;opacity:0}}
+@media(max-width:600px){.cpo-flow-visual svg{min-height:74px}.cpo-flow-label{font-size:8px}.cpo-flow-abbr{font-size:6.5px}}
+@media(prefers-reduced-motion:reduce){.cpo-flow-traveler{transition:none}.cpo-flow-node.is-active .cpo-flow-ring{animation:none;stroke:#f0a21c;opacity:.8}}
