@@ -151,8 +151,10 @@
     if(changed&&typeof window.renderVendor==='function')window.renderVendor();
   }
   function refreshBadge(){
-    var badge=$('#buildBadge');if(!badge||badge.textContent.indexOf('v2.14.3')>=0)return;
-    badge.textContent='v2.14.3 · 접기형 시장 판단 · CPO 광경로 · 국내 채널 · 2026-10-17';
+    var badge=$('#buildBadge');
+    var current='v2.15.1 · 접기형 시장 판단 · CPO 광경로 · 국내 채널 · 주간 제품 업데이트 · 2026-10-24';
+    if(!badge||badge.textContent===current)return;
+    badge.textContent=current;
   }
   function init(){initWholeCpoFlow();initKoreaDirectory();appendLatestNews();refreshBadge();var badge=$('#buildBadge');if(badge)new MutationObserver(refreshBadge).observe(badge,{childList:true,characterData:true,subtree:true});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
