@@ -2,14 +2,23 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.14.3 (v2.13.7 base runtime + 2026-10-17 collapsible market-signal brief)
+- **Current release:** v2.15.0 (OCP 2026 source-linked CPO and optical-interconnect product update)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
 
+## OCP 2026 product updates · 2026-10-24
+
+The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loaded from [data/ocp_product_updates_20261024.json](./data/ocp_product_updates_20261024.json). It covers the Broadcom Tomahawk 6-Davisson 102.4T CPO showcase, Marvell Ara 1.6T transmit-retimed optics, the Lumentum/Astera Labs/Corning PCIe-over-optics demonstration, and LightXcelerate's microVCSEL CPO demo. Each record links to an official company or OCP source and distinguishes demos from commercially orderable products.
+
 ## Version log
+
+### version: 2.15.0 — 2026-10-24
+
+- Added a filterable, source-linked OCP 2026 photonics product panel. Demo/showcase status is kept distinct from a purchasable SKU or production availability.
+
 
 ### version: 2.14.3 — 2026-10-17
 
