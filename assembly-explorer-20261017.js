@@ -17,6 +17,10 @@
     {key:'Main_termination',name:'Main termination',ko:'주 종단부'},
     {key:'Tag_pull_tab',name:'Tag / pull tab',ko:'식별 태그'}
   ];
+  function initViewOrder(){
+    var tabs=$('.view-tabs');if(!tabs)return;
+    ['viewTab2d','viewTab3d','viewTabFau2D','viewTabFauCad'].forEach(function(id){var button=$('#'+id,tabs);if(button)tabs.appendChild(button)});
+  }
   var isKorean=function(){return document.documentElement.lang.toLowerCase().indexOf('ko')===0};
   function componentName(o){return o.name+(isKorean()?' · '+o.ko:'')}
   function init3d(){
@@ -124,6 +128,17 @@
       ['SM 광섬유','변조된 다채널 광신호가 SM fiber harness를 지나갑니다.'],
       ['전면 커넥터','광신호가 전면 커넥터를 거쳐 외부 링크로 전달됩니다.']
     ];
+    var imageTargets=['lightSource','pmBranch','fauPic','fanout','smHarness','frontConnector'];
+    var imageTargetNames=['ELS 광원','PM 광섬유 분기','PIC 광엔진 종단','FAU 팬아웃','SM 광섬유 하네스','전면 커넥터'];
+    function highlightImageRegion(i){
+      $('.fau2d-region',stage).forEach(function(region){
+        var active=region.getAttribute('data-detail-id')===imageTargets[i];
+        region.classList.toggle('cpo-flow-highlight',active);
+        if(active){region.dataset.flowLabel=(i+1)+'단계 · '+imageTargetNames[i];region.setAttribute('aria-current','step')}
+        else{delete region.dataset.flowLabel;region.removeAttribute('aria-current')}
+      });
+      stage.dataset.flowStep=String(i+1);
+    }
     var box=document.createElement('section');box.className='cpo-flow-explainer';
     var heading=document.createElement('h4');heading.textContent='CPO 광신호 전달 원리 · Tx 개념 모델';
     var chain=document.createElement('div');chain.className='cpo-flow-chain';
@@ -147,7 +162,8 @@
     function renderStep(i){
       step=Math.max(0,Math.min(stages.length-1,i));
       buttons.forEach(function(b,j){b.setAttribute('aria-current',j===step?'step':'false')});
-      $$('.cpo-flow-node',visual).forEach(function(node,j){node.classList.toggle('is-active',j===step)});
+      $('.cpo-flow-node',visual).forEach(function(node,j){node.classList.toggle('is-active',j===step)});
+      highlightImageRegion(step);
       var traveler=$('.cpo-flow-traveler',visual);if(traveler)traveler.setAttribute('cx',String(flowX[step]));
       desc.textContent=(step+1)+' / '+stages.length+' · '+stages[step][1];
       if(!running)live.textContent=stages[step][0]+' · '+stages[step][1];
@@ -260,7 +276,7 @@
     }
   }
   function init(){
-    init3d();init2d();initKorea();
+    initViewOrder();init3d();init2d();initKorea();
     var badge=$('#buildBadge');
     if(badge){
       var labelVersion=function(){
