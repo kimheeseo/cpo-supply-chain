@@ -2,7 +2,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.16.0 (animated step-by-step CPO optical-path visual)
+- **Current release:** v2.16.1 (animated step-by-step CPO optical-path visual)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
@@ -15,8 +15,9 @@ The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loade
 
 ## Version log
 
-### version: 2.16.0 — 2026-10-24
+### version: 2.16.1 — 2026-10-24
 - Added a six-stage optical-path diagram for the CPO 2D assembly. The active ELS, PMF, PIC, FAU, SMF, or front connector stage is highlighted and a marker moves along the path when using step-by-step view or the full animation.
+- Fixed stage selection so both the active node and moving marker update when the user changes steps.
 - The visual is a conceptual Tx teaching diagram; it does not represent a measured physical route or optical design dimensions.
 
 
