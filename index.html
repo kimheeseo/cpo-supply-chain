@@ -28,9 +28,9 @@ html,body{margin:0;min-height:100%;background:#f4f8fc;font-family:system-ui,-app
    var esc='';for(i=0;i<u.length;i++)esc+='%'+('0'+u[i].toString(16)).slice(-2);
    return decodeURIComponent(esc);
  }
- fetch('./app.v2.13.7.txt?rev=cpo-2d-stage-highlight-20261024-v2.17.1',{cache:'force-cache'})
+ fetch('./app.v2.13.7.txt?rev=cpo-2d-stage-highlight-20261024-v2.17.2',{cache:'force-cache'})
    .then(function(r){if(!r.ok)throw new Error(r.status);return r.text()})
-   .then(function(p){var html=decode(p.trim());html=html.replace('</head>','<link rel="stylesheet" href="./architecture-labels.css?v=20261014-60pct"><script defer src="./architecture-labels.js?v=20261014-60pct"><\/script><link rel="stylesheet" href="./assembly-explorer-20261017.css?v=2.17.1"><link rel="stylesheet" href="./cpo-release-20261017.css?v=2.14.0"><link rel="stylesheet" href="./cpo-weekly-brief-20261017.css?v=2.14.3"></head>');html=html.replace('</body>','<script src="./assembly-explorer-20261017.js?v=2.17.1"><\/script><script src="./cpo-release-20261017.js?v=2.17.1"><\/script><script src="./cpo-weekly-brief-20261017.js?v=2.14.3"><\/script><script src="./cpo-ocp-products-20261024.js?v=2.17.1"><\/script></body>');document.open();document.write(html);document.close()})
+   .then(function(p){var html=decode(p.trim());html=html.replace('</head>','<link rel="stylesheet" href="./architecture-labels.css?v=20261014-60pct"><script defer src="./architecture-labels.js?v=20261014-60pct"><\/script><link rel="stylesheet" href="./assembly-explorer-20261017.css?v=2.17.2"><link rel="stylesheet" href="./cpo-release-20261017.css?v=2.14.0"><link rel="stylesheet" href="./cpo-weekly-brief-20261017.css?v=2.14.3"></head>');html=html.replace('</body>','<script src="./assembly-explorer-20261017.js?v=2.17.2"><\/script><script src="./cpo-release-20261017.js?v=2.17.2"><\/script><script src="./cpo-weekly-brief-20261017.js?v=2.14.3"><\/script><script src="./cpo-ocp-products-20261024.js?v=2.17.2"><\/script></body>');document.open();document.write(html);document.close()})
    .catch(fail);
  setTimeout(function(){if(document.getElementById('status'))status.textContent='네트워크에서 앱 데이터를 불러오는 중입니다…'},1800);
 })();
