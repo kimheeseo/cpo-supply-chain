@@ -17,7 +17,7 @@ The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loade
 
 ### version: 2.15.2 — 2026-10-24
 
-- Removed the unexplained cyan/orange dashed arcs from the CPO Assembly 2D reference image; they were illustration overlays, not fiber/cable or signal paths.
+- Hid the conceptual cyan/orange Tx optical-path overlays in the idle 2D view. The paths appear only while the optical-flow animation is playing; they are not physical cable routes.
 - Fixed version-label precedence so the legacy v2.14.3 component cannot overwrite the current release badge. Updated the loader cache keys.
 
 
