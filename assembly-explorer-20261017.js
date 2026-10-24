@@ -162,7 +162,7 @@
     function renderStep(i){
       step=Math.max(0,Math.min(stages.length-1,i));
       buttons.forEach(function(b,j){b.setAttribute('aria-current',j===step?'step':'false')});
-      $('.cpo-flow-node',visual).forEach(function(node,j){node.classList.toggle('is-active',j===step)});
+      $$('.cpo-flow-node',visual).forEach(function(node,j){node.classList.toggle('is-active',j===step)});
       highlightImageRegion(step);
       var traveler=$('.cpo-flow-traveler',visual);if(traveler)traveler.setAttribute('cx',String(flowX[step]));
       desc.textContent=(step+1)+' / '+stages.length+' · '+stages[step][1];
