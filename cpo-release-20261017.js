@@ -152,7 +152,7 @@
   }
   function refreshBadge(){
     var badge=$('#buildBadge');
-    var current='v2.15.1 · 접기형 시장 판단 · CPO 광경로 · 국내 채널 · 주간 제품 업데이트 · 2026-10-24';
+    var current='v2.15.2 · 접기형 시장 판단 · CPO 광경로 · 국내 채널 · 주간 제품 업데이트 · 2026-10-24';
     if(!badge||badge.textContent===current)return;
     badge.textContent=current;
   }
