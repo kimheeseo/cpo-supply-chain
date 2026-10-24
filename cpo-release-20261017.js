@@ -152,7 +152,7 @@
   }
   function refreshBadge(){
     var badge=$('#buildBadge');
-    var current='v2.16.2 · CPO 단계별 광경로 시각화 · 접기형 시장 판단 · 국내 채널 · 주간 제품 업데이트 · 2026-10-24';
+    var current='v2.17.0 · 2D→3D 탭 순서 · 단계별 이미지 강조 · 국내 채널 · 2026-10-24';
     if(!badge||badge.textContent===current)return;
     badge.textContent=current;
   }
