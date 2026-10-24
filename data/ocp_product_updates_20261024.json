@@ -48,6 +48,28 @@
       "availability": "프로토타입/데모 정보; SKU 확인 필요",
       "sourceName": "OCP 2026 Innovation Village 공식 목록",
       "sourceUrl": "https://www.opencompute.org/events/ocp-summit/2026-ocp-global-summit/innovation-village/"
+    },
+    {
+      "id": "nvidia-cisco-usfp-12-8t",
+      "company": "NVIDIA · Cisco · TE Connectivity · Amphenol",
+      "category": "고속 광 인터커넥트 / pluggable optics",
+      "name": "USFP 12.8T · 400G/lane",
+      "status": "기술 규격·생태계 협력 발표 (2026-10-12); 10/21 후속 업계 기사",
+      "summary": "OSFP 크기 기반의 차세대 플러거블 폼팩터 제안. 첫 단계 16개 full-duplex 400G lane, 총 12.8 Tb/s를 목표로 하며 커넥터·케이지·모듈 생태계를 파트너와 개발 중입니다. 표준·주문 SKU 확정 전 단계입니다.",
+      "availability": "로드맵/생태계 개발; BOM 수량 계산과 구매 SKU 매칭 제외",
+      "sourceName": "NVIDIA 공식 발표",
+      "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-and-cisco-advance-ai-networking-with-800g-and-1-6t"
+    },
+    {
+      "id": "coolit-staubli-cp-osfp",
+      "company": "CoolIT · Stäubli · Ciena",
+      "category": "광모듈 냉각 / rack interconnect",
+      "name": "CP-OSFP direct-to-plug cold plate + Mini Quick Disconnect",
+      "status": "공동 설계 발표 (2026-10-12); 10/21 후속 업계 기사",
+      "summary": "고전력 OSFP 광트랜시버에 냉각을 직접 전달하는 콜드플레이트와 탈착식 Mini Quick Disconnect 조합. 3.2 Tb/s 이상 차세대 트랜시버를 대상으로 제시됐습니다.",
+      "availability": "발표/개발 단계; SKU·치수·열성능·유량·주문 상태 미공개, 자동 BOM 수량 제외",
+      "sourceName": "CoolIT 공식 발표",
+      "sourceUrl": "https://www.coolitsystems.com/news/coolit-and-staubli-introduce-direct-to-plug-cooling-for-pluggable-optics"
     }
   ]
 }
