@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-26",
+  "scope": "CPO/NPO and adjacent AI optical interconnect; official sources first; checked against main on 2026-10-26",
+  "status": "verified_for_static_site",
+  "newOrUpdated": [
+    {
+      "date": "2026-10-23",
+      "company": "TFC Optical Communication (天孚通信)",
+      "country": "China",
+      "category": "FAU / ELS / CPO supply chain",
+      "title": "2026-057 operational disclosure: FAU and ELS stable mass-production delivery",
+      "stage": "Company-reported stable production/delivery of supporting components; not evidence of full CPO system volume shipments",
+      "url": "https://stock.stockstar.com/notice/SN2026102300022661.shtml",
+      "secondaryOfficial": "https://static.cninfo.com.cn/finalpage/2026-10-22/1225617545.PDF"
+    },
+    {
+      "date": "2026-10-22",
+      "company": "TFC Optical Communication",
+      "country": "China",
+      "category": "CPO/NPO investor relations",
+      "title": "Investor meeting: CPO ramp unchanged; NPO supporting products remain at sample stage",
+      "stage": "CPO components ramp per customer; NPO samples",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-22/1225617545.PDF"
+    },
+    {
+      "date": "2026-10-23",
+      "company": "InnoLight (中际旭创)",
+      "country": "China",
+      "category": "800G/1.6T optical modules / NPO/XPO",
+      "title": "Operational disclosure: 2027 order coverage and 2028 customer demand indications",
+      "stage": "Company-reported orders for optical modules; NPO/XPO future demand is outlook",
+      "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-10-23/164b4f4b-4300-4847-b351-815ae6c9ad5c.pdf"
+    },
+    {
+      "date": "2026-10-21",
+      "company": "Photon Bridge",
+      "country": "Netherlands",
+      "category": "Laser / ELS",
+      "title": "€10M funding for multi-wavelength laser sources",
+      "stage": "Funding; first samples planned 2027, volume preparation 2028",
+      "url": "https://www.photonbridge.com/news/photon-bridge-raises-%E2%82%AC10m-to-tackle-ai%E2%80%99s-emerging-laser-bottleneck"
+    },
+    {
+      "date": "2026-10-20",
+      "company": "Furukawa Electric",
+      "country": "Japan",
+      "category": "Optical chiplet packaging",
+      "title": "NEDO optical chiplet manufacturing project",
+      "stage": "R&D target; 10x productivity goal not achieved",
+      "url": "https://www.furukawaelectric.com/release/2026/comp_20261020.html"
+    },
+    {
+      "date": "2026-10-15",
+      "company": "TSMC",
+      "country": "Taiwan",
+      "category": "Advanced packaging / foundry",
+      "title": "Q3 2026 results",
+      "stage": "Reported revenue $46.72B, gross margin 66.4%, operating margin 58.7%; no CPO-only revenue",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2026/q3"
+    },
+    {
+      "date": "2026-10-12",
+      "company": "Lightmatter",
+      "country": "USA",
+      "category": "CPO integrated systems",
+      "title": "204.8Tbps CPO switch validation",
+      "stage": "Production-validation system, not mass shipments",
+      "url": "https://www.prnewswire.com/news-releases/lightmatter-delivers-open-rack-cpo-switch-and-xpu-scale-up-server-through-independent-collaborations-with-flex-and-other-industry-partners-302906361.html"
+    }
+  ],
+  "upcomingIR": [
+    {
+      "date": "2026-10-27",
+      "company": "Corning",
+      "url": "https://investor.corning.com/investor-relations/"
+    },
+    {
+      "date": "2026-10-28",
+      "company": "Amphenol",
+      "url": "https://investors.amphenol.com/home/"
+    },
+    {
+      "date": "2026-10-30",
+      "company": "Sumitomo Electric",
+      "url": "https://sumitomoelectric.com/ir/calendar"
+    },
+    {
+      "date": "2026-11-03",
+      "company": "AMD",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1300/amd-to-report-fiscal-third-quarter-2026-financial-results"
+    },
+    {
+      "date": "2026-11-05",
+      "company": "Lumentum",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx"
+    }
+  ],
+  "rules": [
+    "No invented future dates",
+    "No forced five articles",
+    "Deduplicate by canonical source URL",
+    "No Render writes",
+    "Full CPO-system production must not be inferred from FAU/ELS component production"
+  ]
+}
