@@ -2,9 +2,9 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.17.3 (2D-to-3D view order and photographed-stage highlighting)
+- **Current release:** v2.17.4 (verified CPO supplier/IR update; preserves 2D/3D visual explorer)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.13.7.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.13.7.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.4.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.17.4.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
@@ -13,7 +13,21 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 
 The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loaded from [data/ocp_product_updates_20261024.json](./data/ocp_product_updates_20261024.json). It covers the Broadcom Tomahawk 6-Davisson 102.4T CPO showcase, Marvell Ara 1.6T transmit-retimed optics, the Lumentum/Astera Labs/Corning PCIe-over-optics demonstration, LightXcelerate's microVCSEL CPO demo, NVIDIA/Cisco USFP 12.8T pluggable-optics roadmap, and CoolIT/Stäubli direct-to-plug OSFP cooling. The latter two were announced at OCP on Oct 12 and received follow-up industry coverage on Oct 21; both remain reference-only. Each record links to an official company or OCP source and distinguishes demos from commercially orderable products.
 
+## Verified market update · 2026-10-26
+
+- The base64-encoded static HTML runtime is [app.v2.17.4.txt](./app.v2.17.4.txt); the [index.html](./index.html) launcher now loads it. The additive, idempotent [market data patch](./cpo-market-update-20261026.js) runs locally without a server or Render.
+- Added official-source records for TFC (CPO FAU/ELS component production; NPO still at sample stage), InnoLight (2027 optical module order visibility, NPO/XPO outlook), Photon Bridge (€10M laser funding, samples planned for 2027), Furukawa chiplet R&D, TSMC Q3, and Lightmatter system validation.
+- Added the AMD 2026-11-03 official earnings event without changing existing Lumentum, Corning, Amphenol, and Sumitomo events; upcoming corporate events are still limited to the nearest five.
+- Refreshed the collapsible weekly market-signal panel to 2026-10-26. Preserved 3D CPO Assembly, domestic sales directory, optical-path animation, 2D→3D tab order, country listings, and mobile styling.
+- Source and stage metadata: [data/update_20261026.json](./data/update_20261026.json). New suppliers: [list/added_companies.csv](./list/added_companies.csv).
+- Company-reported FAU/ELS component shipments do **not** establish full CPO switch volume production. TSMC results are not CPO-specific revenue.
+
 ## Version log
+
+### version: 2.17.4 — 2026-10-26
+- Additive verified CPO/IR static data update and versioned GitHub Pages launcher; no Render changes.
+- JavaScript syntax, base64 runtime integrity, official-source links, and duplicate guards checked.
+
 
 ### version: 2.17.3 — 2026-10-24
 - Reordered the architecture tabs as 2D, 3D, CPO Assembly(2D), CPO Assembly(3D).
