@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-28",
+  "version": "v2.17.5",
+  "scope": "official CPO news, IR, future events",
+  "sources": [
+    {
+      "date": "2026-10-27",
+      "company": "Corning",
+      "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "fact": "Q3 optical sales $2.379B +44%; enterprise +84%"
+    },
+    {
+      "date": "2026-10-21",
+      "company": "NVIDIA / SPIL",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx",
+      "fact": "15x CPO optical engine capacity by mid-2027 target, additional 2x by end-2028 target"
+    },
+    {
+      "date": "2026-10-12",
+      "company": "NVIDIA / Cisco / Amphenol",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Cisco-Introduce-New-Pluggable-Optics-Form-Factor-to-Scale-AI-Factories/default.aspx",
+      "fact": "400G/lane 12.8T USFP announced; distinct from CPO"
+    }
+  ],
+  "irUpdates": [
+    "Corning Q3 2026"
+  ],
+  "futureIrAdded": [
+    "AMD 2026-12-01 UBS",
+    "AMD 2026-12-09 Barclays"
+  ],
+  "newsCompanyCount": 6,
+  "newsRecordCount": 7,
+  "notes": [
+    "No Render changes",
+    "No CPO-specific Corning revenue disclosed",
+    "Capacity target is not actual production"
+  ]
+}
