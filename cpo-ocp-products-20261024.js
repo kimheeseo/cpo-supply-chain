@@ -17,7 +17,7 @@ function mount(items){
  else if(event&&event.parentNode)event.parentNode.insertBefore(section,event);
  else document.body.appendChild(section);
  section.querySelectorAll('[data-filter]').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.filter;section.querySelectorAll('[data-filter]').forEach(function(q){q.setAttribute('aria-pressed',String(q===b))});section.querySelectorAll('.ocp-card').forEach(function(card){card.hidden=f!=='all'&&card.dataset.category!==f})})});
- var badge=document.getElementById('buildBadge');if(badge)badge.textContent='v2.15.3 · 접기형 시장 판단 · CPO 광경로 · 국내 채널 · 주간 제품 업데이트 · 2026-10-24';
+ var badge=document.getElementById('buildBadge');if(badge)badge.textContent='v2.17.5 · 접기형 시장 판단 · CPO 광경로 · 국내 채널 · 주간 제품 업데이트 · 2026-10-28';
 }
 fetch('./data/ocp_product_updates_20261024.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(d){mount(d.products||[])}).catch(function(){});
 })();
