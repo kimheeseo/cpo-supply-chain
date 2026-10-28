@@ -73,6 +73,8 @@
       output: new THREE.MeshStandardMaterial({color:0x18af9c,roughness:.5,emissive:0x000000})
     };
     function register(key,mesh) {
+      // Each selectable part gets its own material so highlights do not leak across groups.
+      mesh.material = mesh.material.clone();
       mesh.userData.cadKey = key;
       mesh.userData.elsConcept = true;
       mesh.userData.basePosition = mesh.position.clone();
@@ -138,7 +140,7 @@
     var controls = document.createElement('div');
     controls.className='cpo-els-controls';
     controls.id='cpoEls3dControls';
-    controls.innerHTML = '<strong>ELS · Laser 3D 추가</strong><button type="button" id="cpoElsShow" aria-pressed="true">ELS/PMF 표시: 켬</button>' +
+    controls.innerHTML = '<strong>v2.17.8 · ELS · Laser 3D 추가</strong><button type="button" id="cpoElsShow" aria-pressed="true">ELS/PMF 표시: 켬</button>' +
       '<button type="button" id="cpoElsRun" aria-pressed="false">▶ 레이저 광경로</button>' +
       '<small id="cpoElsStatus" aria-live="polite">CW 레이저 → PMF → PIC 광엔진 → FAU / 광하네스</small>';
     strip.parentNode.insertBefore(controls,strip);
