@@ -1,5 +1,14 @@
 # CPO Supply Chain
 
+## CPO Assembly (3D): ELS/CW laser visualization · 2026-10-28 (v2.17.8)
+
+- Added an **external CW laser/ELS housing**, optical output port, **PMF input link**, **PIC optical engine**, and a conceptual **Tx/FAU output link** to the interactive CPO Assembly (3D) viewer.
+- The ELS model is outside the PIC/CPO package, consistent with a typical external-laser architecture. Its ELS/PMF and Tx/output routes are visually distinguished.
+- New 3D laser label, selectable ELS/PMF/PIC/FAU parts, optical-path animation, and show/hide control.
+- Existing uploaded 10-part fan-out CAD model, original CAD interactions, and 2D reference photo/flow remain unchanged.
+- **Scope:** The added parts and optical route are teaching geometry, not a reconstructed factory CAD assembly, validated real-world dimensions, or an assertion of component compatibility. Source is [cpo-els-3d-20261028.js](./cpo-els-3d-20261028.js).
+- Architecture references: [Coherent 2026 investor overview](https://ir.coherent.com/static-files/80d6a0b9-4ea5-422d-af1c-9f886021d518); [CPO Assembly Guidance Document](https://optcore.net/wp-content/uploads/CPO-Assembly-Guidance-Doc-V1.0-FINAL.pdf).
+
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
 - **Current release:** v2.17.4 (verified CPO supplier/IR update; preserves 2D/3D visual explorer)
