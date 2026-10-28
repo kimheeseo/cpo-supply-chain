@@ -58,6 +58,8 @@
       else caption.innerHTML='부품을 클릭해 이름 확인<span>Assembly View에서 모델이나 번호를 선택하세요.</span>';
       components.forEach(function(o){map[o.key].setAttribute('aria-pressed',String(o.key===sel))});
     }
+    // Responsive projected markers: keep all ten parts identifiable without stacked text labels.
+    // The complete part names remain available in the button list and on selection.
     function updatePins(ts){
       if(ts-lastUpdate<170)return;
       lastUpdate=ts;
@@ -69,18 +71,50 @@
       if(!window.THREE)return;
       var camera=state.activeCamera||state.camera;
       if(!camera||!state.scene||!state.byKey)return;
+      var rect=stage.getBoundingClientRect(),w=rect.width,h=rect.height;
+      if(w<1||h<1)return;
       state.scene.updateMatrixWorld(true);camera.updateMatrixWorld();
-      components.forEach(function(p){
+      var positions=[],selected=state.selected;
+      components.forEach(function(p,i){
         var btn=map[p.key],meshes=state.byKey[p.key];
         if(!meshes||!meshes.length){btn.hidden=true;return}
         var mesh=meshes[0];if(!mesh.geometry){btn.hidden=true;return}
         if(!mesh.geometry.boundingBox)mesh.geometry.computeBoundingBox();
         var pos=mesh.geometry.boundingBox.getCenter(new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).project(camera);
         if(!isFinite(pos.x)||!isFinite(pos.y)||pos.z>1||pos.z< -1){btn.hidden=true;return}
-        var x=(pos.x+1)*50,y=(1-pos.y)*50;
-        btn.hidden=(x<3||x>97||y<6||y>97);
-        btn.style.left=x.toFixed(2)+'%';btn.style.top=y.toFixed(2)+'%';
-        btn.setAttribute('aria-label',componentName(p));
+        var x=(pos.x+1)*.5*w,y=(1-pos.y)*.5*h;
+        if(x<w*.03||x>w*.97||y<h*.06||y>h*.97){btn.hidden=true;return}
+        positions.push({item:p,index:i,btn:btn,x:x,y:y,chosen:null});
+      });
+      var used=[],gap=33,margin=18,captionW=Math.min(395,w*.78);
+      function fits(x,y){
+        if(x<margin||x>w-margin||y<margin||y>h-margin)return false;
+        // Keep the permanent explanatory caption free of markers.
+        if(x<captionW+8&&y<91)return false;
+        return !used.some(function(v){return Math.hypot(v.x-x,v.y-y)<gap});
+      }
+      // Prioritize the selected part; others are moved along an expanding spiral.
+      positions.sort(function(a,b){
+        var sa=a.item.key===selected?0:1,sb=b.item.key===selected?0:1;
+        return sa-sb||a.index-b.index;
+      });
+      positions.forEach(function(v){
+        var result=null,step=10;
+        for(var ring=0;ring<=13&&!result;ring++){
+          var count=ring===0?1:Math.max(12,ring*10);
+          for(var k=0;k<count;k++){
+            var angle=2*Math.PI*k/count+(ring%2)*.16;
+            var x=v.x+Math.cos(angle)*ring*step,y=v.y+Math.sin(angle)*ring*step;
+            if(fits(x,y)){result={x:x,y:y};break}
+          }
+        }
+        if(!result){v.btn.hidden=true;return}
+        used.push(result);v.btn.hidden=false;
+        v.btn.style.left=result.x.toFixed(1)+'px';
+        v.btn.style.top=result.y.toFixed(1)+'px';
+        v.btn.dataset.labelSide=result.x>w*.6?'left':'right';
+        v.btn.title=componentName(v.item);
+        v.btn.setAttribute('aria-label',componentName(v.item));
       });
       sync(false);
     }
