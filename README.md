@@ -1,5 +1,14 @@
 # CPO Supply Chain
 
+## Corporate IR and government/public R&D schedule — 2026-10-28 (v2.17.9)
+
+- Company IR: verified [Coherent FY2027 Q1 earnings on 2026-11-04](https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings) and NVIDIA FY2027 Q3 call scheduled for 2026-11-17 per its [2026-08-26 IR transcript](https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf). Existing AMD, Lumentum, Sumitomo, Furukawa and conference dates preserved. Beyond the first five IR events, the interface offers a collapsible “more company IR” list.
+- Government/public: **10 verified dated events** and **one explicitly undated notice** (NIST CRDO expected Nov 2026 portal reopening). New policy tab includes country filters for South Korea, US, Japan, China and Europe; empty countries show no invented future events.
+- Significant dates: US NIST CHIPS materials/equipment NOFO 2 concept-plan deadline **Nov 1**; US NSF 26-510/26-511 SBIR/STTR deadlines **Nov 4**; EU integrated-photonics 2027 RIA opening **Nov 17**; EU Chips JU AI chips/evaluation (deadline **Dec 1**, updated extension); EU–Japan semiconductor cooperation **Dec 8**; Horizon integrated photonics RIA deadline **Mar 18, 2027**.
+- Scope labels distinguish CPO-relevant photonics from broader semiconductor manufacturing, AI compute or test instrumentation programs. Event dates, award/budget figures, and application time zones are attributed to official program pages.
+- **Not automatic/live:** All data is a verified snapshot as of 2026-10-28; official dates may change. Corporate earnings/event dates do not imply product-launch or CPO commercialization dates.
+- Data: [data/cpo_event_calendar_20261028.json](./data/cpo_event_calendar_20261028.json). UI enhancer: [cpo-events-20261028.js](./cpo-events-20261028.js). Preserves all existing 2D, 3D, market/supplier listings, company news, and original event-category toggles.
+
 ## CPO Assembly (3D): ELS/CW laser visualization · 2026-10-28 (v2.17.8)
 
 - Added an **external CW laser/ELS housing**, optical output port, **PMF input link**, **PIC optical engine**, and a conceptual **Tx/FAU output link** to the interactive CPO Assembly (3D) viewer.
@@ -11,7 +20,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.17.8 (adds visible ELS/CW laser + PMF + PIC conceptual 3D overlay; retains existing 2D/3D explorer and supplier data)
+- **Current release:** v2.17.9 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.4.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.17.4.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
