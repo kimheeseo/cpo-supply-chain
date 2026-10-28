@@ -48,6 +48,115 @@
     }
   };
 
+
+  /* 2026-10-28: category coverage. Only official published contacts or clearly labelled HQ inquiries.
+     A Korean office or distributor does NOT imply authorization for a particular CPO SKU. */
+  function record(channel,role,tier,tierLabel,sourceUrl,sourceName,phone,email){
+    return {channel:channel,role:role,tier:tier,tierLabel:tierLabel,sourceUrl:sourceUrl,
+      sourceName:sourceName,phone:phone||'',email:email||''};
+  }
+  function brand(id,name,product,records){return {id:id,name:name,product:product,records:records}}
+  var koreanContact='국내 법인/영업 또는 공식 문의 창구. CPO 제품의 취급·수입·호환·양산 여부는 별도 확인';
+  koreaDirectory.laser={
+    title:'Laser / External Laser Source · 제품 및 한국 연락 창구',
+    note:'CPO 외부 광원(ELS)과 인접 레이저·SOA 기술을 구분합니다. 한국 문의 번호가 제품별 CPO 영업 담당자를 의미하지는 않습니다.',
+    brands:[
+      brand('lumentum','Lumentum','ELSFP-350 · CW laser · InP laser',[
+        record('Lumentum APAC 고객 서비스','한국 접속 지원 번호 · ELSFP 국내 공급 여부 별도 문의','global','APAC 공식 문의','https://www.lumentum.com/en/company/contact-us/apac','Lumentum APAC official customer service','001-800-0825-5483','customer.service@lumentum.com')]),
+      brand('coherent','Coherent','PhotonLink · UHP CW laser · OptiFocus',[
+        record('Coherent 공식 한국어 문의','한국어 제조사 문의 양식 · 광원/PhotonLink 담당 부서 연결 필요','office','한국어 공식 문의','https://www.coherent.com/ko/contact','Coherent 공식 한국어 연락처')]),
+      brand('anritsu','Anritsu','SOA · Gain Chip · Swept Light Source (CPO ELS와 구분)',[
+        record('안리쓰코퍼레이션 과천','광소자 부문 영업·기술 문의 · 특정 ELS 호환 미검증','office','국내 연락 창구','https://www.anritsu.com/ko-kr/sensing-devices/contact-us','Anritsu Sensing & Devices Korea','02-6259-7300')])
+    ]
+  };
+  koreaDirectory.pmFiber={
+    title:'Polarization-Maintaining Fiber · 국내 문의 및 품목',
+    note:'PMF의 파장, MFD, PER, 코팅/외경 및 광엔진 연결 적합성은 제품별 추가 확인 대상입니다.',
+    brands:[
+      brand('corning','Corning','PANDA PM 1310 · Reduced-Clad PMF · PM BI R5 1310',[
+        record('한국코닝(주)','Corning 한국 문의 · CPO 특수 PMF는 담당 부서 확인','office','한국 법인','https://www.corning.com/oem-solutions/worldwide/en/home/products-solutions/optical-communication-components/specialty-fiber/cpo-specialty-fiber.html','Corning CPO specialty fiber','02-796-9500','krregion@corning.com')]),
+      brand('sumitomo','Sumitomo Electric','PANDA PM fiber · precision fiber · optical cable',[
+        record('Sumitomo Electric (Korea) Electronics','한국 영업점, PMF 제품별 판매·담당 조직 확인 필요','office','한국 영업점','https://sumitomoelectric.com/company/office_group_companies/sumitomo-electric-korea-electronics-ltd','Sumitomo Korea official office','02-3453-4511')]),
+      brand('coherent','Coherent','Tight-geometry PMF · mode-matched specialty fiber',[
+        record('Coherent 한국어 문의','ECOC 2026 공개 PMF·특수광섬유 제품군 문의','office','한국어 공식 문의','https://www.coherent.com/news/press-releases/showcases-optical-innovations-scale-ai-infrastructure-ecoc-2026','Coherent specialty fiber announcement')])
+    ]
+  };
+  koreaDirectory.opticalEngine={
+    title:'Optical Engine / PIC · 제품 및 공식 문의 채널',
+    note:'PIC/광엔진 개발사에 국내 공식 판매 법인이 공개되지 않은 경우 해외 제조사 직접 문의로 표시합니다. 반도체 설계 지원과 상용 광엔진 공급을 혼동하지 마세요.',
+    brands:[
+      brand('coherent','Coherent','PhotonLink · silicon photonics · optical assemblies',[
+        record('Coherent 한국어 제조사 문의','한국어 문의 양식 · CPO/NPO 광엔진 공급 규격은 개별 협의','office','한국어 공식 문의','https://www.coherent.com/ko/contact','Coherent Korean inquiry')]),
+      brand('ayar','Ayar Labs','TeraPHY™ Optical Engine · SuperNova™ Light Source',[
+        record('Ayar Labs 본사','한국 지정 판매업체 확인되지 않음 · 영문 본사 직접 문의','global','해외 본사 문의','https://ayarlabs.com/contact/','Ayar Labs official contact','+1-650-963-7200','info@ayarlabs.com')]),
+      brand('corning','Corning','Fiber-to-PIC GlassBridge™ · CPO FlexConnect™ (광엔진 연결 부품)',[
+        record('한국코닝(주)','광엔진 자체가 아닌 Fiber-to-PIC 및 결합부품 문의','office','한국 법인','https://www.corning.com/oem-solutions/worldwide/en/home/products-solutions/optical-communication-components/co-packaged-optics.html','Corning CPO products','02-796-9500','krregion@corning.com')])
+    ]
+  };
+  koreaDirectory.switchAsic={
+    title:'Switch ASIC / Networking · 국내 영업 문의',
+    note:'네트워킹 시스템·AI 제품의 한국 영업 창구입니다. Switch ASIC 단품 판매 또는 CPO 플랫폼 직접 공급 자격은 별도 문의가 필요합니다.',
+    brands:[
+      brand('nvidia','NVIDIA','Spectrum-X Photonics · Quantum-X Photonics · GPU/AI fabric',[
+        record('NVIDIA 엔터프라이즈 영업','국내 기업 대상 공식 구매 상담 양식','office','한국어 공식 문의','https://www.nvidia.com/ko-kr/contact/sales/','NVIDIA enterprise sales Korea')]),
+      brand('cisco','Cisco','Silicon One · networking switches · optical networking',[
+        record('Cisco Korea 영업팀','한국 공식 영업 및 제품 문의','office','한국 영업팀','https://www.cisco.com/site/kr/ko/about/contact-cisco/index.html','Cisco Korea official contact','080-377-0880','kr_contactsales@cisco.com')])
+    ]
+  };
+  koreaDirectory.package={
+    title:'Package / Substrate / OSAT · 국내 패키징 생태계',
+    note:'표시 업체는 반도체 패키징·파운드리·설계 생태계 역할을 기준으로 선정했습니다. 각 업체의 CPO 전용 OSAT 라인·공급 승인 상태는 미확인입니다.',
+    brands:[
+      brand('amkor','Amkor Technology','Advanced packaging · package assembly · test',[
+        record('앰코테크놀로지코리아 송도 고객지원센터','국내 생산/지원센터 · CPO 광패키징 가능 여부 별도 확인','office','국내 고객지원센터','https://amkor.com/kr/contact-us/','Amkor Korea official contact','032-728-4114')]),
+      brand('ase','ASE','OSAT · advanced packaging · photonic integration 인접 공정',[
+        record('ASE Korea Sales Office','한국 공식 영업 사무소 · CPO 생산 실적 별도 검증','office','한국 영업 사무소','https://ase.aseglobal.com/about-ase/contact/global-sales/','ASE global official sales','031-940-0458','yglee@asekr.com')]),
+      brand('samsung','Samsung Foundry','2.5D/3D integration · advanced packaging · SAFE ecosystem',[
+        record('삼성 Foundry 국내 네트워크','국내 제조사 · 패키징/Foundry 협력 문의','office','국내 제조사','https://semiconductor.samsung.com/kr/about-us/business-area/foundry/','Samsung Foundry official technology','031-209-7114')])
+    ]
+  };
+  koreaDirectory.fau={
+    title:'Fiber Array Unit / Fiber-to-Chip · 문의 및 제품군',
+    note:'FAU/PIC 접속 상품의 한국 판매권과 공정 호환성, 삽입손실, 피치·채널 수는 상세 규격 확인이 필요합니다.',
+    brands:[
+      brand('corning','Corning','Fiber Array Units · GlassBridge™ Fiber-to-PIC',[
+        record('한국코닝(주)','CPO FAU 및 광결합 제품군 문의 · 직접 공급 여부 추가 확인','office','한국 법인','https://www.corning.com/oem-solutions/worldwide/en/home/products-solutions/optical-communication-components/co-packaged-optics.html','Corning CPO fiber-to-PIC','02-796-9500','krregion@corning.com')]),
+      brand('coherent','Coherent','OptiAlign FAU · FlexConnect detachable FAU · FiberPack',[
+        record('Coherent 한국어 제조사 문의','OptiAlign/FlexConnect 제품 담당 조직 연결 요청','office','한국어 공식 문의','https://www.coherent.com/news/press-releases/showcases-optical-innovations-scale-ai-infrastructure-ecoc-2026','Coherent ECOC 2026 FAU portfolio')]),
+      brand('ayar','Ayar Labs','TeraPHY™ optical engine fiber interface (참고)',[
+        record('Ayar Labs 본사','광엔진 접속 방식 기술 문의 · FAU 제조사로 분류하지 않음','global','해외 본사 문의','https://ayarlabs.com/contact/','Ayar Labs official contact','+1-650-963-7200','info@ayarlabs.com')])
+    ]
+  };
+  koreaDirectory.test={
+    title:'Optical / RF / High-speed Test · 국내 영업 연락처',
+    note:'측정기 제조사 공식 한국 고객센터 및 제조사 판매 경로입니다. 특정 CPO 광엔진 자동시험 호환 여부는 모델별 확인이 필요합니다.',
+    brands:[
+      brand('keysight','Keysight','Optical spectrum analyzer · BERT · high-speed optical test',[
+        record('키사이트코리아','한국 영업 및 기술지원 대표 창구','office','국내 공식 문의','https://www.keysight.com/kr/ko/contact.1.html','Keysight Korea contact','080-769-0800','korea_call@keysight.com')]),
+      brand('anritsu','Anritsu','Optical testing · spectrum analyzer · BERT',[
+        record('안리쓰 과천','국내 광·RF 측정기 영업·기술지원','office','한국 지점','https://www.anritsu.com/ko-kr/contact-us','Anritsu Korea Test & Measurement','02-6259-7300')]),
+      brand('tektronix','Tektronix','Oscilloscope · high-speed signal analysis',[
+        record('한국 텍트로닉스','국내 제품 판매 및 파트너 문의','office','한국 법인','https://www.tek.com/ko/buy/partner-locator','Tektronix Korea partner locator','02-565-1455')]),
+      brand('viavi','VIAVI','mTLS · mOSA · optical component test · CPO module test',[
+        record('VIAVI 공식 영업 연결','한국 파트너 또는 지역 세일즈 담당 연결 신청','global','공식 문의 경로','https://www.viavisolutions.com/en-us/support/customer-support','VIAVI sales & support')])
+    ]
+  };
+  // Expand the existing fiber / connector categories, preserving reviewed local contacts.
+  koreaDirectory.fiber.brands[0].product='SMF-28® Ultra · CPO FlexConnect™ · PANDA PMF · optical cable';
+  koreaDirectory.fiber.brands[1].product='Lightera / Furukawa optical cable · HCF · MCF ecosystem';
+  koreaDirectory.fiber.brands[2].product='PANDA PM fiber · SDM4 MCF · optical cable';
+  koreaDirectory.connector.brands[0].product='DDK electric connectors (광 CPO connector 공급 자격 미확인)';
+  koreaDirectory.connector.brands.push(
+    brand('corning','Corning','MMC 16F/24F · GlassBridge™ · LC/SC optical connectivity',[
+      record('한국코닝(주)','광커넥터 제품군 국내 문의 · MMC 국내 취급 여부 별도 확인','office','한국 법인','https://www.corning.com/oem-solutions/worldwide/en/home/products-solutions/optical-communication-components/co-packaged-optics.html','Corning CPO connector lineup','02-796-9500','krregion@corning.com')]),
+    brand('senko','SENKO','SN® · SN-MT · detachable PIC connector',[
+      record('SENKO 글로벌 공식 문의','한국 내 해당 광커넥터 지정 총판 미확인 · 본사 문의','global','제조사 본사 문의','https://www.senko.com/news/','SENKO optical connectivity news')]),
+    brand('usconec','US Conec','MMC® · PRIZM® TMT · high-density ferrules',[
+      record('US Conec 공식 제품 문의','한국 내 제품별 공급사 및 기술 연락처는 제조사 확인 필요','global','제조사 본사 문의','https://www.usconec.com/','US Conec official')])
+  );
+  koreaDirectory.connector.brands[2].records.push(
+    record('KDPS','Molex 공식 한국 Distributor 목록의 등록 업체 · CPO 제품 공급 여부 별도 문의','authorized','공식 목록 등록','https://www.molex.com/en-us/contact/molex-korea-distributors','Molex Korea official distributors','031-406-5700','kdps@e-kdps.com')
+  );
   function contactHtml(record){
     var out=[];
     if(record.email)out.push('<a href="mailto:'+escapeHtml(record.email)+'">'+escapeHtml(record.email)+'</a>');
@@ -89,7 +198,18 @@
         button.addEventListener('click',function(){active[key]=item[0];repaint()});filters.appendChild(button);
       });
       var note=document.createElement('p');note.className='cpo-directory-note';note.textContent='※ '+section.note;
-      toolbar.append(title,filters,note);result.insertBefore(toolbar,tableWrap);repaint();
+      // Place the Corning overview ABOVE the table/headers as its own normal-flow row.
+      var overview=null;
+      if(key==='fiber'){
+        overview=document.createElement('div');overview.className='cpo-directory-overview';
+        overview.innerHTML='<strong>Corning · 광섬유/광케이블 제조사</strong>'+
+          '<span>한국 법인 1곳 · 공식 Distributor 5곳 · 취급 정보 1곳(총판 여부 확인 필요)</span>'+
+          '<a href="https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html" target="_blank" rel="noopener noreferrer">Corning 공식 한국 채널 보기 ↗</a>';
+      }
+      toolbar.appendChild(title);
+      if(overview)toolbar.appendChild(overview);
+      toolbar.append(filters,note);
+      result.insertBefore(toolbar,tableWrap);repaint();
     }
     grid.addEventListener('click',function(event){
       var button=event.target.closest('[data-korea-component]');if(!button||!grid.contains(button))return;
@@ -152,7 +272,7 @@
   }
   function refreshBadge(){
     var badge=$('#buildBadge');
-    var current='v2.17.4 · 2D→3D 탭 순서 · 단계별 이미지 강조 · 국내 채널 · 2026-10-26';
+    var current='v2.17.6 · CPO 3D 라벨 정리 · 국내 영업 9개 부품군 · 기사 갱신 · 2026-10-28';
     if(!badge||badge.textContent===current)return;
     badge.textContent=current;
   }
