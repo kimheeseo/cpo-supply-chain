@@ -243,71 +243,23 @@
     window.addEventListener('pagehide',stop,{once:true});
     renderStep(0);
   }
+  // Legacy Corning overlay removed: it overlapped the directory table headers.
+  // The single authoritative Korea directory now lives in cpo-release-20261017.js.
   function initKorea(){
-    var modal=$('#koreaSalesModal'),result=$('#koreaSalesResult'),table=$('#koreaSalesTableWrap'),body=$('#koreaSalesBody');
-    if(!modal||!result||!table||!body)return;
-    var brand=document.createElement('div');brand.className='cpo-brand-card';brand.hidden=true;brand.id='cpoCorningBrand';
-    brand.innerHTML='<div><strong>Corning · 광섬유/광케이블 제조사</strong><small>미국 제조사 → 한국 법인 1곳 · 공식 한국 Distributor 5곳 · 국내 취급 정보 1곳</small><a href="https://www.corning.com/optical-communications/in/en/home/support/distributors/korea.html" target="_blank" rel="noopener">Corning 공식 한국 Distributor 확인 ↗</a></div><button type="button" id="cpoCorningExpand" aria-expanded="true">한국 판매/지원 7곳 보기</button>';
-    var filters=document.createElement('div');filters.className='cpo-korea-filters';filters.hidden=true;
-    var choices=[['all','전체 7'],['official','공식 확인 6'],['review','취급 정보 1 · 확인 필요']];
-    var filter='all',expanded=true;
-    function applyFilter(){
-      $$('tr',body).forEach(function(row){
-        var tier=row.dataset.cpoTier||'official';
-        row.hidden=(!expanded)||(filter!=='all'&&tier!==filter);
-      });
-      table.hidden=!expanded;
-      filters.hidden=!expanded||brand.hidden;
-      $$('#cpoCorningFilters button').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.filter===filter))});
-    }
-    choices.forEach(function(opt){
-      var btn=document.createElement('button');btn.type='button';btn.dataset.filter=opt[0];btn.textContent=opt[1];
-      btn.addEventListener('click',function(){filter=opt[0];applyFilter()});filters.appendChild(btn);
+    var modal=$('#koreaSalesModal'),tags=$('#partTags'),partSelect=$('#partSelect');
+    if(!modal||!tags||!partSelect)return;
+    var card=document.createElement('div');
+    card.className='cpo-korea-cta';card.hidden=true;
+    card.innerHTML='<span>Optical Fiber → Corning → 국내 공식 법인·유통 채널</span><button type="button">🇰🇷 한국 영업·지원 업체 보기</button>';
+    tags.insertAdjacentElement('afterend',card);
+    card.querySelector('button').addEventListener('click',function(){
+      var open=$('#koreaSalesBtn'),fiber=$('[data-korea-component="fiber"]',modal);
+      if(open)open.click();if(fiber)fiber.click();
     });
-    filters.id='cpoCorningFilters';
-    result.insertBefore(brand,table);
-    result.insertBefore(filters,table);
-    $('#cpoCorningExpand').addEventListener('click',function(){
-      expanded=!expanded;this.setAttribute('aria-expanded',String(expanded));this.textContent=expanded?'한국 판매/지원 7곳 접기':'한국 판매/지원 7곳 보기';applyFilter();
-    });
-    function decorate(key){
-      brand.hidden=key!=='fiber';filters.hidden=key!=='fiber';
-      if(key!=='fiber'){table.hidden=false;return}
-      expanded=true;filter='all';
-      var rows=$$('tr',body);
-      rows.forEach(function(row,i){
-        var label=i===0?'한국 법인':i===rows.length-1?'Corning 취급 정보 · 총판 지위 확인 필요':'Corning 공식 Distributor';
-        var review=i===rows.length-1;
-        row.dataset.cpoTier=review?'review':'official';
-        var first=$('td:first-child',row);if(!first)return;
-        var badge=document.createElement('span');badge.className='cpo-korea-tag'+(review?' review':'');badge.textContent=label;
-        first.appendChild(document.createElement('br'));first.appendChild(badge);
-      });
-      $('#cpoCorningExpand').setAttribute('aria-expanded','true');
-      $('#cpoCorningExpand').textContent='한국 판매/지원 7곳 접기';
-      applyFilter();
-      var text=$('#koreaSalesSelected');if(text)text.textContent='Optical Fiber / Cable → Corning → 한국 법인·대리점 (공식/취급 구분)';
-    }
-    document.addEventListener('click',function(e){
-      var btn=e.target.closest('[data-korea-component]');
-      if(btn&&modal.contains(btn))decorate(btn.getAttribute('data-korea-component'));
-      if(e.target.closest('#koreaSalesBtn')){brand.hidden=true;filters.hidden=true;table.hidden=false}
-    });
-    var tags=$('#partTags'),partSelect=$('#partSelect');
-    if(tags&&partSelect){
-      var card=document.createElement('div');card.className='cpo-korea-cta';card.hidden=true;
-      card.innerHTML='<span>Optical Fiber → Corning → 한국코닝 및 국내 총판/취급처</span><button type="button">🇰🇷 한국 영업·지원 업체 보기</button>';
-      tags.insertAdjacentElement('afterend',card);
-      card.querySelector('button').addEventListener('click',function(){
-        var open=$('#koreaSalesBtn'),fiber=$('[data-korea-component="fiber"]',modal);
-        if(open)open.click();if(fiber)fiber.click();
-      });
-      function update(){card.hidden=partSelect.value!=='dataFiber'}
-      var title=$('#partTitle');
-      if(title){new MutationObserver(update).observe(title,{childList:true,characterData:true,subtree:true})}
-      partSelect.addEventListener('change',function(){setTimeout(update,0)});
-      update();
-    }
+    function update(){card.hidden=partSelect.value!=='dataFiber'}
+    var title=$('#partTitle');if(title)new MutationObserver(update).observe(title,{childList:true,characterData:true,subtree:true});
+    partSelect.addEventListener('change',function(){setTimeout(update,0)});
+    update();
   }
   function init(){
     initViewOrder();init3d();init2d();initKorea();
