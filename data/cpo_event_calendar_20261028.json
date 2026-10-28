@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "version": "2.17.9",
+  "checked": "2026-10-28",
+  "timeZone": "Asia/Seoul",
+  "scope": "CPO/photonic interconnect + enabling semiconductor policies; scheduled event and official program deadlines only",
+  "disclaimer": "Static snapshot, not a live schedule feed. Government funding calls are not automatically CPO grants. Dates are event-location local unless otherwise noted. Official dates can change.",
+  "companyEvents": [
+    {
+      "id": "coherent-fy2027-q1",
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "region": "corporate",
+      "company": "Coherent",
+      "name": "FY2027 Q1 Results · 16:30 ET webcast",
+      "where": "IR webcast / 미국 동부시간",
+      "parts": [
+        "Laser / External Laser Source",
+        "Optical Engine / PIC",
+        "Polarization-Maintaining Fiber"
+      ],
+      "url": "https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings",
+      "relevance": "AI 광엔진·고출력 레이저·PhotonLink 실적/투자 언급 여부 주목"
+    },
+    {
+      "id": "nvidia-fy2027-q3",
+      "start": "2026-11-17",
+      "end": "2026-11-17",
+      "region": "corporate",
+      "company": "NVIDIA",
+      "name": "FY2027 Q3 Earnings Call · 회사 IR 콜에서 예고",
+      "where": "시간 미확정 / 날짜는 회사 IR 콜 공지",
+      "parts": [
+        "Switch ASIC / xPU",
+        "Optical Engine / PIC + EIC"
+      ],
+      "url": "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+      "relevance": "AI 데이터센터 네트워크 수요·CPO 채택 전략 관찰. 정식 3분기 IR 공지에서 일정 변경 확인 필요"
+    }
+  ],
+  "policyEvents": [
+    {
+      "id": "kr-photonicskorea-2026",
+      "start": "2026-10-28",
+      "end": "2026-10-29",
+      "country": "한국",
+      "agency": "산업통상자원부·광주광역시·한국광융합산업진흥회",
+      "type": "정부·산업 행사",
+      "stage": "개최 확정",
+      "relation": "광융합·광통신 인접",
+      "title": "PHOTONICS KOREA 2026 국제 광융합산업 전시회",
+      "detail": "광주 김대중컨벤션센터 B·C홀, 광융합 기술·제품 전시와 기술교류. CPO 전용 정책은 아님.",
+      "url": "https://www.photonicskorea.kapid.org/page.php?id=13&sid=57"
+    },
+    {
+      "id": "us-chips-nofo2-2026",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "country": "미국",
+      "agency": "미 상무부 / NIST CHIPS Program Office",
+      "type": "지원사업 마감",
+      "stage": "공식 확정",
+      "relation": "반도체 소재·장비 공급망 / CPO 간접",
+      "title": "CHIPS NOFO 2 소재·제조장비 시설 Concept Plan 접수 마감",
+      "detail": "미국 반도체 소재 및 제조장비 생산시설 건설·증설·현대화 사업의 1단계 개념계획서 접수 마감. CPO 전용 사업이 아니며 자격 확인 필요.",
+      "url": "https://www.nist.gov/chips/incentives-funding-opportunities/notice-funding-opportunity-semiconductor-materials-equipment"
+    },
+    {
+      "id": "jp-jetro-taiwan-ai-chip-2026",
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "country": "일본",
+      "agency": "JETRO 홋카이도",
+      "type": "정부·산업 행사",
+      "stage": "개최 확정",
+      "relation": "AI 반도체·차세대통신 인접",
+      "title": "홋카이도–대만 AI·반도체 공동창출 포럼",
+      "detail": "삿포로 13:30~19:00 JST. AI·반도체, 5G 및 차세대 통신 분야 교류. 사전 신청 마감 11/2 12:00 JST.",
+      "url": "https://www.jetro.go.jp/events/sap/572822e083de7ab8.html"
+    },
+    {
+      "id": "us-nsf-photonics-sbir-2026",
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "country": "미국",
+      "agency": "미 NSF",
+      "type": "R&D 공모 마감",
+      "stage": "공식 확정",
+      "relation": "광포토닉스 / CPO 인접",
+      "title": "NSF SBIR/STTR 26-510 광포토닉스 포함 딥테크 제안서 마감",
+      "detail": "Photonics(PH) 지원 주제 포함. 미국 중소기업 대상·제안 단계별 자격 요건 적용, 17:00 제출기관 현지시간.",
+      "url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510"
+    },
+    {
+      "id": "us-nsf-instrumentation-2026",
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "country": "미국",
+      "agency": "미 NSF",
+      "type": "R&D 공모 마감",
+      "stage": "공식 확정",
+      "relation": "광측정·장비 / CPO 간접",
+      "title": "NSF SBIR/STTR 26-511 과학 측정기기 집중 공모 마감",
+      "detail": "과학 측정기기 관련 중소기업 기술사업화 지원. CPO 전용 과제가 아니며 17:00 제출기관 현지시간.",
+      "url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology-0/nsf26-511/solicitation"
+    },
+    {
+      "id": "eu-horizon-photonics-open-2026",
+      "start": "2026-11-17",
+      "end": "2026-11-17",
+      "country": "유럽",
+      "agency": "EU 집행위원회 / Horizon Europe",
+      "type": "R&D 공모 개시",
+      "stage": "공식 포털 예정",
+      "relation": "집적광소자·초저전력 / CPO 직접 연관 기술",
+      "title": "Horizon Europe 저전력 고기능 집적 포토닉스 RIA 공모 개시",
+      "detail": "HORIZON-CL4-2027-05-DIGITAL-EMERGING-03. 2026-11-17 개시 예정, 2027-03-18 마감 예정. 해당 과제 참여 자격 및 세부 조건 확인.",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?frameworkProgramme=43108390&isExactMatch=true&keywords=HORIZON-CL4&order=DESC&pageNumber=1&pageSize=50&sortBy=relevance&status=31094501%2C31094502"
+    },
+    {
+      "id": "eu-chips-ai1-2026",
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "country": "유럽",
+      "agency": "Chips Joint Undertaking / EU",
+      "type": "R&D 공모 마감",
+      "stage": "연장 마감 확정",
+      "relation": "AI 칩·광I/O 인접",
+      "title": "EU Chips JU AI 칩 실증(DIGITAL-JU-CHIPS-2026-AI1-SG) 마감",
+      "detail": "AI 컴퓨팅 인프라용 기능성 실리콘 칩 실증 지원, EU 예산 약 €1,000만. 마감 17:00 브뤼셀 시간(연장 반영). CPO 전용 지원사업은 아님.",
+      "url": "https://www.chips-ju.europa.eu/NewsDetails/?id=3c0e9cb9-3bb7-f111-aaab-e4fb1ef9ad95"
+    },
+    {
+      "id": "eu-chips-platform-2026",
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "country": "유럽",
+      "agency": "Chips Joint Undertaking / EU",
+      "type": "R&D 공모 마감",
+      "stage": "연장 마감 확정",
+      "relation": "AI 시스템·랙 실증 / CPO 간접",
+      "title": "EU Chips JU AI 컴퓨팅 평가·배치 플랫폼 공모 마감",
+      "detail": "DIGITAL-JU-CHIPS-2026-AI-GfP. AI compute 평가·조달·파일럿 랙 배치, EU 예산 약 €7,000만. 마감 17:00 브뤼셀 시간.",
+      "url": "https://www.chips-ju.europa.eu/NewsDetails/?id=3c0e9cb9-3bb7-f111-aaab-e4fb1ef9ad95"
+    },
+    {
+      "id": "eu-japan-chips-2026",
+      "start": "2026-12-08",
+      "end": "2026-12-08",
+      "country": "유럽",
+      "agency": "Chips Joint Undertaking / EU",
+      "type": "국제협력 공모 마감",
+      "stage": "공식 확정",
+      "relation": "AI 칩렛·첨단 반도체 / CPO 간접",
+      "title": "EU–일본 반도체 국제협력 공동연구 공모 마감",
+      "detail": "DIGITAL-JU-Chips-2026-SG-JAPAN. AI 칩렛 생태계와 2nm 이후 공정 공동개발; EU 예산 약 €500만.",
+      "url": "https://www.chips-ju.europa.eu/Open-and-Upcoming-Calls/"
+    },
+    {
+      "id": "eu-horizon-photonics-close-2027",
+      "start": "2027-03-18",
+      "end": "2027-03-18",
+      "country": "유럽",
+      "agency": "EU 집행위원회 / Horizon Europe",
+      "type": "R&D 공모 마감",
+      "stage": "공식 포털 예정",
+      "relation": "집적광소자·초저전력 / CPO 직접 연관 기술",
+      "title": "Horizon Europe 초저전력 집적 포토닉스 RIA 마감",
+      "detail": "HORIZON-CL4-2027-05-DIGITAL-EMERGING-03. 2026-11-17 개시 예정 건의 공식 포털상 마감 예정일.",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?frameworkProgramme=43108390&isExactMatch=true&keywords=HORIZON-CL4&order=DESC&pageNumber=1&pageSize=50&sortBy=relevance&status=31094501%2C31094502"
+    }
+  ],
+  "undatedWatch": [
+    {
+      "period": "2026-11",
+      "country": "미국",
+      "agency": "NIST CHIPS CRDO",
+      "status": "재개 예정 / 정확한 날짜 미공개",
+      "title": "CRDO Broad Agency Announcement 접수 포털 재개 예상",
+      "detail": "시스템 업그레이드로 중단된 BAA 포털을 2026년 11월 중 재개할 계획. 정확한 날짜와 세부 접수 지침은 NIST 공지 확인 필요.",
+      "url": "https://www.nist.gov/chips/chips-rd-funding-opportunities/crdo-broad-agency-announcement-baa"
+    }
+  ],
+  "unverifiedNotScheduled": [
+    "공식 미래 일정이 확인되지 않은 국가·기관의 날짜는 추가하지 않음.",
+    "회사 실적 발표 날짜와 공모 마감일을 CPO 제품 출시 일정으로 취급하지 않음."
+  ],
+  "sources": [
+    "https://www.photonicskorea.kapid.org/page.php?id=13&sid=57",
+    "https://www.nist.gov/chips/incentives-funding-opportunities/notice-funding-opportunity-semiconductor-materials-equipment",
+    "https://www.jetro.go.jp/events/sap/572822e083de7ab8.html",
+    "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510",
+    "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology-0/nsf26-511/solicitation",
+    "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?frameworkProgramme=43108390&isExactMatch=true&keywords=HORIZON-CL4&order=DESC&pageNumber=1&pageSize=50&sortBy=relevance&status=31094501%2C31094502",
+    "https://www.chips-ju.europa.eu/NewsDetails/?id=3c0e9cb9-3bb7-f111-aaab-e4fb1ef9ad95",
+    "https://www.chips-ju.europa.eu/Open-and-Upcoming-Calls/",
+    "https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings",
+    "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf"
+  ]
+}
