@@ -272,7 +272,7 @@
   }
   function refreshBadge(){
     var badge=$('#buildBadge');
-    var current='v2.17.6 · CPO 3D 라벨 정리 · 국내 영업 9개 부품군 · 기사 갱신 · 2026-10-28';
+    var current='v2.17.7 · 3D 부품명 분리 · 국내 영업 9개 부품군 · 업체/기사 · 2026-10-28';
     if(!badge||badge.textContent===current)return;
     badge.textContent=current;
   }
