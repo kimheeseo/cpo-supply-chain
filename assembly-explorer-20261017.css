@@ -76,3 +76,49 @@
 .fau2d-stage .fau2d-region.cpo-flow-highlight::after{content:attr(data-flow-label);position:absolute;left:50%;top:-14px;transform:translate(-50%,-100%);white-space:nowrap;border-radius:999px;padding:5px 9px;background:#a85d00;color:#fff;font:800 10px/1.2 system-ui;box-shadow:0 2px 9px rgba(0,0,0,.22);pointer-events:none}
 @keyframes cpo-image-marker-pulse{0%,100%{transform:translate(-50%,-50%) scale(.82);opacity:.78}50%{transform:translate(-50%,-50%) scale(1.16);opacity:1}}
 @media(prefers-reduced-motion:reduce){.fau2d-stage .fau2d-region.cpo-flow-highlight{animation:none}}
+
+/* v2.17.6 - uncluttered CPO Assembly (3D) markers and accessible part names */
+#fauCadStage .cpo-cad-overlay{pointer-events:none}
+#fauCadStage .cpo-cad-pin{
+  box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+  width:29px;height:29px;min-width:29px;min-height:29px;
+  padding:2px;border:2px solid #fff;border-radius:50%;
+  background:#124c70;color:#fff;transform:translate(-50%,-50%);
+  box-shadow:0 2px 8px rgba(9,30,50,.5);font-size:11px;
+  white-space:normal;overflow:visible;z-index:2;pointer-events:auto
+}
+#fauCadStage .cpo-cad-pin b{
+  display:grid;place-items:center;min-width:21px;height:21px;
+  background:transparent;color:#fff;border-radius:50%;font:800 12px/1 system-ui
+}
+#fauCadStage .cpo-cad-pin[aria-pressed="true"]{
+  background:#08786e;border-color:#ffe08a;z-index:12;
+  box-shadow:0 0 0 3px rgba(246,188,75,.35),0 3px 9px #0006
+}
+#fauCadStage .cpo-cad-pin .pin-label{
+  display:none;position:absolute;left:calc(100% + 7px);top:50%;
+  transform:translateY(-50%);pointer-events:none;
+  width:max-content;max-width:min(178px,40vw);min-width:80px;
+  padding:6px 9px;border-radius:7px;border:1px solid #aad3e5;
+  background:#092c48f2;color:#fff;text-align:left;
+  white-space:normal;overflow-wrap:anywhere;font:700 12px/1.3 system-ui;
+  box-shadow:0 5px 13px #0005
+}
+#fauCadStage .cpo-cad-pin[data-label-side="left"] .pin-label{
+  left:auto;right:calc(100% + 7px);text-align:right
+}
+#fauCadStage .cpo-cad-pin:is(:hover,:focus-visible,[aria-pressed="true"]) .pin-label{display:block}
+#fauCadStage .cpo-cad-pin[hidden]{display:none!important}
+#cadPartButtons.cad3d-part-strip{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(155px,100%),1fr));
+  gap:7px;align-items:stretch;padding-top:12px
+}
+#cadPartButtons .cad3d-part-btn{
+  white-space:normal;overflow-wrap:anywhere;line-height:1.4;text-align:left;
+  padding:8px 10px;min-height:39px;font-size:11px
+}
+@media(max-width:620px){
+  #fauCadStage .cpo-cad-pin{width:30px;height:30px;min-width:30px;min-height:30px}
+  #fauCadStage .cpo-cad-pin .pin-label{max-width:135px;font-size:11px}
+  #cadPartButtons.cad3d-part-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
