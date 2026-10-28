@@ -26,23 +26,43 @@
   function init3d(){
     var stage=$('#fauCadStage'),strip=$('#cadPartButtons'),buttons=$('[data-view-panel="fauCad"] .cad3d-buttons');
     if(!stage||!strip||!buttons)return;
-    var overlay=document.createElement('div');overlay.className='cpo-cad-overlay';overlay.id='cpoCadPins';stage.appendChild(overlay);
-    var caption=document.createElement('div');caption.className='cpo-cad-caption';caption.id='cpoCadCaption';
-    caption.innerHTML='부품을 클릭해 이름 확인<span>Assembly View에서도 10개 CAD 그룹을 직접 선택할 수 있습니다.</span>';
-    stage.appendChild(caption);
-    var toggle=document.createElement('button');toggle.type='button';toggle.className='cad3d-btn cpo-cad-toggle';toggle.id='cpoCadLabelToggle';
-    toggle.setAttribute('aria-pressed','true');toggle.textContent='부품명 표시: 켬';buttons.appendChild(toggle);
+    // Keep all descriptive text OUTSIDE the 3D canvas to prevent overlap.
+    var caption=document.createElement('div');
+    caption.className='cpo-cad-caption';caption.id='cpoCadCaption';
+    caption.setAttribute('role','status');caption.setAttribute('aria-live','polite');
+    caption.innerHTML='<strong>3D 구성품 선택</strong><span>번호를 누르거나 아래 부품 목록에서 선택하면 해당 부품을 강조합니다.</span>';
+    stage.parentNode.insertBefore(caption,stage);
+
+    var overlay=document.createElement('div');
+    overlay.className='cpo-cad-overlay';overlay.id='cpoCadPins';
+    stage.appendChild(overlay);
+    var toggle=document.createElement('button');
+    toggle.type='button';toggle.className='cad3d-btn cpo-cad-toggle';toggle.id='cpoCadLabelToggle';
+    toggle.setAttribute('aria-pressed','true');toggle.textContent='3D 번호 표시: 켬';
+    buttons.appendChild(toggle);
     var visible=true,lastSelected=null,lastUpdate=0;
     var map={};
+    var names={};
     components.forEach(function(p,i){
-      var btn=document.createElement('button');btn.type='button';btn.className='cpo-cad-pin';btn.hidden=true;
-      btn.setAttribute('aria-label',componentName(p));btn.setAttribute('aria-pressed','false');
-      btn.innerHTML='<b>'+(i+1)+'</b><span class="pin-label">'+p.name+'</span>';
+      names[p.key]=(i+1)+'. '+componentName(p);
+      var btn=document.createElement('button');
+      btn.type='button';btn.className='cpo-cad-pin';btn.hidden=true;
+      btn.setAttribute('aria-label',names[p.key]);btn.setAttribute('aria-pressed','false');
+      btn.textContent=String(i+1);
       btn.addEventListener('pointerdown',function(e){e.stopPropagation()});
       btn.addEventListener('pointerup',function(e){e.stopPropagation()});
+      btn.addEventListener('pointerenter',function(){showName(p.key,'가리킨 부품')});
+      btn.addEventListener('focus',function(){showName(p.key,'선택 가능한 부품')});
+      btn.addEventListener('pointerleave',function(){sync(true)});
+      btn.addEventListener('blur',function(){sync(true)});
       btn.addEventListener('click',function(e){e.stopPropagation();pick(p.key)});
       overlay.appendChild(btn);map[p.key]=btn;
     });
+    function showName(key,prefix){
+      var p=components.find(function(item){return item.key===key});
+      if(!p)return;
+      caption.innerHTML='<strong>'+prefix+': '+names[key]+'</strong><span>클릭하면 3D 구성품과 아래 설명에서 확인할 수 있습니다.</span>';
+    }
     function pick(key){
       var base=$('#cadPartButtons [data-cad-key="'+key+'"]');
       if(base)base.click();
@@ -54,14 +74,14 @@
       if(!force&&sel===lastSelected)return;
       lastSelected=sel;
       var p=components.find(function(a){return a.key===sel});
-      if(p){caption.innerHTML='선택한 부품: '+componentName(p)+'<span>아래 부품 설명·공급망에서도 상세 내용을 확인할 수 있습니다.</span>';}
-      else caption.innerHTML='부품을 클릭해 이름 확인<span>Assembly View에서 모델이나 번호를 선택하세요.</span>';
+      if(p)caption.innerHTML='<strong>선택한 부품: '+names[p.key]+'</strong><span>3D 모델과 아래 부품 설명·공급망에서 상세 정보를 확인하세요.</span>';
+      else caption.innerHTML='<strong>3D 구성품 선택</strong><span>번호 또는 아래 목록에서 부품을 선택하세요. 이름표는 3D 화면 바깥에 표시됩니다.</span>';
       components.forEach(function(o){map[o.key].setAttribute('aria-pressed',String(o.key===sel))});
     }
-    // Responsive projected markers: keep all ten parts identifiable without stacked text labels.
-    // The complete part names remain available in the button list and on selection.
+    // Place only small numbered pins on the canvas. Every pin has a minimum
+    // centre-to-centre gap; project in pixel coordinates for variable screen sizes.
     function updatePins(ts){
-      if(ts-lastUpdate<170)return;
+      if(ts-lastUpdate<120)return;
       lastUpdate=ts;
       var state=window.fauCadState,active=$('[data-view-panel="fauCad"].active');
       if(!state||!state.ready||!active||!visible||document.hidden){
@@ -83,44 +103,38 @@
         var pos=mesh.geometry.boundingBox.getCenter(new THREE.Vector3()).applyMatrix4(mesh.matrixWorld).project(camera);
         if(!isFinite(pos.x)||!isFinite(pos.y)||pos.z>1||pos.z< -1){btn.hidden=true;return}
         var x=(pos.x+1)*.5*w,y=(1-pos.y)*.5*h;
-        if(x<w*.03||x>w*.97||y<h*.06||y>h*.97){btn.hidden=true;return}
-        positions.push({item:p,index:i,btn:btn,x:x,y:y,chosen:null});
+        if(x<w*.02||x>w*.98||y<h*.02||y>h*.98){btn.hidden=true;return}
+        positions.push({item:p,index:i,btn:btn,x:x,y:y});
       });
-      var used=[],gap=33,margin=18,captionW=Math.min(395,w*.78);
+      var placed=[],gap=39,margin=21;
       function fits(x,y){
         if(x<margin||x>w-margin||y<margin||y>h-margin)return false;
-        // Keep the permanent explanatory caption free of markers.
-        if(x<captionW+8&&y<91)return false;
-        return !used.some(function(v){return Math.hypot(v.x-x,v.y-y)<gap});
+        return placed.every(function(v){return Math.hypot(v.x-x,v.y-y)>=gap});
       }
-      // Prioritize the selected part; others are moved along an expanding spiral.
       positions.sort(function(a,b){
-        var sa=a.item.key===selected?0:1,sb=b.item.key===selected?0:1;
-        return sa-sb||a.index-b.index;
+        return (a.item.key===selected?-1:0)-(b.item.key===selected?-1:0)||a.index-b.index;
       });
       positions.forEach(function(v){
-        var result=null,step=10;
-        for(var ring=0;ring<=13&&!result;ring++){
-          var count=ring===0?1:Math.max(12,ring*10);
+        var dest=null;
+        for(var ring=0;ring<=18&&!dest;ring++){
+          var count=ring===0?1:Math.max(12,ring*12);
           for(var k=0;k<count;k++){
-            var angle=2*Math.PI*k/count+(ring%2)*.16;
-            var x=v.x+Math.cos(angle)*ring*step,y=v.y+Math.sin(angle)*ring*step;
-            if(fits(x,y)){result={x:x,y:y};break}
+            var angle=2*Math.PI*k/count+ring*.2;
+            var x=v.x+Math.cos(angle)*ring*10,y=v.y+Math.sin(angle)*ring*10;
+            if(fits(x,y)){dest={x:x,y:y};break}
           }
         }
-        if(!result){v.btn.hidden=true;return}
-        used.push(result);v.btn.hidden=false;
-        v.btn.style.left=result.x.toFixed(1)+'px';
-        v.btn.style.top=result.y.toFixed(1)+'px';
-        v.btn.dataset.labelSide=result.x>w*.6?'left':'right';
-        v.btn.title=componentName(v.item);
-        v.btn.setAttribute('aria-label',componentName(v.item));
+        if(!dest){v.btn.hidden=true;return}
+        placed.push(dest);v.btn.hidden=false;
+        v.btn.style.left=dest.x.toFixed(1)+'px';
+        v.btn.style.top=dest.y.toFixed(1)+'px';
+        v.btn.setAttribute('aria-label',names[v.item.key]);
       });
       sync(false);
     }
     toggle.addEventListener('click',function(){
       visible=!visible;toggle.setAttribute('aria-pressed',String(visible));
-      toggle.textContent=visible?'부품명 표시: 켬':'부품명 표시: 끔';
+      toggle.textContent=visible?'3D 번호 표시: 켬':'3D 번호 표시: 끔';
       components.forEach(function(o){map[o.key].hidden=!visible});
     });
     stage.addEventListener('pointerup',function(e){
@@ -129,7 +143,7 @@
     });
     strip.addEventListener('click',function(){setTimeout(function(){sync(true)},10)});
     $('#cadViewReset')?.addEventListener('click',function(){setTimeout(function(){sync(true)},30)});
-    // CAD model already has its own rendering loop; annotation updates are throttled and read-only.
+    // CAD model already has its own rendering loop; the annotation is read-only.
     var raf=null;function frame(ts){updatePins(ts);raf=window.requestAnimationFrame(frame)}
     raf=window.requestAnimationFrame(frame);
     window.addEventListener('pagehide',function(){if(raf!==null)window.cancelAnimationFrame(raf)},{once:true});
