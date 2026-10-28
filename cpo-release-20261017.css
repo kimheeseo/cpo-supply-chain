@@ -49,3 +49,46 @@ body.dark .cpo-access-brand{color:#8ed7ff}body.dark .cpo-access-product,body.dar
   .cpo-system-flow{padding:10px}.cpo-system-svg{min-width:540px;height:125px}.cpo-system-caption{align-items:flex-start;flex-direction:column;gap:3px}
   .cpo-directory-filter{padding:6px 8px;font-size:11px}
 }
+
+/* v2.17.6: normal document flow avoids Corning title overlaying the table header */
+#koreaSalesResult .cpo-directory-toolbar{
+  position:static;inset:auto;z-index:auto;float:none;clear:both;
+  display:block;width:100%;box-sizing:border-box;margin:12px 0 12px;
+}
+#koreaSalesResult .cpo-directory-overview{
+  position:static;inset:auto;display:flex;flex-wrap:wrap;align-items:center;
+  gap:8px 14px;margin:10px 0;padding:12px 14px;
+  background:#e8f4fd;border:1px solid #9fc7df;border-radius:10px;
+  color:#124a6e;line-height:1.55;white-space:normal;overflow-wrap:anywhere
+}
+#koreaSalesResult .cpo-directory-overview strong{font-size:14px;flex:1 1 100%}
+#koreaSalesResult .cpo-directory-overview span{font-size:12px;flex:1 1 220px}
+#koreaSalesResult .cpo-directory-overview a{font-size:12px;font-weight:750;white-space:normal}
+#koreaSalesTableWrap.cpo-directory-mode{
+  clear:both;position:relative;overflow-x:auto;overflow-y:visible;
+  margin:0;max-width:100%;isolation:isolate;
+}
+#koreaSalesTableWrap.cpo-directory-mode .korea-sales-table{
+  width:100%;min-width:780px;table-layout:fixed;border-collapse:separate;border-spacing:0
+}
+#koreaSalesTableWrap.cpo-directory-mode thead{position:static}
+#koreaSalesTableWrap.cpo-directory-mode th{
+  position:sticky;top:0;z-index:1;box-sizing:border-box;
+  background:#edf5fb;line-height:1.4;white-space:normal;
+  overflow-wrap:anywhere;vertical-align:middle;
+}
+#koreaSalesTableWrap.cpo-directory-mode td{
+  box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;
+  word-break:normal;vertical-align:top;line-height:1.5
+}
+#koreaSalesResult .cpo-directory-filters{
+  display:flex;flex-wrap:wrap;align-items:center;gap:7px;clear:both;max-width:100%
+}
+body.dark #koreaSalesResult .cpo-directory-overview{background:#193b51;color:#e1f5ff;border-color:#4e819a}
+body.dark #koreaSalesTableWrap.cpo-directory-mode th{background:#17354b;color:#e8f5ff}
+@media(max-width:750px){
+ #koreaSalesResult .cpo-directory-title{display:block}
+ #koreaSalesResult .cpo-directory-title span{display:block;margin-top:3px}
+ #koreaSalesResult .cpo-directory-overview{padding:10px}
+ #koreaSalesTableWrap.cpo-directory-mode .korea-sales-table{min-width:720px}
+}
