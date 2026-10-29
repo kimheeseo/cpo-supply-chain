@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-30",
+  "version": "v2.17.10",
+  "sources": [
+    {
+      "company": "Amphenol",
+      "date": "2026-10-28",
+      "url": "https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-Third-Quarter-2026-Results-and-Announces-Dividend-Increase-and-New-Stock-Repurchase-Program/default.aspx",
+      "fact": "Q3 2026 sales $10.2B, orders $12.2B, IT datacom strong; CPO revenue not separately disclosed"
+    },
+    {
+      "company": "Prysmian",
+      "date": "2026-10-29",
+      "url": "https://www.prysmian.com/en/media/press-releases/prysmian-to-exceed-2028-financial-targets-two-years-early-raises-2026-guidance-again-after-its-best-quarter-to-date",
+      "fact": "Q3 Digital Solutions organic growth 17.3%, EBITDA margin 25%; no CPO-specific revenue"
+    },
+    {
+      "company": "NVIDIA",
+      "date": "2026-10-28",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
+      "fact": "FY2027 Q3 earnings call scheduled Nov 17 2026 14:00 PT"
+    }
+  ],
+  "companyBriefingsUpdated": [
+    "Amphenol",
+    "Prysmian"
+  ],
+  "vendorNewsUpdated": [
+    "Amphenol",
+    "Prysmian"
+  ],
+  "newIrEvents": 0,
+  "irEventSourcesChanged": 1,
+  "render": "untouched",
+  "notes": [
+    "No invented dates or CPO revenue",
+    "Prior data preserved and news deduplicated by URL"
+  ]
+}

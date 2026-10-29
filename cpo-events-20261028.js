@@ -85,7 +85,7 @@ function integrate(){
    }else renderCorporateMore();
    paintPolicy();syncMode();
    var badge=$('#buildBadge');
-   if(badge){badge.textContent='v2.17.9 · CPO 3D ELS · 기업 IR/정부 일정 · 2026-10-28';}
+   if(badge){badge.textContent='v2.17.10 · CPO 3D ELS · 공식 IR/기업 기사 · 2026-10-30';}
    var sub=$('#eventBoxSub');
    if(sub)sub.textContent='기업 IR 5개 + 추가 일정 · 정부 공모/정책 · 공식 출처';
  })

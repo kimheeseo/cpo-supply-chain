@@ -1,5 +1,13 @@
 # CPO Supply Chain
 
+## Verified IR / company news refresh — 2026-10-30 (v2.17.10)
+
+- Updated Amphenol Q3 2026 official IR (sales $10.2B; orders $12.2B; strong IT datacom) and Prysmian Q3 2026 official IR (Digital Solutions organic +17.3%; adjusted EBITDA margin 25.0%) in the vendor news and recent IR briefings. No CPO-specific revenue inferred.
+- NVIDIA FY2027 Q3 November 17 earnings calendar URL now points to its dedicated October 28 official IR announcement; event date unchanged. Expired corporate events remain excluded by existing renderer.
+- Additive, idempotent GitHub Pages static data. No Render changes; original CPO Assembly 2D/3D, supplier roster, country filters, domestic channels, stock/spec data and responsive UI retained.
+- Audit record: [data/update_20261030.json](./data/update_20261030.json); patch: [cpo-market-update-20261030.js](./cpo-market-update-20261030.js).
+
+
 ## Corporate IR and government/public R&D schedule — 2026-10-28 (v2.17.9)
 
 - Company IR: verified [Coherent FY2027 Q1 earnings on 2026-11-04](https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings) and NVIDIA FY2027 Q3 call scheduled for 2026-11-17 per its [2026-08-26 IR transcript](https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf). Existing AMD, Lumentum, Sumitomo, Furukawa and conference dates preserved. Beyond the first five IR events, the interface offers a collapsible “more company IR” list.
@@ -20,9 +28,9 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.17.9 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
+- **Current release:** v2.17.10 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.4.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.17.4.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.10.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.17.10.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)

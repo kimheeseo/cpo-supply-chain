@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "2.17.9",
-  "checked": "2026-10-28",
+  "version": "2.17.10",
+  "checked": "2026-10-30",
   "timeZone": "Asia/Seoul",
   "scope": "CPO/photonic interconnect + enabling semiconductor policies; scheduled event and official program deadlines only",
   "disclaimer": "Static snapshot, not a live schedule feed. Government funding calls are not automatically CPO grants. Dates are event-location local unless otherwise noted. Official dates can change.",
@@ -28,13 +28,13 @@
       "end": "2026-11-17",
       "region": "corporate",
       "company": "NVIDIA",
-      "name": "FY2027 Q3 Earnings Call · 회사 IR 콜에서 예고",
-      "where": "시간 미확정 / 날짜는 회사 IR 콜 공지",
+      "name": "FY2027 Q3 Earnings Call · 14:00 PT",
+      "where": "IR webcast / 미국 태평양시간",
       "parts": [
         "Switch ASIC / xPU",
         "Optical Engine / PIC + EIC"
       ],
-      "url": "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
       "relevance": "AI 데이터센터 네트워크 수요·CPO 채택 전략 관찰. 정식 3분기 IR 공지에서 일정 변경 확인 필요"
     }
   ],
