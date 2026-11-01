@@ -73,15 +73,17 @@ function mount(){
  var sales=el('button','cpo26-open-sales','기존 국내 영업업체 상세 보기');sales.type='button';sales.addEventListener('click',function(){var target=document.getElementById('koreaSalesBtn');if(target)target.click();});sections.korea.prepend(sales);
  var foot=el('p','cpo26-disclaimer','기준일 2026-11-02. 기사 발표일과 행사 개최일은 구분합니다. 시연·개발·공급망 참여·회사 전체 실적은 CPO 전용 양산/매출을 뜻하지 않습니다. 국내 유통권·규격·호환성은 반드시 제조사에 재확인하세요.');
  root.append(heading,tabs,view,foot);
- hero.insertAdjacentElement('afterend',root);
+ var main=hero.closest('main'),anchor=document.getElementById('weeklyTrendBrief')||document.getElementById('eventFilter');
+ while(anchor&&anchor.parentElement!==main)anchor=anchor.parentElement;
+ (anchor||hero).insertAdjacentElement('afterend',root);
 }
 function enhanceExistingNews(){
  var C=window.companies;if(!C)return;
  companies.forEach(function(x){
   var obj=C[x.id];if(!obj)return;
   var news=Array.isArray(obj.news)?obj.news:[];
-  if(!news.some(function(n){return String(n.url||'').split('?')[0]===x.url.split('?')[0]})){
-   news.push({date:/^\d{4}-\d{2}-\d{2}$/.test(x.date)?x.date:'2026-11-02',title:x.name+' · CPO 공급망 업데이트',summary:x.text,implication:'제품·시연·실적과 상용 공급/적격성은 분리해 검증',source:'제조사 공식 자료',url:x.url,relevance:'component'});
+  if(/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&!news.some(function(n){return String(n.url||'').split('?')[0]===x.url.split('?')[0]})){
+   news.push({date:x.date,title:x.name+' · CPO 공급망 업데이트',summary:x.text,implication:'제품·시연·실적과 상용 공급/적격성은 분리해 검증',source:'제조사 공식 자료',url:x.url,relevance:'component'});
    news.sort(function(a,b){return String(b.date||'').localeCompare(String(a.date||''))});obj.news=news.slice(0,5);
   }
  });
