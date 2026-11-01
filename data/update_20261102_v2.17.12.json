@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-02",
+  "version": "v2.17.12",
+  "baseVersion": "v2.17.11",
+  "scope": [
+    "Remove yellow 2D image-region highlight marker and attached stage tooltip; keep photo labels and optical flow controls",
+    "Industry official-source briefings for NVIDIA, Broadcom, Marvell, TSMC, Intel, AMD, Corning, SENKO, US Conec, Sumitomo Electric, Furukawa Electric",
+    "Technology overview CPO/PIC/EIC/ELS/PMF/MCF/pluggable",
+    "Official OCP 2027/OFC 2027/ECOC 2027 schedule and COBO/APC context",
+    "Seven-layer supply chain and Korean sales/support verification checklist"
+  ],
+  "newFiles": [
+    "cpo-industry-expansion-20261102.js"
+  ],
+  "modifiedFiles": [
+    "index.html",
+    "assembly-explorer-20261017.js",
+    "assembly-explorer-20261017.css"
+  ],
+  "constraints": [
+    "No changes to source CAD or packaged base HTML",
+    "Company announcements and demos are not proof of CPO product mass production",
+    "Korea sales channel is not SKU authorization",
+    "Dates are manually checked snapshot, not auto-refresh"
+  ],
+  "sourceURLs": [
+    "https://www.opencompute.org/events/ocp-summit/2027-ocp-global-summit/",
+    "https://www.ofcconference.org/program/schedule-at-a-glance",
+    "https://www.ecocexhibition.com/future-dates/",
+    "https://www.furukawaelectric.com/en/release/2026/opt_20261030.html",
+    "https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking",
+    "https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html",
+    "https://www.senko.com/senko-advantest-and-viavi-collaborate-to-address-a-hidden-bottleneck-in-cpo-module-level-testing/",
+    "https://www.corning.com/worldwide/en/about-us/news-events/news-releases/2026/09/corning-to-showcase-new-cable-and-connectivity-innovations-to-accelerate-and-streamline-ai-network-growth-at-ecoc-2026.html",
+    "https://www.usconec.com/resources/white-papers",
+    "https://www.intel.com/content/www/us/en/products/details/network-io/silicon-photonics.html",
+    "https://www.amd.com/en/blogs/2026/next-gen-networking-transport-for-large-scale-ai-training.html"
+  ]
+}
