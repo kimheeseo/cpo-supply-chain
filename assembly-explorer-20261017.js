@@ -176,17 +176,7 @@
       ['SM 광섬유','변조된 다채널 광신호가 SM fiber harness를 지나갑니다.'],
       ['전면 커넥터','광신호가 전면 커넥터를 거쳐 외부 링크로 전달됩니다.']
     ];
-    var imageTargets=['lightSource','pmBranch','fauPic','fanout','smHarness','frontConnector'];
-    var imageTargetNames=['ELS 광원','PM 광섬유 분기','PIC 광엔진 종단','FAU 팬아웃','SM 광섬유 하네스','전면 커넥터'];
-    function highlightImageRegion(i){
-      $$('.fau2d-region',stage).forEach(function(region){
-        var active=region.getAttribute('data-detail-id')===imageTargets[i];
-        region.classList.toggle('cpo-flow-highlight',active);
-        if(active){region.dataset.flowLabel=(i+1)+'단계 · '+imageTargetNames[i];region.setAttribute('aria-current','step')}
-        else{delete region.dataset.flowLabel;region.removeAttribute('aria-current')}
-      });
-      stage.dataset.flowStep=String(i+1);
-    }
+    // 2026-11-02: Keep original part labels; no step-triggered yellow marker on the reference image.
     var box=document.createElement('section');box.className='cpo-flow-explainer';
     var heading=document.createElement('h4');heading.textContent='CPO 광신호 전달 원리 · Tx 개념 모델';
     var chain=document.createElement('div');chain.className='cpo-flow-chain';
@@ -211,7 +201,6 @@
       step=Math.max(0,Math.min(stages.length-1,i));
       buttons.forEach(function(b,j){b.setAttribute('aria-current',j===step?'step':'false')});
       $$('.cpo-flow-node',visual).forEach(function(node,j){node.classList.toggle('is-active',j===step)});
-      highlightImageRegion(step);
       var traveler=$('.cpo-flow-traveler',visual);if(traveler)traveler.setAttribute('cx',String(flowX[step]));
       desc.textContent=(step+1)+' / '+stages.length+' · '+stages[step][1];
       if(!running)live.textContent=stages[step][0]+' · '+stages[step][1];
