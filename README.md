@@ -1,5 +1,17 @@
 # CPO Supply Chain
 
+## 2026-11-02 · v2.17.12 · CPO Assembly 2D + 업계 콘텐츠 업데이트
+
+- **CPO Assembly (2D):** 동작 원리 실행 시 참고 사진 위에 나타나던 노란색 원형 마커·추가 말풍선 제거. 기존 부품명 라벨, 레이저 경로 설명·재생·단계별 보기, 3D Assembly는 유지.
+- **11개 기업 업데이트:** NVIDIA, Broadcom, Marvell, TSMC, Intel, AMD, Corning, SENKO, US Conec, Sumitomo Electric, Furukawa Electric. 관련 공식 원문 링크와 발표/시연/양산 구분.
+- **기술:** CPO, Optical Engine/PIC/EIC, ELS, PMF, MCF, Pluggable/NPO 비교.
+- **행사:** OFC 2027, OCP Global Summit 2027, ECOC 2027 공식 일정 및 COBO/APC 관련 활동. 확인되지 않은 차기 일정은 미확정 표시.
+- **공급망:** Chip / Package / Optical Engine / Fiber·Laser / Connector·FAU / Assembly·Test / System Vendor 7계층.
+- **국내 영업/지원:** 품목별 문의 경로와 샘플·인증·양산·호환성 검토 항목. 국내 문의처의 존재가 CPO SKU 판매자격을 의미하지 않음을 명시.
+- 새 스크립트: [cpo-industry-expansion-20261102.js](./cpo-industry-expansion-20261102.js). 감사 기록: [data/update_20261102_v2.17.12.json](./data/update_20261102_v2.17.12.json).
+- 표시는 **2026-11-02 기준 정적 스냅샷**입니다. 자동 갱신 데이터가 아니므로 날짜·공급·가격·행사는 공식 원문 재확인이 필요합니다.
+
+
 ## Verified IR / company news refresh — 2026-10-30 (v2.17.10)
 
 - Updated Amphenol Q3 2026 official IR (sales $10.2B; orders $12.2B; strong IT datacom) and Prysmian Q3 2026 official IR (Digital Solutions organic +17.3%; adjusted EBITDA margin 25.0%) in the vendor news and recent IR briefings. No CPO-specific revenue inferred.
@@ -28,7 +40,7 @@
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
-- **Current release:** v2.17.10 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
+- **Current release:** v2.17.12 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
 - **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.10.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.17.10.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
