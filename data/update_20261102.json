@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-02",
+  "version": "v2.17.11",
+  "sources": [
+    {
+      "company": "Furukawa Electric",
+      "date": "2026-10-30",
+      "url": "https://www.furukawaelectric.com/en/release/2026/opt_20261030.html",
+      "fact": "Snap-Beam CPO/PIC connector ECOC2026 award; 8x40 channel 320-fiber one-touch demonstration, not mass shipment"
+    },
+    {
+      "company": "US Conec",
+      "date": "2026-10",
+      "datePrecision": "month",
+      "url": "https://www.usconec.com/resources/white-papers",
+      "fact": "2026 IWCS MMC blind-mate technical paper; GR-1435 environmental/mechanical test; exact publication day not stated"
+    },
+    {
+      "company": "Sumitomo Electric",
+      "date": "2026-10-30",
+      "url": "https://sumitomoelectric.com/sites/default/files/2026-10/download_documents/2026_2m.pdf",
+      "fact": "FY2026 1H consolidated revenue JPY 2,764.912B, Infocommunications JPY 201.459B and segment profit JPY 61.237B"
+    },
+    {
+      "company": "YOFC",
+      "date": "2026-10-31",
+      "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-10-31/601869_20261031_SL60.pdf",
+      "fact": "2026 Jan-Sep attributable profit CNY 6.128B +1204.63%; SSE filing indexed but PDF may be inaccessible to some browsers"
+    },
+    {
+      "company": "Hengtong",
+      "date": "2026-10-29",
+      "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-10-29/600487_20261029_XOLI.pdf",
+      "fact": "2026 Jan-Sep revenue CNY 64.367B +29.72%, attributable profit CNY 6.163B +159.42%"
+    },
+    {
+      "company": "Lumentum",
+      "date": "2026-10-05",
+      "eventDate": "2026-11-05",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx",
+      "fact": "FY2027 Q1 earnings 2026-11-05 14:00 PT official scheduled"
+    }
+  ],
+  "companyBriefingsUpdated": [
+    "Furukawa Electric",
+    "Sumitomo Electric",
+    "YOFC",
+    "Hengtong"
+  ],
+  "vendorNewsUpdated": [
+    "Furukawa Electric",
+    "US Conec",
+    "Sumitomo Electric",
+    "YOFC",
+    "Hengtong"
+  ],
+  "newIrEvents": 1,
+  "irEventSourcesChanged": 0,
+  "render": "untouched",
+  "notes": [
+    "No fabricated exact date for US Conec October white paper",
+    "Keep current base HTML and all feature scripts unchanged",
+    "Deduplicate by canonical URL and cap vendor news at five",
+    "IR event parts computed by existing parts/vendors mappings"
+  ]
+}
