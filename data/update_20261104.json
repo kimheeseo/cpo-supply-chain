@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-04",
+  "runtime": "app.v2.17.11.txt",
+  "siteVersion": "v2.17.12",
+  "sources": [
+    {
+      "company": "Lumentum",
+      "date": "2026-11-02",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
+      "fact": "FY2027 Q1 revenue $1.2626B, NPO/CPO second major win with >$5B purchase commitments; outlook is forward looking"
+    },
+    {
+      "company": "Marvell",
+      "date": "2026-11-02",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+      "fact": "Definitive all-stock acquisition agreement, implied enterprise value $115B, expected closing H1 2028 subject to approvals"
+    }
+  ],
+  "companyBriefingsUpdated": [
+    "Lumentum",
+    "Marvell"
+  ],
+  "vendorNewsUpdated": [
+    "Lumentum",
+    "Marvell"
+  ],
+  "newIrEvents": 0,
+  "notes": [
+    "No changes to Render or 3D UI",
+    "Existing versioned static runtime retained; additive script loaded by index.html",
+    "AMD 2026 Q3 results not added because official published results not verified at run time",
+    "Lumentum previously scheduled Nov 5 earnings superseded by Nov 2 results; event filtering should exclude past events"
+  ]
+}
