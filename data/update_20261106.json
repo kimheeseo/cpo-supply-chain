@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-06",
+  "runtime": "app.v2.17.11.txt",
+  "siteVersion": "v2.17.12",
+  "sources": [
+    {
+      "company": "AMD",
+      "date": "2026-11-03",
+      "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000188/q32026991.htm",
+      "fact": "Q3 2026 revenue $13.377B, Data Center $8.546B +97% YoY"
+    },
+    {
+      "company": "Coherent",
+      "date": "2026-11-04",
+      "url": "https://ir.coherent.com/news-releases/news-release-details/coherent-corp-reports-first-quarter-fiscal-2027-results",
+      "fact": "FY2027 Q1 revenue $2.37B +50% YoY; GAAP gross margin 39.1%"
+    }
+  ],
+  "companyBriefingsUpdated": [
+    "AMD",
+    "Coherent"
+  ],
+  "vendorNewsUpdated": [
+    "AMD",
+    "Coherent"
+  ],
+  "irEventCorrections": [
+    "Remove superseded Lumentum November 5 earnings event; results announced November 2"
+  ],
+  "notes": [
+    "No Render changes",
+    "No change to 3D or other existing UI",
+    "Incremental static script loaded after previous patches",
+    "Existing versioned runtime unchanged to minimize regression risk"
+  ]
+}
