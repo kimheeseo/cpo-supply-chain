@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-09",
+  "runtime": "app.v2.17.11.txt",
+  "siteVersion": "v2.17.12",
+  "sources": [
+    {
+      "company": "Furukawa Electric",
+      "date": "2026-10-28",
+      "url": "https://cdntest.digitalpr.jp/r/146831",
+      "fact": "MOU with SK Ecoplant Materials for semiconductor and AI datacenter high-performance materials; no CPO-specific contract"
+    }
+  ],
+  "companyBriefingsUpdated": [],
+  "vendorNewsUpdated": [
+    "Furukawa Electric"
+  ],
+  "irEventsAdded": [],
+  "notes": [
+    "Official release identified as previously untracked; latest existing Furukawa briefing dated 2026-10-30 preserved",
+    "No Render changes",
+    "Base versioned runtime and existing UI preserved",
+    "Idempotent incremental static patch"
+  ]
+}
