@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-10",
+  "runtime": "app.v2.17.11.txt",
+  "siteVersion": "v2.17.13",
+  "sourceScope": "company IR / official technical papers",
+  "sources": [
+    {
+      "company": "Coherent",
+      "date": "2026-11-04",
+      "url": "https://ir.coherent.com/static-files/4c75f2dd-b6ef-4abb-9cf1-df95638a9058",
+      "fact": "Q1 Scale-across/DCI recognized revenue >$200M; PhotonLink ~20B/5y LTA not recognized revenue; PhotonLink forecasts not actual"
+    },
+    {
+      "company": "Furukawa Electric",
+      "date": "2026-11-09",
+      "url": "https://www.furukawaelectric.com/en/ir/library/finalreport/pdf/2027/20261109_pre.pdf",
+      "fact": "H1 Optical Solutions JPY130.9B recognized SEGMENT sales (not CPO-specific); TMT ferrules 2x, DFB laser 5x future capacity targets"
+    },
+    {
+      "company": "Lumentum",
+      "date": "2026-11-02",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
+      "fact": "NPO/CPO purchase commitments >USD5B; not recognized revenue"
+    },
+    {
+      "company": "US Conec",
+      "date": "2026-10",
+      "url": "https://www.usconec.com/media/aa3dckka/a-high-density-optical-blind-mate-connector-system-for-data-center-optical-networks.pdf",
+      "fact": "2026 IWCS technical paper MMC blind-mate float and GR-1435"
+    },
+    {
+      "company": "US Conec",
+      "date": "2026-10",
+      "url": "https://www.usconec.com/media/srhajpse/low-loss_intermateability_of_apc-mpo_connectors.pdf",
+      "fact": "2026 technical paper APC-MPO ferrule intermateability"
+    },
+    {
+      "company": "Furukawa Electric",
+      "date": "2026-11-09",
+      "url": "https://www.furukawaelectric.com/en/release/2026/comp_20261109.html",
+      "fact": "HVLP4 high-frequency copper foil capacity target 2x by FY2029 end; CPO-adjacent, not CPO revenue"
+    }
+  ],
+  "revenueClassification": "CPO-only realized revenue unavailable in cited figures; separate mixed optical segment, adjacent recognized, contracts, forecasts",
+  "whitePapersAdded": 2,
+  "technicalBlogsAdded": 1,
+  "companyBriefingsUpdated": [
+    "Coherent",
+    "Furukawa Electric"
+  ],
+  "newsUpdated": [
+    "Coherent",
+    "Furukawa Electric",
+    "US Conec"
+  ],
+  "renderNotModified": true,
+  "notes": [
+    "Additive, idempotent static JS patch only",
+    "No Render changes",
+    "Preserve all prior features and versioned runtime",
+    "No fabricated CPO revenue"
+  ]
+}
