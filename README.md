@@ -1,5 +1,17 @@
 # CPO Supply Chain
 
+## 🌐 CPO Supply Chain 툴 바로가기
+
+**[▶ CPO Supply Chain 웹사이트 실행하기 (GitHub Pages)](https://kimheeseo.github.io/cpo-supply-chain/)**
+
+- **실행 주소:** https://kimheeseo.github.io/cpo-supply-chain/
+- **GitHub 저장소:** [kimheeseo/cpo-supply-chain](https://github.com/kimheeseo/cpo-supply-chain)
+- **배포 상태 확인:** [GitHub Actions](https://github.com/kimheeseo/cpo-supply-chain/actions) · [사이트 로딩 파일(index.html)](./index.html)
+
+> 위 **웹사이트 실행하기** 링크를 클릭하면 별도 설치 없이 CPO 공급망 및 2D·3D Assembly 툴에 접속할 수 있습니다. GitHub의 `index.html` **코드 보기 화면은 실행 페이지가 아닙니다.** 사이트가 열리지 않으면 배포 상태를 확인한 후 새로고침(Ctrl+F5)을 시도해 주세요.
+
+---
+
 ## 2026-11-02 · v2.17.12 · CPO Assembly 2D + 업계 콘텐츠 업데이트
 
 - **CPO Assembly (2D):** 동작 원리 실행 시 참고 사진 위에 나타나던 노란색 원형 마커·추가 말풍선 제거. 기존 부품명 라벨, 레이저 경로 설명·재생·단계별 보기, 3D Assembly는 유지.
