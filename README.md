@@ -7,6 +7,7 @@
 - **실행 주소:** https://kimheeseo.github.io/cpo-supply-chain/
 - **GitHub 저장소:** [kimheeseo/cpo-supply-chain](https://github.com/kimheeseo/cpo-supply-chain)
 - **실행 파일 보관 폴더:** [app_runtime/](./app_runtime/) — 현재 사이트 실행 파일 [app.v2.17.11.txt](./app_runtime/app.v2.17.11.txt) 및 과거 버전 보관 (GitHub Pages는 index.html에서 실행)
+- **CPO 스크립트·스타일 폴더:** [cpo_modules/](./cpo_modules/) — CPO 뉴스·행사·IWCS·시장 업데이트용 `cpo-*.js` 및 `cpo-*.css` 보관. 신규 CPO 파일도 이 폴더에 추가하고 `index.html`에서 `./cpo_modules/` 경로를 사용합니다.
 - **배포 상태 확인:** [GitHub Actions](https://github.com/kimheeseo/cpo-supply-chain/actions) · [사이트 로딩 파일(index.html)](./index.html)
 
 > 위 **웹사이트 실행하기** 링크를 클릭하면 별도 설치 없이 CPO 공급망 및 2D·3D Assembly 툴에 접속할 수 있습니다. GitHub의 `index.html` **코드 보기 화면은 실행 페이지가 아닙니다.** 사이트가 열리지 않으면 배포 상태를 확인한 후 새로고침(Ctrl+F5)을 시도해 주세요.
@@ -27,7 +28,7 @@
 - **행사:** OFC 2027, OCP Global Summit 2027, ECOC 2027 공식 일정 및 COBO/APC 관련 활동. 확인되지 않은 차기 일정은 미확정 표시.
 - **공급망:** Chip / Package / Optical Engine / Fiber·Laser / Connector·FAU / Assembly·Test / System Vendor 7계층.
 - **국내 영업/지원:** 품목별 문의 경로와 샘플·인증·양산·호환성 검토 항목. 국내 문의처의 존재가 CPO SKU 판매자격을 의미하지 않음을 명시.
-- 새 스크립트: [cpo-industry-expansion-20261102.js](./cpo-industry-expansion-20261102.js). 감사 기록: [data/update_20261102_v2.17.12.json](./data/update_20261102_v2.17.12.json).
+- 새 스크립트: [cpo-industry-expansion-20261102.js](./cpo_modules/cpo-industry-expansion-20261102.js). 감사 기록: [data/update_20261102_v2.17.12.json](./data/update_20261102_v2.17.12.json).
 - 표시는 **2026-11-02 기준 정적 스냅샷**입니다. 자동 갱신 데이터가 아니므로 날짜·공급·가격·행사는 공식 원문 재확인이 필요합니다.
 
 
@@ -36,7 +37,7 @@
 - Updated Amphenol Q3 2026 official IR (sales $10.2B; orders $12.2B; strong IT datacom) and Prysmian Q3 2026 official IR (Digital Solutions organic +17.3%; adjusted EBITDA margin 25.0%) in the vendor news and recent IR briefings. No CPO-specific revenue inferred.
 - NVIDIA FY2027 Q3 November 17 earnings calendar URL now points to its dedicated October 28 official IR announcement; event date unchanged. Expired corporate events remain excluded by existing renderer.
 - Additive, idempotent GitHub Pages static data. No Render changes; original CPO Assembly 2D/3D, supplier roster, country filters, domestic channels, stock/spec data and responsive UI retained.
-- Audit record: [data/update_20261030.json](./data/update_20261030.json); patch: [cpo-market-update-20261030.js](./cpo-market-update-20261030.js).
+- Audit record: [data/update_20261030.json](./data/update_20261030.json); patch: [cpo-market-update-20261030.js](./cpo_modules/cpo-market-update-20261030.js).
 
 
 ## Corporate IR and government/public R&D schedule — 2026-10-28 (v2.17.9)
@@ -46,7 +47,7 @@
 - Significant dates: US NIST CHIPS materials/equipment NOFO 2 concept-plan deadline **Nov 1**; US NSF 26-510/26-511 SBIR/STTR deadlines **Nov 4**; EU integrated-photonics 2027 RIA opening **Nov 17**; EU Chips JU AI chips/evaluation (deadline **Dec 1**, updated extension); EU–Japan semiconductor cooperation **Dec 8**; Horizon integrated photonics RIA deadline **Mar 18, 2027**.
 - Scope labels distinguish CPO-relevant photonics from broader semiconductor manufacturing, AI compute or test instrumentation programs. Event dates, award/budget figures, and application time zones are attributed to official program pages.
 - **Not automatic/live:** All data is a verified snapshot as of 2026-10-28; official dates may change. Corporate earnings/event dates do not imply product-launch or CPO commercialization dates.
-- Data: [data/cpo_event_calendar_20261028.json](./data/cpo_event_calendar_20261028.json). UI enhancer: [cpo-events-20261028.js](./cpo-events-20261028.js). Preserves all existing 2D, 3D, market/supplier listings, company news, and original event-category toggles.
+- Data: [data/cpo_event_calendar_20261028.json](./data/cpo_event_calendar_20261028.json). UI enhancer: [cpo-events-20261028.js](./cpo_modules/cpo-events-20261028.js). Preserves all existing 2D, 3D, market/supplier listings, company news, and original event-category toggles.
 
 ## CPO Assembly (3D): ELS/CW laser visualization · 2026-10-28 (v2.17.8)
 
@@ -54,14 +55,14 @@
 - The ELS model is outside the PIC/CPO package, consistent with a typical external-laser architecture. Its ELS/PMF and Tx/output routes are visually distinguished.
 - New 3D laser label, selectable ELS/PMF/PIC/FAU parts, optical-path animation, and show/hide control.
 - Existing uploaded 10-part fan-out CAD model, original CAD interactions, and 2D reference photo/flow remain unchanged.
-- **Scope:** The added parts and optical route are teaching geometry, not a reconstructed factory CAD assembly, validated real-world dimensions, or an assertion of component compatibility. Source is [cpo-els-3d-20261028.js](./cpo-els-3d-20261028.js).
+- **Scope:** The added parts and optical route are teaching geometry, not a reconstructed factory CAD assembly, validated real-world dimensions, or an assertion of component compatibility. Source is [cpo-els-3d-20261028.js](./cpo_modules/cpo-els-3d-20261028.js).
 - Architecture references: [Coherent 2026 investor overview](https://ir.coherent.com/static-files/80d6a0b9-4ea5-422d-af1c-9f886021d518); [CPO Assembly Guidance Document](https://optcore.net/wp-content/uploads/CPO-Assembly-Guidance-Doc-V1.0-FINAL.pdf).
 
 CPO Supply Chain Explorer — GitHub Pages frontend.
 
 - **Current release:** v2.17.12 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.10.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app_runtime/app.v2.17.10.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.10.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app_runtime/app.v2.17.10.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo_modules/cpo-release-20261017.js), and [weekly brief](./cpo_modules/cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
@@ -72,7 +73,7 @@ The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loade
 
 ## Verified market update · 2026-10-26
 
-- The base64-encoded static HTML runtime is [app.v2.17.4.txt](./app_runtime/app.v2.17.4.txt); the [index.html](./index.html) launcher now loads it. The additive, idempotent [market data patch](./cpo-market-update-20261026.js) runs locally without a server or Render.
+- The base64-encoded static HTML runtime is [app.v2.17.4.txt](./app_runtime/app.v2.17.4.txt); the [index.html](./index.html) launcher now loads it. The additive, idempotent [market data patch](./cpo_modules/cpo-market-update-20261026.js) runs locally without a server or Render.
 - Added official-source records for TFC (CPO FAU/ELS component production; NPO still at sample stage), InnoLight (2027 optical module order visibility, NPO/XPO outlook), Photon Bridge (€10M laser funding, samples planned for 2027), Furukawa chiplet R&D, TSMC Q3, and Lightmatter system validation.
 - Added the AMD 2026-11-03 official earnings event without changing existing Lumentum, Corning, Amphenol, and Sumitomo events; upcoming corporate events are still limited to the nearest five.
 - Refreshed the collapsible weekly market-signal panel to 2026-10-26. Preserved 3D CPO Assembly, domestic sales directory, optical-path animation, 2D→3D tab order, country listings, and mobile styling.
