@@ -23,6 +23,10 @@ function css(){
  '#cpoPolicyFilter.active{background:#136b8d;color:#fff;border-color:#136b8d}' +
  '#cpoPolicyBox{margin:10px 0 0;padding:12px;border:1px solid #abc5d5;border-radius:12px;background:#f7fbfd;color:#24455a}' +
  '#cpoPolicyBox[hidden],#cpoMoreCorporate[hidden],#eventList[hidden],#irWatchList[hidden]{display:none!important}' +
+ '#cpoEventCollapsibleContent[hidden]{display:none!important}' +
+ '.cpo-event-collapse-toggle{width:100%;margin:8px 0 4px;display:flex;justify-content:space-between;align-items:center;gap:8px;cursor:pointer;border:1px solid #a5c5d8;border-radius:10px;background:#f0f7fc;color:#135b84;padding:10px 12px;font-weight:850;font-size:12px}' +
+ '.cpo-event-collapse-toggle:hover{background:#e2f1fa}' +
+ 'html[data-theme="dark"] .cpo-event-collapse-toggle{background:#20394c;color:#d6eeff;border-color:#52758b}' +
  '.cpo-event-meta{font-size:11px;line-height:1.55;color:#577082;margin:0 0 10px}' +
  '.cpo-policy-filters{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}' +
  '.cpo-policy-filters button{border:1px solid #adc4d2;border-radius:7px;background:#fff;color:#32556b;font:750 11px system-ui;padding:6px 10px;min-height:32px;cursor:pointer}' +
@@ -45,6 +49,29 @@ function css(){
  '@media(max-width:650px){#cpoPolicyBox{padding:9px}.cpo-policy-item{padding:9px}.cpo-policy-filters button{min-height:38px}}';
  document.head.appendChild(el);
 }
+/* Event schedule is initially collapsed on every page load. Keep the
+   market brief, IR filters, country/policy controls and all data intact. */
+function installEventAccordion(){
+ var box=root&&root.closest('.event-box');if(!box)return;
+ if(box.querySelector('#cpoEventCollapseButton'))return;
+ var title=box.querySelector('.event-title');if(!title)return;
+ var panel=document.createElement('div');
+ panel.id='cpoEventCollapsibleContent';
+ panel.hidden=true;
+ while(title.nextSibling)panel.appendChild(title.nextSibling);
+ var button=document.createElement('button');
+ button.type='button';button.id='cpoEventCollapseButton';button.className='cpo-event-collapse-toggle';
+ button.setAttribute('aria-controls',panel.id);button.setAttribute('aria-expanded','false');
+ button.innerHTML='주요 행사 일정 펼쳐 보기 <span aria-hidden="true">▾</span>';
+ title.insertAdjacentElement('afterend',button);
+ button.insertAdjacentElement('afterend',panel);
+ button.addEventListener('click',function(){
+   var open=panel.hidden;
+   panel.hidden=!open;
+   button.setAttribute('aria-expanded',String(open));
+   button.innerHTML=open?'주요 행사 일정 접기 <span aria-hidden="true">▴</span>':'주요 행사 일정 펼쳐 보기 <span aria-hidden="true">▾</span>';
+ });
+}
 function integrate(){
  root=$('#eventFilter');list=$('#eventList');watch=$('#irWatchList');
  if(!root||!list)return;
@@ -62,6 +89,7 @@ function integrate(){
  more=document.createElement('details');
  more.id='cpoMoreCorporate';more.hidden=true;
  list.insertAdjacentElement('afterend',more);
+ installEventAccordion();
 
  policyButton.addEventListener('click',function(){
   policyOn=!policyOn;
@@ -84,8 +112,7 @@ function integrate(){
     window.renderUpcomingEvents();
    }else renderCorporateMore();
    paintPolicy();syncMode();
-   var badge=$('#buildBadge');
-   if(badge){badge.textContent='v2.17.10 · CPO 3D ELS · 공식 IR/기업 기사 · 2026-10-30';}
+   /* Overall build badge is managed by the latest static news patch. */
    var sub=$('#eventBoxSub');
    if(sub)sub.textContent='기업 IR 5개 + 추가 일정 · 정부 공모/정책 · 공식 출처';
  })

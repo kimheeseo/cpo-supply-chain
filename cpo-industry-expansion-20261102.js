@@ -4,9 +4,11 @@
 if(window.__cpoIndustryExpansion20261102)return;
 window.__cpoIndustryExpansion20261102=true;
 var companies=[
+{id:'coherent',name:'Coherent',date:'2026-11-04',kind:'광연결 실매출 · Optical Engine',text:'FY2027 Q1 Scale-across/DCI 분기 매출 2억 달러 초과(실제 인식 매출, CPO 전용 아님). PhotonLink 5년 약 200억 달러 LTA는 미래 계약이며 매출로 인식된 금액과 구분합니다.',url:'https://ir.coherent.com/static-files/4c75f2dd-b6ef-4abb-9cf1-df95638a9058'},
+{id:'lumentum',name:'Lumentum',date:'2026-11-02',kind:'NPO/CPO 수주 · ELS',text:'FY2027 Q1 회사 전체 매출 12.626억 달러. 두 번째 NPO/CPO 주요 고객 수주와 50억 달러 초과 구매약정을 발표했습니다. 약정 금액은 CPO 인식매출이 아닙니다.',url:'https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx'},
 {id:'nvidia',name:'NVIDIA',date:'2026-10-21',kind:'CPO 직접',text:'Spectrum-X / Quantum-X Photonics CPO와 광엔진 패키징 생태계 확대. SPIL 생산능력 확대 목표는 계획 수치로, 실제 출하량과 구분해야 합니다.',url:'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx'},
 {id:'broadcom',name:'Broadcom',date:'2026-10-08',kind:'CPO 직접',text:'OCP 2026에서 Tomahawk 6, TH6-Davisson 3세대 CPO 및 통합 광기술을 AI 이더넷 네트워킹 제품군으로 제시했습니다.',url:'https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking'},
-{id:'marvell',name:'Marvell',date:'2026-09-20',kind:'CPO 직접',text:'ECOC 2026에서 200G/lane SiPh 기반 102.4T CPO 플랫폼 데모와 2nm 광연결 기술을 발표했습니다. 데모와 양산을 구분합니다.',url:'https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html'},
+{id:'marvell',name:'Marvell',date:'2026-11-02',kind:'CPO 공급망 · 인수 합의',text:'Lumentum과 전액 주식 인수·합병 계약을 발표했습니다. ASIC·광엔진·레이저 공동설계 시너지를 추진하며 거래는 아직 승인·종결 전입니다. 완성 제품의 양산 출하로 해석하지 않습니다.',url:'https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity'},
 {id:'tsmc',name:'TSMC',date:'2026 공개 보고서',kind:'파운드리/패키징',text:'COUPE는 SiPh PIC와 전기제어 EIC를 3D 집적하는 광엔진 플랫폼입니다. 연차보고서의 CPO 양산 목표는 목표 일정이며 고객별 공급을 보장하지 않습니다.',url:'https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf'},
 {id:'intel',name:'Intel',date:'공식 기술 자료',kind:'Optical I/O',text:'광컴퓨트 인터커넥트(OCI) 칩렛에 PIC·EIC와 온칩 광원·SOA를 집적하는 접근을 소개합니다. 외부 ELS 구조만 사용하는 것은 아닙니다.',url:'https://www.intel.com/content/www/us/en/products/details/network-io/silicon-photonics.html'},
 {id:'amd',name:'AMD',date:'2026',kind:'AI 네트워킹 인접',text:'Pensando Pollara 400 / Vulcano 800 NIC로 AI 클러스터 연결을 고도화합니다. 해당 공개 자료는 CPO 스위치 양산 발표가 아닙니다.',url:'https://www.amd.com/en/blogs/2026/next-gen-networking-transport-for-large-scale-ai-training.html'},
@@ -14,9 +16,12 @@ var companies=[
 {id:'senko',name:'SENKO',date:'2026-09-14',kind:'FAU / 시험',text:'Advantest·VIAVI와 함께 탈착형 광커넥터를 적용한 CPO 모듈 자동시험을 발표했습니다. 반복 체결, BER, 제조 수율 검증이 핵심입니다.',url:'https://www.senko.com/senko-advantest-and-viavi-collaborate-to-address-a-hidden-bottleneck-in-cpo-module-level-testing/'},
 {id:'usconec',name:'US Conec',date:'2026-10 (월 단위)',kind:'MMC / Blind-mate',text:'MMC 기반 고밀도 blind-mate 광커넥터 기술논문을 공개했습니다. 정렬 공차와 유지보수성 관점이며 CPO 전용 양산 인증은 별도 확인 대상입니다.',url:'https://www.usconec.com/resources/white-papers'},
 {id:'sumitomo',name:'Sumitomo Electric',date:'2026-10-30',kind:'ELS / Fiber',text:'2026년 상반기 Infocommunications 실적을 발표했습니다. CW 레이저·PMF·MCF가 CPO 관련 공급망이나, 사업부 전체 매출을 CPO 매출로 해석하면 안 됩니다.',url:'https://sumitomoelectric.com/sites/default/files/2026-10/download_documents/2026_2m.pdf'},
-{id:'furukawa',name:'Furukawa Electric',date:'2026-10-30',kind:'CPO Connector',text:'ECOC 2026에서 Snap-Beam 다심 탈착형 커넥터로 수상했습니다. 8×40채널, 총 320심 원터치 접속 기술을 소개했으며 양산 출하와는 구분합니다.',url:'https://www.furukawaelectric.com/en/release/2026/opt_20261030.html'}
+{id:'furukawa',name:'Furukawa Electric',date:'2026-11-09',kind:'Fiber · Connector · IR',text:'11월 9일 상반기 실적·전망을 공개했습니다. Optical Solutions 사업부 매출 약 1,309억 엔은 광통신 전체 실적이며 CPO 단독 매출이 아닙니다. TMT 페룰·DFB 레이저칩 등의 향후 증설 목표도 별도 추적합니다.',url:'https://www.furukawaelectric.com/en/ir/library/index.html'}
 ];
+companies.sort(function(a,b){var ad=/^20\d{2}-\d{2}-\d{2}$/.test(a.date)?a.date:'0000';var bd=/^20\d{2}-\d{2}-\d{2}$/.test(b.date)?b.date:'0000';return bd.localeCompare(ad);});
 var technologies=[
+{name:'CPO 매출 · 구매약정 구분',meta:'매출인식 ≠ 구매약정 ≠ 양산 계획',text:'Coherent의 Scale-across/DCI 매출은 실제 분기 인식 매출이나 CPO 전용으로 분리된 값이 아닙니다. Lumentum의 NPO/CPO 구매약정 및 Coherent의 PhotonLink LTA는 미래 계약으로 인식 매출과 구분합니다.',source:'https://ir.coherent.com/static-files/4c75f2dd-b6ef-4abb-9cf1-df95638a9058'},
+{name:'IWCS 2026 · MMC Blind-Mate 접속',meta:'US Conec · 고밀도 커넥터 기술논문',text:'MMC 기반 Blind-Mate 구조의 독립 Float·정렬오차 흡수와 반복 체결, 환경·기계 시험 항목을 소개합니다. 자료 공개는 CPO용 양산 인증을 의미하지 않습니다.',source:'https://www.usconec.com/resources/white-papers'},
 {name:'CPO · Co-Packaged Optics',meta:'ASIC과 광엔진의 패키지 근접 집적',text:'고속 전기 배선을 줄여 손실·전력·전면 밀도 문제를 완화합니다. 제조 수율, 열, 광접속·수리 가능성은 별도 해결 과제입니다.',source:'https://www.broadcom.com/info/optics/cpo'},
 {name:'Optical Engine / PIC + EIC',meta:'광변조·검출과 전기 구동',text:'PIC가 광신호를 처리하고 EIC가 드라이버·TIA 등을 담당합니다. 다중 칩/패키징 공정에서 사전 시험과 수율이 중요합니다.',source:'https://www.intel.com/content/www/us/en/products/details/network-io/silicon-photonics.html'},
 {name:'ELS · External Laser Source',meta:'외부 CW 광원',text:'열이 큰 스위치 ASIC 주변에서 레이저를 분리하는 설계입니다. 출력, RIN, 파장 안정성, 신뢰성, 레이저-광엔진 경로 손실을 검증합니다.',source:'https://developer.nvidia.com/blog/scaling-power-efficient-ai-factories-with-nvidia-spectrum-x-ethernet-photonics/'},
@@ -52,9 +57,9 @@ function mount(){
  if(document.getElementById('cpoIndustry20261102'))return;
  var hero=document.querySelector('main.wrap .hero');
  if(!hero||!hero.parentNode)return;
- var root=el('section','cpo26-panel');root.id='cpoIndustry20261102';root.setAttribute('aria-label','2026년 11월 2일 CPO 업계 업데이트');
+ var root=el('section','cpo26-panel');root.id='cpoIndustry20261102';root.setAttribute('aria-label','2026년 11월 10일 CPO 업계 업데이트');
  var heading=el('div','cpo26-head');
- var headingTitle=el('div');headingTitle.append(el('strong','', 'CPO 산업 업데이트 · 2026.11.02'),el('p','','기업·기술·행사·7단계 공급망·국내 영업 가이드 | 공식 발표 및 제조사 자료 기준 정적 스냅샷'));
+ var headingTitle=el('div');headingTitle.append(el('strong','', 'CPO 산업 업데이트 · 2026.11.10'),el('p','','11월 신규 실적·CPO 매출/수주 구분·IWCS 기술논문 반영 | 기존 기업·행사·공급망·국내 영업 가이드 유지'));
  heading.append(headingTitle);
  var tabs=el('div','cpo26-tabs');tabs.setAttribute('role','group');tabs.setAttribute('aria-label','CPO 산업 콘텐츠 분류');
  var view=el('div','cpo26-content');
@@ -71,7 +76,7 @@ function mount(){
  layers.forEach(function(x){sections.layers.append(card(x.name,x.companies,x.text,null));});
  korea.forEach(function(x){sections.korea.append(card(x.name,'한국 영업·기술 지원 확인 항목',x.text,x.url));});
  var sales=el('button','cpo26-open-sales','기존 국내 영업업체 상세 보기');sales.type='button';sales.addEventListener('click',function(){var target=document.getElementById('koreaSalesBtn');if(target)target.click();});sections.korea.prepend(sales);
- var foot=el('p','cpo26-disclaimer','기준일 2026-11-02. 기사 발표일과 행사 개최일은 구분합니다. 시연·개발·공급망 참여·회사 전체 실적은 CPO 전용 양산/매출을 뜻하지 않습니다. 국내 유통권·규격·호환성은 반드시 제조사에 재확인하세요.');
+ var foot=el('p','cpo26-disclaimer','기준일 2026-11-10. 기사 발표일과 행사 개최일은 구분합니다. 시연·개발·공급망 참여·회사 전체 실적은 CPO 전용 양산/매출을 뜻하지 않습니다. 국내 유통권·규격·호환성은 반드시 제조사에 재확인하세요.');
  root.append(heading,tabs,view,foot);
  var main=hero.closest('main'),anchor=document.getElementById('weeklyTrendBrief')||document.getElementById('eventFilter');
  while(anchor&&anchor.parentElement!==main)anchor=anchor.parentElement;
@@ -101,6 +106,6 @@ function style(){
  "@media(max-width:720px){.cpo26-panel{padding:11px}.cpo26-grid{grid-template-columns:1fr}.cpo26-head strong{font-size:15px}.cpo26-tabs button{padding:8px 10px;font-size:11px}}";
  document.head.appendChild(s);
 }
-function init(){style();mount();enhanceExistingNews();var badge=document.getElementById('buildBadge');if(badge)badge.textContent='v2.17.12 · CPO 산업/Assembly 2D · 2026-11-02';}
+function init(){style();mount();enhanceExistingNews();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
