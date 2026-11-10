@@ -6,6 +6,7 @@
 
 - **실행 주소:** https://kimheeseo.github.io/cpo-supply-chain/
 - **GitHub 저장소:** [kimheeseo/cpo-supply-chain](https://github.com/kimheeseo/cpo-supply-chain)
+- **실행 파일 보관 폴더:** [app_runtime/](./app_runtime/) — 현재 사이트 실행 파일 [app.v2.17.11.txt](./app_runtime/app.v2.17.11.txt) 및 과거 버전 보관 (GitHub Pages는 index.html에서 실행)
 - **배포 상태 확인:** [GitHub Actions](https://github.com/kimheeseo/cpo-supply-chain/actions) · [사이트 로딩 파일(index.html)](./index.html)
 
 > 위 **웹사이트 실행하기** 링크를 클릭하면 별도 설치 없이 CPO 공급망 및 2D·3D Assembly 툴에 접속할 수 있습니다. GitHub의 `index.html` **코드 보기 화면은 실행 페이지가 아닙니다.** 사이트가 열리지 않으면 배포 상태를 확인한 후 새로고침(Ctrl+F5)을 시도해 주세요.
@@ -54,7 +55,7 @@ CPO Supply Chain Explorer — GitHub Pages frontend.
 
 - **Current release:** v2.17.12 (company IR and source-linked government policy calendar, retaining v2.17.8 ELS/PMF/PIC 3D overlay and earlier supplier updates)
 - **Application:** [Open CPO Supply Chain](https://kimheeseo.github.io/cpo-supply-chain/)
-- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.10.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app.v2.17.10.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
+- **Launcher:** [index.html](https://github.com/kimheeseo/cpo-supply-chain/blob/main/index.html) loads [app.v2.17.10.txt](https://github.com/kimheeseo/cpo-supply-chain/blob/main/app_runtime/app.v2.17.10.txt) with isolated [assembly](./assembly-explorer-20261017.js), [v2.14.0 release](./cpo-release-20261017.js), and [weekly brief](./cpo-weekly-brief-20261017.js) enhancements.
 - **Country classification:** [99-company CSV](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_99%EA%B0%9C%EC%97%85%EC%B2%B4_%EA%B5%AD%EA%B0%80%EB%B3%84%EB%B6%84%EB%A5%98.csv)
 - **CPO supplier research:** [Country and component list](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/261003_CPO_%EA%B5%AD%EA%B0%80%EB%B3%84%EC%97%85%EC%B2%B4%EB%A6%AC%EC%8A%A4%ED%8A%B8.csv)
 - **Newly added supplier log:** [list/added_companies.csv](https://github.com/kimheeseo/cpo-supply-chain/blob/main/list/added_companies.csv)
@@ -65,7 +66,7 @@ The visible **OCP 2026 CPO · 광 인터커넥트 제품/기술** panel is loade
 
 ## Verified market update · 2026-10-26
 
-- The base64-encoded static HTML runtime is [app.v2.17.4.txt](./app.v2.17.4.txt); the [index.html](./index.html) launcher now loads it. The additive, idempotent [market data patch](./cpo-market-update-20261026.js) runs locally without a server or Render.
+- The base64-encoded static HTML runtime is [app.v2.17.4.txt](./app_runtime/app.v2.17.4.txt); the [index.html](./index.html) launcher now loads it. The additive, idempotent [market data patch](./cpo-market-update-20261026.js) runs locally without a server or Render.
 - Added official-source records for TFC (CPO FAU/ELS component production; NPO still at sample stage), InnoLight (2027 optical module order visibility, NPO/XPO outlook), Photon Bridge (€10M laser funding, samples planned for 2027), Furukawa chiplet R&D, TSMC Q3, and Lightmatter system validation.
 - Added the AMD 2026-11-03 official earnings event without changing existing Lumentum, Corning, Amphenol, and Sumitomo events; upcoming corporate events are still limited to the nearest five.
 - Refreshed the collapsible weekly market-signal panel to 2026-10-26. Preserved 3D CPO Assembly, domestic sales directory, optical-path animation, 2D→3D tab order, country listings, and mobile styling.
@@ -215,7 +216,7 @@ Record each newly added supplier as one row in [list/added_companies.csv](https:
 ## Deployment policy
 
 - **GitHub-only static deployment**: the public homepage is deployed only through GitHub Pages.
-- The release launcher loads the versioned base runtime `app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css`, `cpo-release-20261017.js`/`.css`, and `cpo-weekly-brief-20261017.js`/`.css` enhancements.
+- The release launcher loads the versioned base runtime `app_runtime/app.v2.13.7.txt` plus the separate `assembly-explorer-20261017.js`/`.css`, `cpo-release-20261017.js`/`.css`, and `cpo-weekly-brief-20261017.js`/`.css` enhancements.
 - Corporate IR/event schedules and company briefing summaries are stored in the static site data.
 - Render is not part of the deployment/update workflow for this site.
 
