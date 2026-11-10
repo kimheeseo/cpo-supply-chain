@@ -270,11 +270,34 @@
     updates.forEach(function(update){var company=companies[update.id];if(!company)return;company.news=Array.isArray(company.news)?company.news:[];if(company.news.some(function(n){return n.url===update.item.url}))return;company.news.unshift(update.item);company.news.sort(function(a,b){return String(b.date).localeCompare(String(a.date))});changed=true});
     if(changed&&typeof window.renderVendor==='function')window.renderVendor();
   }
+  /* Keep the vendor/news badge synchronized with the latest committed static
+     cpo-market-update-YYYYMMDD.js file. Do not use today's browser date: a
+     cached deployment must show the actual last data-update date. */
+  var latestBuildVersion='v2.17.13';
+  function latestVendorNewsDate(){
+    var latest='2026-11-10',scripts=document.scripts||[];
+    for(var i=0;i<scripts.length;i++){
+      var src=scripts[i].getAttribute('src')||'';
+      var m=/cpo-market-update-(20\d{2})(\d{2})(\d{2})\.js(?:$|[?#])/.exec(src);
+      if(m){
+        var stamp=m[1]+'-'+m[2]+'-'+m[3];
+        if(stamp>latest)latest=stamp;
+      }
+    }
+    var explicit=String(window.cpoSiteUpdateDate||'');
+    if(/^20\d{2}-\d{2}-\d{2}$/.test(explicit)&&explicit>latest)latest=explicit;
+    return latest;
+  }
   function refreshBadge(){
-    var badge=$('#buildBadge');
-    var current='v2.17.7 · 3D 부품명 분리 · 국내 영업 9개 부품군 · 업체/기사 · 2026-10-28';
-    if(!badge||badge.textContent===current)return;
-    badge.textContent=current;
+    var badge=$('#buildBadge');if(!badge)return;
+    var candidate=/v(\d+)\.(\d+)\.(\d+)/.exec(badge.textContent||'');
+    if(candidate){
+      var next='v'+candidate[1]+'.'+candidate[2]+'.'+candidate[3];
+      var old=latestBuildVersion.slice(1).split('.').map(Number),v=next.slice(1).split('.').map(Number);
+      if(v[0]>old[0]||(v[0]===old[0]&&(v[1]>old[1]||(v[1]===old[1]&&v[2]>old[2]))))latestBuildVersion=next;
+    }
+    var current=latestBuildVersion+' · 3D 부품명 분리 · 국내 영업 9개 부품군 · 업체/기사 · '+latestVendorNewsDate();
+    if(badge.textContent!==current)badge.textContent=current;
   }
   function init(){initWholeCpoFlow();initKoreaDirectory();appendLatestNews();refreshBadge();var badge=$('#buildBadge');if(badge)new MutationObserver(refreshBadge).observe(badge,{childList:true,characterData:true,subtree:true});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
