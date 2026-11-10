@@ -1,13 +1,13 @@
 /* CPO Supply Chain v2.17.9 — 2026-10-28
  * Verified corporate IR and government/public R&D schedule.
  * Additive GitHub Pages enhancement: keeps 2D/3D, supplier and event core intact.
- * Data: ./data/cpo_event_calendar_20261028.json
+ * Data: ./data/cpo_event_calendar_20261110.json
  */
 (function(){
 'use strict';
 if(window.__cpoEvents20261028)return;
 window.__cpoEvents20261028=true;
-var root=null,list=null,watch=null,policyBox=null,policyButton=null,more=null;
+var root=null,list=null,watch=null,policyBox=null,policyButton=null,more=null,conferenceBox=null,conferenceButton=null,conferenceOn=false;
 var data=null,policyOn=false,country='전체';
 var $=function(s,r){return(r||document).querySelector(s)};
 function escapeHtml(s){return String(s==null?'':s).replace(/[&<>"']/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]})}
@@ -20,10 +20,13 @@ function css(){
  var el=document.createElement('style');
  el.id='cpoEvent20261028Style';
  el.textContent=
- '#cpoPolicyFilter.active{background:#136b8d;color:#fff;border-color:#136b8d}' +
+ '#cpoPolicyFilter.active,#cpoConferenceFilter.active{background:#136b8d;color:#fff;border-color:#136b8d}' +
+ '.cpo-conference-item{background:var(--card,#fff);border:1px solid #cbdce7;border-radius:10px;padding:11px 12px;margin:8px 0;font-size:12px;line-height:1.6}' +
+ '.cpo-conference-item b{display:block;font-size:13px;margin:4px 0}' +
+ '.cpo-conference-item a{color:#0a689c;font-weight:750;text-decoration:underline}' +
  '#cpoPolicyBox{margin:10px 0 0;padding:12px;border:1px solid #abc5d5;border-radius:12px;background:#f7fbfd;color:#24455a}' +
  '#cpoPolicyBox[hidden],#cpoMoreCorporate[hidden],#eventList[hidden],#irWatchList[hidden]{display:none!important}' +
- '#cpoEventCollapsibleContent[hidden]{display:none!important}' +
+ '#cpoEventCollapsibleContent[hidden],#cpoConferenceBox[hidden]{display:none!important}' +
  '.cpo-event-collapse-toggle{width:100%;margin:8px 0 4px;display:flex;justify-content:space-between;align-items:center;gap:8px;cursor:pointer;border:1px solid #a5c5d8;border-radius:10px;background:#f0f7fc;color:#135b84;padding:10px 12px;font-weight:850;font-size:12px}' +
  '.cpo-event-collapse-toggle:hover{background:#e2f1fa}' +
  'html[data-theme="dark"] .cpo-event-collapse-toggle{background:#20394c;color:#d6eeff;border-color:#52758b}' +
@@ -89,19 +92,22 @@ function integrate(){
  more=document.createElement('details');
  more.id='cpoMoreCorporate';more.hidden=true;
  list.insertAdjacentElement('afterend',more);
+ conferenceButton=document.createElement('button');conferenceButton.type='button';conferenceButton.id='cpoConferenceFilter';conferenceButton.className='event-filter-btn';conferenceButton.textContent='학회·전시회';conferenceButton.setAttribute('aria-pressed','false');root.appendChild(conferenceButton);
+ conferenceBox=document.createElement('section');conferenceBox.id='cpoConferenceBox';conferenceBox.hidden=true;conferenceBox.setAttribute('aria-label','학회·전시회 공식 일정');policyBox.insertAdjacentElement('afterend',conferenceBox);
  installEventAccordion();
 
  policyButton.addEventListener('click',function(){
-  policyOn=!policyOn;
+  policyOn=!policyOn;conferenceOn=false;
   syncMode();
  });
+ conferenceButton.addEventListener('click',function(){conferenceOn=!conferenceOn;policyOn=false;syncMode()});
  root.addEventListener('click',function(ev){
   if(ev.target.closest('[data-event-filter]')){
-   policyOn=false;syncMode();
+   policyOn=false;conferenceOn=false;syncMode();
   }
  });
  // Wait until the official dates are loaded; no unsupported placeholder dates.
- fetch('./data/cpo_event_calendar_20261028.json?v=2.17.9',{cache:'no-store'})
+ fetch('./data/cpo_event_calendar_20261110.json?v=20261110',{cache:'no-store'})
  .then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()})
  .then(function(x){
    if(!x||!Array.isArray(x.policyEvents)||!Array.isArray(x.companyEvents))throw Error('Bad calendar schema');
@@ -111,10 +117,10 @@ function integrate(){
     window.renderUpcomingEvents=function(){base.apply(this,arguments);renderCorporateMore();if(policyOn)syncMode()};
     window.renderUpcomingEvents();
    }else renderCorporateMore();
-   paintPolicy();syncMode();
+   paintPolicy();paintConference();syncMode();
    /* Overall build badge is managed by the latest static news patch. */
    var sub=$('#eventBoxSub');
-   if(sub)sub.textContent='기업 IR 5개 + 추가 일정 · 정부 공모/정책 · 공식 출처';
+   if(sub)sub.textContent='2026-11-10 검증 · IR / 학회·전시 / 정부·EU 공모';
  })
  .catch(function(error){
   data={companyEvents:[],policyEvents:[],undatedWatch:[]};
@@ -125,6 +131,7 @@ function integrate(){
 function mergeCorporate(items){
  var events=window.cpoEvents;
  if(!Array.isArray(events))return;
+ for(var z=events.length-1;z>=0;z--){if(events[z].region==='corporate'&&!items.some(function(a){return a.company===events[z].company&&a.start===events[z].start}))events.splice(z,1)}
  items.forEach(function(item){
   if(!item||item.region!=='corporate'||!item.start||!isUrl(item.url))return;
   if(events.some(function(old){return old.region==='corporate'&&old.company===item.company&&old.start===item.start}))return;
@@ -140,7 +147,7 @@ function renderCorporateMore(){
  .sort(function(a,b){return a.start.localeCompare(b.start)||String(a.company).localeCompare(String(b.company))})
  .slice(5);
  var selected=$('#eventFilter [data-event-filter].active');
- var hidden=policyOn ||(selected&&selected.getAttribute('data-event-filter')!=='corporate')||later.length===0;
+ var hidden=policyOn||conferenceOn||(selected&&selected.getAttribute('data-event-filter')!=='corporate')||later.length===0;
  more.hidden=!!hidden;
  if(!later.length)return;
  var currentOpen=more.open;
@@ -177,17 +184,28 @@ function paintPolicy(){
   btn.addEventListener('click',function(){country=this.getAttribute('data-policy-country');paintPolicy();});
  });
 }
+function paintConference(){
+ if(!conferenceBox||!data)return;
+ var items=(data.conferenceEvents||[]).filter(function(x){return x.end>=todaySeoul()}).sort(function(a,b){return a.start.localeCompare(b.start)});
+ conferenceBox.innerHTML='<div class="cpo-event-meta"><b>학회·전시회 공식 일정 검증 '+escapeHtml(data.checked)+'</b> · 학회 개최일과 전시일은 원문을 확인하세요.</div>'+
+ items.map(function(x){
+ return '<article class="cpo-conference-item"><span style="font-size:11px;font-weight:850;color:#126d96">'+escapeHtml(dateLabel(x.start)+(x.start===x.end?'':' ~ '+dateLabel(x.end)))+' · '+escapeHtml(x.country)+' · '+escapeHtml(x.type)+'</span><b>'+escapeHtml(x.name)+'</b><div>'+escapeHtml(x.where)+'</div><div>'+escapeHtml(x.note)+'</div>'+sourceLink(x)+'</article>';
+ }).join('');
+}
 function syncMode(){
  if(!list||!policyBox||!policyButton)return;
  policyBox.hidden=!policyOn;
- list.hidden=policyOn;
- if(watch)watch.hidden=policyOn;
+ if(conferenceBox)conferenceBox.hidden=!conferenceOn;
+ list.hidden=policyOn||conferenceOn;
+ if(watch)watch.hidden=policyOn||conferenceOn;
+ if(conferenceButton){conferenceButton.classList.toggle('active',conferenceOn);conferenceButton.setAttribute('aria-pressed',String(conferenceOn));}
  policyButton.classList.toggle('active',policyOn);
  policyButton.setAttribute('aria-pressed',String(policyOn));
- if(policyOn){
+ if(policyOn||conferenceOn){
   root.querySelectorAll('[data-event-filter]').forEach(function(btn){btn.classList.remove('active');btn.setAttribute('aria-pressed','false')});
   if(more)more.hidden=true;
-  if(data&&!policyBox.querySelector('.cpo-policy-filters'))paintPolicy();
+  if(policyOn&&data&&!policyBox.querySelector('.cpo-policy-filters'))paintPolicy();
+  if(conferenceOn&&data&&!conferenceBox.querySelector('.cpo-conference-item'))paintConference();
  }else renderCorporateMore();
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',integrate,{once:true});

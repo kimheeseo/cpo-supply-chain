@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-11-10",
+  "checked": "2026-11-10",
+  "timeZone": "Asia/Seoul",
+  "scope": "CPO/photonic interconnect + enabling semiconductor policies; scheduled event and official program deadlines only",
+  "disclaimer": "Static snapshot, not a live schedule feed. Government funding calls are not automatically CPO grants. Dates are event-location local unless otherwise noted. Official dates can change.",
+  "companyEvents": [
+    {
+      "id": "verified-0",
+      "start": "2026-11-17",
+      "end": "2026-11-17",
+      "region": "corporate",
+      "company": "NVIDIA",
+      "name": "FY2027 Q3 Financial Results · 14:00 PT",
+      "where": "Official IR",
+      "parts": [
+        "Switch ASIC / System",
+        "Optical Engine / CPO"
+      ],
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx"
+    },
+    {
+      "id": "verified-1",
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "region": "corporate",
+      "company": "Marvell",
+      "name": "FY2027 Q3 Financial Results · 13:30 PT",
+      "where": "Official IR",
+      "parts": [
+        "Switch ASIC / DSP",
+        "Optical Engine / CPO"
+      ],
+      "url": "https://investor.marvell.com/_assets/_de258ecc084556935b61ff8ecc599288/marvell/news/2026-11-06_Marvell_Technology_Inc_Announces_Conference_Call_1041.pdf"
+    },
+    {
+      "id": "verified-2",
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "region": "corporate",
+      "company": "AMD",
+      "name": "UBS Global Technology and AI Conference",
+      "where": "Official IR",
+      "parts": [
+        "GPU / xPU",
+        "Optical Interconnect (인접)"
+      ],
+      "url": "https://ir.amd.com/news-events/ir-calendar"
+    },
+    {
+      "id": "verified-3",
+      "start": "2026-12-09",
+      "end": "2026-12-09",
+      "region": "corporate",
+      "company": "AMD",
+      "name": "Barclays Global Technology Conference",
+      "where": "Official IR",
+      "parts": [
+        "GPU / xPU",
+        "Optical Interconnect (인접)"
+      ],
+      "url": "https://ir.amd.com/news-events/ir-calendar"
+    }
+  ],
+  "policyEvents": [
+    {
+      "id": "policy-0",
+      "start": "2026-11-17",
+      "end": "2026-11-17",
+      "country": "유럽",
+      "type": "R&D 공모 개시",
+      "title": "Horizon Europe 초저전력 집적 포토닉스 RIA 개시",
+      "detail": "HORIZON-CL4-2027-05-DIGITAL-EMERGING-03. 접수 개시일. CPO 직접 지원 사업으로 분류하지 않음.",
+      "agency": "European Commission",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?frameworkProgramme=43108390&isExactMatch=true&order=ASC&pageNumber=1&pageSize=100&programmePart=43120193&programmePeriod=2021+-+2027&sortBy=startDate&status=31094501%2C31094502",
+      "stage": "예정",
+      "relation": "집적포토닉스·반도체 인접(직접 CPO 전용 아님)"
+    },
+    {
+      "id": "policy-1",
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "country": "유럽",
+      "type": "정부·EU 공모 마감",
+      "title": "EU Chips JU AI 칩 실증 공모 마감",
+      "detail": "DIGITAL-JU-CHIPS-2026-AI1-SG 관련 AI 칩·시스템 공모. CPO 전용이 아님.",
+      "agency": "Chips JU",
+      "url": "https://www.chips-ju.europa.eu/Open-and-Upcoming-Calls/",
+      "stage": "마감 확정",
+      "relation": "집적포토닉스·반도체 인접(직접 CPO 전용 아님)"
+    },
+    {
+      "id": "policy-2",
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "country": "유럽",
+      "type": "정부·EU 공모 마감",
+      "title": "EU Chips JU AI 컴퓨팅 평가·배치 플랫폼 공모 마감",
+      "detail": "DIGITAL-JU-CHIPS-2026-AI-GfP 공모. AI 인프라 관련.",
+      "agency": "Chips JU",
+      "url": "https://www.chips-ju.europa.eu/Open-and-Upcoming-Calls/",
+      "stage": "마감 확정",
+      "relation": "집적포토닉스·반도체 인접(직접 CPO 전용 아님)"
+    },
+    {
+      "id": "policy-3",
+      "start": "2026-12-08",
+      "end": "2026-12-08",
+      "country": "유럽",
+      "type": "정부·EU 공모 마감",
+      "title": "EU–일본 반도체·Chiplet 공동 연구 공모 마감",
+      "detail": "DIGITAL-JU-Chips-2026-SG-JAPAN; 2.5D/3D 패키징·포토닉스 인접.",
+      "agency": "Chips JU",
+      "url": "https://www.chips-ju.europa.eu/Call-Details/?id=a1c5feaf-d070-f111-ab0e-000d3ab6c0a4",
+      "stage": "마감 확정",
+      "relation": "집적포토닉스·반도체 인접(직접 CPO 전용 아님)"
+    },
+    {
+      "id": "policy-4",
+      "start": "2027-03-18",
+      "end": "2027-03-18",
+      "country": "유럽",
+      "type": "R&D 공모 마감",
+      "title": "Horizon Europe 초저전력 집적 포토닉스 RIA 마감",
+      "detail": "HORIZON-CL4-2027-05-DIGITAL-EMERGING-03의 공식 마감일.",
+      "agency": "European Commission",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?frameworkProgramme=43108390&isExactMatch=true&order=ASC&pageNumber=1&pageSize=100&programmePart=43120193&programmePeriod=2021+-+2027&sortBy=startDate&status=31094501%2C31094502",
+      "stage": "마감 확정",
+      "relation": "집적포토닉스·반도체 인접(직접 CPO 전용 아님)"
+    }
+  ],
+  "undatedWatch": [],
+  "unverifiedNotScheduled": [],
+  "sources": [
+    "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
+    "https://investor.marvell.com/_assets/_de258ecc084556935b61ff8ecc599288/marvell/news/2026-11-06_Marvell_Technology_Inc_Announces_Conference_Call_1041.pdf",
+    "https://ir.amd.com/news-events/ir-calendar",
+    "https://sc26.supercomputing.org/attendees/chicago/",
+    "https://www.chips-ju.europa.eu/EventsDetails/?id=51c9b367-0c55-f111-bec6-7c1e5234c674",
+    "https://www.semiconjapan.org/jp/about",
+    "https://spie.org/conferences-and-exhibitions/photonics-west",
+    "https://www.ofcconference.org/program/schedule-at-a-glance",
+    "https://www.opencompute.org/events/ocp-summit/2027-ocp-global-summit/",
+    "https://www.ecocexhibition.com/future-dates/",
+    "https://iwcs.org/events/",
+    "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?frameworkProgramme=43108390&isExactMatch=true&order=ASC&pageNumber=1&pageSize=100&programmePart=43120193&programmePeriod=2021+-+2027&sortBy=startDate&status=31094501%2C31094502",
+    "https://www.chips-ju.europa.eu/Open-and-Upcoming-Calls/",
+    "https://www.chips-ju.europa.eu/Call-Details/?id=a1c5feaf-d070-f111-ab0e-000d3ab6c0a4"
+  ],
+  "conferenceEvents": [
+    {
+      "id": "conf-0",
+      "name": "SC26 · Supercomputing Conference",
+      "start": "2026-11-15",
+      "end": "2026-11-20",
+      "country": "미국",
+      "type": "학회·전시회",
+      "where": "Chicago, USA",
+      "url": "https://sc26.supercomputing.org/attendees/chicago/",
+      "note": "AI/HPC 네트워크·광인터커넥트 인접"
+    },
+    {
+      "id": "conf-1",
+      "name": "EFECS 2026",
+      "start": "2026-12-02",
+      "end": "2026-12-03",
+      "country": "유럽",
+      "type": "산업·정책 포럼",
+      "where": "Helsinki, Finland",
+      "url": "https://www.chips-ju.europa.eu/EventsDetails/?id=51c9b367-0c55-f111-bec6-7c1e5234c674",
+      "note": "유럽 첨단 반도체·패키징 생태계"
+    },
+    {
+      "id": "conf-2",
+      "name": "SEMICON Japan 2026",
+      "start": "2026-12-09",
+      "end": "2026-12-11",
+      "country": "일본",
+      "type": "전시회",
+      "where": "Tokyo, Japan",
+      "url": "https://www.semiconjapan.org/jp/about",
+      "note": "첨단 패키징·Chiplet Summit 병행"
+    },
+    {
+      "id": "conf-3",
+      "name": "SPIE Photonics West 2027",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "country": "미국",
+      "type": "학회·전시회",
+      "where": "San Francisco, USA",
+      "url": "https://spie.org/conferences-and-exhibitions/photonics-west",
+      "note": "PIC·레이저·광부품"
+    },
+    {
+      "id": "conf-4",
+      "name": "OFC 2027",
+      "start": "2027-03-07",
+      "end": "2027-03-11",
+      "country": "미국",
+      "type": "학회·전시회",
+      "where": "Los Angeles, USA",
+      "url": "https://www.ofcconference.org/program/schedule-at-a-glance",
+      "note": "기술회의 3/7~11·전시 3/9~11"
+    },
+    {
+      "id": "conf-5",
+      "name": "OCP Global Summit 2027",
+      "start": "2027-10-04",
+      "end": "2027-10-07",
+      "country": "미국",
+      "type": "컨퍼런스",
+      "where": "San Francisco, USA",
+      "url": "https://www.opencompute.org/events/ocp-summit/2027-ocp-global-summit/",
+      "note": "AI 네트워크·CPO 생태계"
+    },
+    {
+      "id": "conf-6",
+      "name": "ECOC 2027",
+      "start": "2027-10-10",
+      "end": "2027-10-14",
+      "country": "유럽",
+      "type": "학회·전시회",
+      "where": "Milan, Italy",
+      "url": "https://www.ecocexhibition.com/future-dates/",
+      "note": "기술회의 10/10~14·전시 10/11~13"
+    },
+    {
+      "id": "conf-7",
+      "name": "IWCS 2027",
+      "start": "2027-11-14",
+      "end": "2027-11-18",
+      "country": "미국",
+      "type": "학회",
+      "where": "Providence, USA",
+      "url": "https://iwcs.org/events/",
+      "note": "광섬유·케이블·다심 커넥터"
+    }
+  ]
+}

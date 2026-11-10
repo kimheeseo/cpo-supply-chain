@@ -30,6 +30,10 @@ var technologies=[
 {name:'Pluggable / NPO / CPO 비교',meta:'유지보수성 ↔ 배선 길이·전력·밀도',text:'Pluggable은 전면 교체가 용이하지만 ASIC↔전면 모듈 배선이 깁니다. NPO는 광엔진을 ASIC 가까이, CPO는 같은 패키지 근처에 배치합니다. 현장 교체성과 제조·시험은 구조마다 다릅니다.',source:'https://www.ofcconference.org/program/special-events/open-cpx-presents-accelerating-the-commercial-adoption-of-cpo-npo/'}
 ];
 var events=[
+{name:'SC26 · Supercomputing',date:'2026-11-15 ~ 11-20',note:'미국 시카고 · AI/HPC·고속 네트워크.',url:'https://sc26.supercomputing.org/attendees/chicago/',state:'공식 개최'},
+{name:'SEMICON Japan 2026',date:'2026-12-09 ~ 12-11',note:'일본 도쿄 · 반도체·첨단패키징·Chiplet Summit.',url:'https://www.semiconjapan.org/jp/about',state:'공식 개최'},
+{name:'SPIE Photonics West 2027',date:'2027-01-30 ~ 02-04',note:'미국 샌프란시스코 · 광소자·포토닉스·레이저.',url:'https://spie.org/conferences-and-exhibitions/photonics-west',state:'공식 개최'},
+{name:'IWCS 2027',date:'2027-11-14 ~ 11-18',note:'미국 프로비던스 · 광섬유·케이블·접속.',url:'https://iwcs.org/events/',state:'공식 개최'},
 {name:'OFC 2027',date:'2027-03-07 ~ 03-11',note:'기술회의 3/7~11, 전시 3/9~11 · 미국 로스앤젤레스. Demo Zone/Dataset Paper 제출 마감 2026-11-17.',url:'https://www.ofcconference.org/program/schedule-at-a-glance',state:'공식 일정'},
 {name:'OCP Global Summit 2027',date:'2027-10-04 ~ 10-07',note:'미국 샌프란시스코 Moscone Center. AI 네트워킹·광인터커넥트 생태계 관련 발표 확인 대상.',url:'https://www.opencompute.org/events/ocp-summit/2027-ocp-global-summit/',state:'공식 일정'},
 {name:'ECOC 2027',date:'2027-10-10 ~ 10-14',note:'기술회의 10/10~14, 전시 10/11~13 · 이탈리아 밀라노.',url:'https://www.ecocexhibition.com/future-dates/',state:'공식 일정'},
@@ -72,7 +76,7 @@ function mount(){
  });
  companies.forEach(function(x){sections.company.append(card(x.name,x.date+' · '+x.kind,x.text,x.url));});
  technologies.forEach(function(x){sections.tech.append(card(x.name,x.meta,x.text,x.source));});
- events.forEach(function(x){sections.event.append(card(x.name,x.date+' · '+x.state,x.note,x.url));});
+ events.filter(function(x){return /^20\d{2}-\d{2}-\d{2}/.test(x.date)&&x.date.slice(0,10)>=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'})}).forEach(function(x){sections.event.append(card(x.name,x.date+' · '+x.state,x.note,x.url));});
  layers.forEach(function(x){sections.layers.append(card(x.name,x.companies,x.text,null));});
  korea.forEach(function(x){sections.korea.append(card(x.name,'한국 영업·기술 지원 확인 항목',x.text,x.url));});
  var sales=el('button','cpo26-open-sales','기존 국내 영업업체 상세 보기');sales.type='button';sales.addEventListener('click',function(){var target=document.getElementById('koreaSalesBtn');if(target)target.click();});sections.korea.prepend(sales);
