@@ -1,5 +1,11 @@
 # CPO Supply Chain
 
+## 업체 최신 기사 갱신 (2026-11-10)
+
+- 공식 소식 기준으로 기업별 관련 기사를 갱신하고, 선택 기업에 따라 **최대 5건** 표시합니다. 최근 30일 자료가 없는 기업은 과거 자료의 원 발행일을 그대로 표기합니다.
+- **초기화 버튼 바로 아래** 업체·기사 최종 업데이트 일자를 표시합니다. 이는 브라우저 접속일이 아니라 검증된 정적 데이터의 갱신일입니다.
+- 검증 데이터: [data/company_news_20261110.json](./data/company_news_20261110.json), 업데이트 코드: [cpo-company-news-20261110.js](./cpo_modules/cpo-company-news-20261110.js).
+
 ## 🌐 CPO Supply Chain 툴 바로가기
 
 **[▶ CPO Supply Chain 웹사이트 실행하기 (GitHub Pages)](https://kimheeseo.github.io/cpo-supply-chain/)**
