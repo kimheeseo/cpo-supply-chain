@@ -74,7 +74,7 @@ html[data-theme="dark"] .cpo-n18-inspector h4,html[data-theme="dark"] .cpo-n18-p
 function init(){
  var tabs=$('.view-tabs'),existing=$('[data-view-panel="3d"]'),shell=tabs&&tabs.parentElement,arch=$('#architecture');
  if(!tabs||!existing||!shell||!arch||$('#cpoNov18Directory'))return;
- var badge=$('#buildBadge');if(badge)badge.textContent='v2.17.15 · '+RELEASE_DATE+' · CPO 3D / 패키징 / 국내 공급망';
+ var badge=$('#buildBadge');if(badge)badge.textContent='v2.17.16 · '+RELEASE_DATE+' · CPO 3D / 패키징 / 국내 공급망';
  var button1=document.createElement('button');button1.type='button';button1.id='viewTabCpoPro';button1.className='view-tab';button1.setAttribute('data-view','cpoPro');button1.textContent='실사형 CPO 3D';
  var button2=document.createElement('button');button2.type='button';button2.id='viewTabCpoPackaging';button2.className='view-tab';button2.setAttribute('data-view','cpoPackaging');button2.textContent='2D·2.5D·3D 패키징';
  tabs.appendChild(button1);tabs.appendChild(button2);
@@ -229,7 +229,7 @@ function init(){
  ctx.camera.position.set(22,22,27);ctx.controls&&ctx.controls.update();
  return {ctx:ctx,asic:asic,engines:engines,els:els,fibers:fibers,connectors:connectors,fau:fau};
  }
- function initPro(){if(!pro3d)pro3d=createPro();if(pro3d)pro3d.ctx.activate()}
+ function initPro(){if(!pro3d)pro3d=createPro();if(pro3d){window.__cpoFlow3dContexts=window.__cpoFlow3dContexts||{};window.__cpoFlow3dContexts.pro=pro3d.ctx;pro3d.ctx.activate()}}
  $('#cpoNov18ProReset').addEventListener('click',function(){if(!pro3d)return;pro3d.ctx.camera.position.set(22,22,27);if(pro3d.ctx.controls){pro3d.ctx.controls.target.set(0,1,0);pro3d.ctx.controls.update()}});
  var exp=false;$('#cpoNov18ProExplode').addEventListener('click',function(){if(!pro3d)return;exp=!exp;pro3d.asic.position.y=exp?2.2:0;pro3d.engines.position.y=exp?.95:0;pro3d.els.position.y=exp?2.5:0;pro3d.connectors.position.z=exp?-1.8:0;this.setAttribute('aria-pressed',String(exp))});
  var fiberOn=true;$('#cpoNov18ProFiber').addEventListener('click',function(){if(!pro3d)return;fiberOn=!fiberOn;pro3d.fibers.visible=fiberOn;this.textContent='광섬유 표시: '+(fiberOn?'켬':'끔');this.setAttribute('aria-pressed',String(fiberOn))});
@@ -252,7 +252,7 @@ function init(){
  $('#cpoNov18HybridTsv').disabled=mode!=='hybrid';
  if(ctx.pick)ctx.pick.refresh();ctx.ctxReady=true;ctx.renderer.render(ctx.scene,ctx.camera);
  }
- function initPack(){if(!pack3d){var c=initRenderer($('#cpoNov18PackScene'));if(!c)return;pack3d={ctx:c};c.camera.position.set(17,15,24);installPick(c,'pack');buildPackage()}pack3d.ctx.activate()}
+ function initPack(){if(!pack3d){var c=initRenderer($('#cpoNov18PackScene'));if(!c)return;pack3d={ctx:c};c.camera.position.set(17,15,24);installPick(c,'pack');buildPackage()}window.__cpoFlow3dContexts=window.__cpoFlow3dContexts||{};window.__cpoFlow3dContexts.pack=pack3d.ctx;pack3d.ctx.activate()}
  $$('#cpoNov18PackModes [data-mode]').forEach(function(btn){btn.addEventListener('click',function(){mode=btn.getAttribute('data-mode');$$('#cpoNov18PackModes [data-mode]').forEach(function(b){b.classList.toggle('active',b===btn)});initPack();buildPackage()})});
  $('#cpoNov18PackReset').addEventListener('click',function(){initPack();if(!pack3d)return;pack3d.ctx.camera.position.set(17,15,24);pack3d.ctx.controls&&pack3d.ctx.controls.target.set(0,1,0);pack3d.ctx.controls&&pack3d.ctx.controls.update()});
  $('#cpoNov18PackExplode').addEventListener('click',function(){packExplode=!packExplode;this.setAttribute('aria-pressed',String(packExplode));initPack();buildPackage()});
