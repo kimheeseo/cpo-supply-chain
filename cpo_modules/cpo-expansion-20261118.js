@@ -61,6 +61,7 @@ html[data-theme="dark"] .cpo-n18-entry h3,html[data-theme="dark"] .cpo-n18-facts
 function init(){
  var tabs=$('.view-tabs'),existing=$('[data-view-panel="3d"]'),shell=tabs&&tabs.parentElement,arch=$('#architecture');
  if(!tabs||!existing||!shell||!arch||$('#cpoNov18Directory'))return;
+ var badge=$('#buildBadge');if(badge)badge.textContent='v2.17.13 · 2026-11-18 CPO 3D / 국내 공급망';
  var button1=document.createElement('button');button1.type='button';button1.id='viewTabCpoPro';button1.className='view-tab';button1.setAttribute('data-view','cpoPro');button1.textContent='실사형 CPO 3D';
  var button2=document.createElement('button');button2.type='button';button2.id='viewTabCpoPackaging';button2.className='view-tab';button2.setAttribute('data-view','cpoPackaging');button2.textContent='2D·2.5D·3D 패키징';
  tabs.appendChild(button1);tabs.appendChild(button2);
