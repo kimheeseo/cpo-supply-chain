@@ -6,7 +6,8 @@
 'use strict';
 if(window.__cpoNov18Expansion)return;
 window.__cpoNov18Expansion=true;
-var DATE='2026-11-18';
+var DATA_CHECKED='2026-11-18';
+var RELEASE_DATE='2026-11-19';
 var domestic=[
  {company:'오이솔루션 (OE Solutions)',category:'외부광원 / ELS',product:'23 dBm O-band cooled ELSFP (200 mW/ch)',status:'샘플링 발표',evidence:'제조사 공식 보도자료',detail:'2026년 3분기 샘플 공급 개시 계획 발표. 양산 완료 또는 CPO 탑재 확정으로 해석하지 않음.',url:'https://oesolutions.com/ko/oe-solutions-announces-23dbm-ultra-high-power-cooled-elsfp-sampling-begins-q3-2026/'},
  {company:'에이치씨앤지 (HC&G)',category:'광결합 / PIC–fiber',product:'X-BRIDGE optical coupler',status:'개발 중',evidence:'제조사 공식 보도자료',detail:'CPO의 PIC–광섬유 간 수동 광결합부 개발 및 특허 관련 발표. 양산 사양 미공개.',url:'https://hcng.co.kr/kr/sub/media/media.php?bid=4&idx=108&mode=view'},
@@ -61,7 +62,7 @@ html[data-theme="dark"] .cpo-n18-entry h3,html[data-theme="dark"] .cpo-n18-facts
 function init(){
  var tabs=$('.view-tabs'),existing=$('[data-view-panel="3d"]'),shell=tabs&&tabs.parentElement,arch=$('#architecture');
  if(!tabs||!existing||!shell||!arch||$('#cpoNov18Directory'))return;
- var badge=$('#buildBadge');if(badge)badge.textContent='v2.17.13 · 2026-11-18 CPO 3D / 국내 공급망';
+ var badge=$('#buildBadge');if(badge)badge.textContent='v2.17.14 · '+RELEASE_DATE+' · CPO 3D / 패키징 / 국내 공급망';
  var button1=document.createElement('button');button1.type='button';button1.id='viewTabCpoPro';button1.className='view-tab';button1.setAttribute('data-view','cpoPro');button1.textContent='실사형 CPO 3D';
  var button2=document.createElement('button');button2.type='button';button2.id='viewTabCpoPackaging';button2.className='view-tab';button2.setAttribute('data-view','cpoPackaging');button2.textContent='2D·2.5D·3D 패키징';
  tabs.appendChild(button1);tabs.appendChild(button2);
@@ -70,10 +71,15 @@ function init(){
  var pack=document.createElement('div');pack.className='view-panel';pack.setAttribute('data-view-panel','cpoPackaging');
  pack.innerHTML='<div class="cpo-n18-view-heading"><div><h3>2D / 2.5D / 3D TSV / 3D Hybrid Bonding</h3><small>패키징 구조를 선택하고 3D 단면을 회전해 비교</small></div><small>교육용 구조 비교 · 실제 제조 공정 스펙 아님</small></div><div class="cpo-n18-ui" id="cpoNov18PackModes"><button class="active" type="button" data-mode="2d">2D Package</button><button type="button" data-mode="25d">2.5D Interposer</button><button type="button" data-mode="tsv">3D TSV + Micro-bump</button><button type="button" data-mode="hybrid">3D Hybrid Bonding</button></div><div class="cpo-n18-viewport" id="cpoNov18PackScene"><div class="cpo-n18-fallback">패키징 3D 모델을 준비하는 중입니다.</div></div><div class="cpo-n18-ui"><button type="button" id="cpoNov18PackReset">기본 시점</button><button type="button" id="cpoNov18PackExplode" aria-pressed="false">분해 보기</button><button type="button" id="cpoNov18HybridTsv" aria-pressed="false">Hybrid에서 TSV 함께 보기: 끔</button></div><div id="cpoNov18PackText" class="cpo-n18-facts"></div><p class="cpo-n18-note"><b>분류 주의:</b> 2D·2.5D·3D는 집적 구조의 구분, TSV는 다이 내부 수직 관통전극, Die-to-Die는 접합 대상, Micro-bump/Hybrid Bonding은 접합 방식입니다. 따라서 TSV와 Hybrid Bonding은 함께 적용할 수도 있습니다.</p>';
  shell.appendChild(pack);
- function switchTab(key){$('.view-tab',tabs).forEach(function(b){b.classList.toggle('active',b.getAttribute('data-view')===key)});$$('.view-panel',shell).forEach(function(p){p.classList.toggle('active',p.getAttribute('data-view-panel')===key)})}
- button1.addEventListener('click',function(){switchTab('cpoPro');initPro()});
- button2.addEventListener('click',function(){switchTab('cpoPackaging');initPack()});
- var section=document.createElement('section');section.id='cpoNov18Directory';section.innerHTML='<div class="cpo-n18-meta">CPO SUPPLY CHAIN · 검토 기준일 '+DATE+'</div><h2>국내 CPO 공급망 · 해외 기업 국내 영업 채널</h2><p>제품 발표·개발·샘플·관련 공정 및 영업망을 구분했습니다. 과거 확인된 자료도 현재 공신력 있는 자료에 한해 표시하며, 제조사의 한국 법인 존재가 CPO 전용 제품의 공식 대리점 또는 재고 보유를 뜻하지 않습니다.</p><div class="cpo-n18-pills"><button class="cpo-n18-btn" type="button" data-kind="domestic" aria-pressed="true">국내 업체 / 제품 (6)</button><button class="cpo-n18-btn" type="button" data-kind="channel" aria-pressed="false">해외 업체 국내 채널 (9)</button></div><div id="cpoNov18Rows" class="cpo-n18-rows"></div><p class="cpo-n18-note">Source는 제조사 공식 자료 우선, 보도자료·언론은 별도 표기 · 제품별 국내 판매 권한과 실제 납품 가능 여부는 RFQ 확인 필요</p>';
+ function switchTab(key){
+  if(pro3d && key!=='cpoPro')pro3d.ctx.pause();
+  if(pack3d && key!=='cpoPackaging')pack3d.ctx.pause();
+  $$('.view-tab',tabs).forEach(function(b){var active=b.getAttribute('data-view')===key;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));});
+  $$('.view-panel',shell).forEach(function(p){p.classList.toggle('active',p.getAttribute('data-view-panel')===key)});
+ }
+ button1.addEventListener('click',function(){switchTab('cpoPro');try{initPro()}catch(err){var box=$('#cpoNov18ProScene');if(box)box.innerHTML='<div class="cpo-n18-fallback">3D 렌더링에 오류가 발생했습니다. WebGL과 그래픽 드라이버를 확인해 주세요.</div>';console.error('CPO 3D init',err)}});
+ button2.addEventListener('click',function(){switchTab('cpoPackaging');try{initPack()}catch(err){var box=$('#cpoNov18PackScene');if(box)box.innerHTML='<div class="cpo-n18-fallback">패키징 3D 렌더링에 오류가 발생했습니다. WebGL과 그래픽 드라이버를 확인해 주세요.</div>';console.error('CPO packaging init',err)}});
+ var section=document.createElement('section');section.id='cpoNov18Directory';section.innerHTML='<div class="cpo-n18-meta">CPO SUPPLY CHAIN · 검토 기준일 '+DATA_CHECKED+'</div><h2>국내 CPO 공급망 · 해외 기업 국내 영업 채널</h2><p>제품 발표·개발·샘플·관련 공정 및 영업망을 구분했습니다. 과거 확인된 자료도 현재 공신력 있는 자료에 한해 표시하며, 제조사의 한국 법인 존재가 CPO 전용 제품의 공식 대리점 또는 재고 보유를 뜻하지 않습니다.</p><div class="cpo-n18-pills"><button class="cpo-n18-btn" type="button" data-kind="domestic" aria-pressed="true">국내 업체 / 제품 (6)</button><button class="cpo-n18-btn" type="button" data-kind="channel" aria-pressed="false">해외 업체 국내 채널 (9)</button></div><div id="cpoNov18Rows" class="cpo-n18-rows"></div><p class="cpo-n18-note">Source는 제조사 공식 자료 우선, 보도자료·언론은 별도 표기 · 제품별 국내 판매 권한과 실제 납품 가능 여부는 RFQ 확인 필요</p>';
  arch.insertAdjacentElement('afterend',section);
  var view='domestic',rows=$('#cpoNov18Rows');
  function renderRows(){var items=view==='domestic'?domestic:channels;rows.innerHTML=items.map(function(it){if(view==='domestic')return '<article class="cpo-n18-entry"><div class="cpo-n18-meta">'+txt(it.category)+' <span class="cpo-n18-status">'+txt(it.status)+'</span></div><h3>'+txt(it.company)+'</h3><b>'+txt(it.product)+'</b><p>'+txt(it.detail)+'</p><div class="cpo-n18-meta">'+txt(it.evidence)+'</div><a href="'+txt(it.url)+'" target="_blank" rel="noopener noreferrer">출처 확인 ↗</a></article>';return '<article class="cpo-n18-entry"><div class="cpo-n18-meta">'+txt(it.route)+'</div><h3>'+txt(it.company)+'</h3><b>'+txt(it.name)+'</b><p>'+txt(it.product)+' · '+txt(it.note)+'</p><div class="cpo-n18-meta">'+txt(it.basis)+'</div><a href="'+txt(it.url)+'" target="_blank" rel="noopener noreferrer">공식 채널 확인 ↗</a></article>'}).join('')}
@@ -147,7 +153,7 @@ function init(){
  $('#cpoNov18PackExplode').addEventListener('click',function(){packExplode=!packExplode;this.setAttribute('aria-pressed',String(packExplode));initPack();buildPackage()});
  $('#cpoNov18HybridTsv').addEventListener('click',function(){withTsv=!withTsv;this.textContent='Hybrid에서 TSV 함께 보기: '+(withTsv?'켬':'끔');this.setAttribute('aria-pressed',String(withTsv));initPack();buildPackage()});
  // Suspend rendering when the viewer is hidden; revive on explicit tab activation.
- $('.view-tab',tabs).forEach(function(b){if(b!==button1&&b!==button2)b.addEventListener('click',function(){if(pro3d)pro3d.ctx.pause();if(pack3d)pack3d.ctx.pause()})});
+ $$('.view-tab',tabs).forEach(function(b){if(b!==button1&&b!==button2)b.addEventListener('click',function(){if(pro3d)pro3d.ctx.pause();if(pack3d)pack3d.ctx.pause()})});
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
